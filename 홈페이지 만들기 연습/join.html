@@ -1,0 +1,238 @@
+<html>
+<head>
+<title>화면구현 이정환</title>
+<link rel = "stylesheet" type="text/css" href= "css/join.css">
+<script type="text/javascript" src="js/join.js"></script>
+<script>
+	function send(){
+		/*id 입력*/
+		if(bighouse.idbox.value==""){
+			alert("ID 입력");
+			bighouse.idbox.focus();
+			return;
+		}else{
+			if(bighouse.idbox.value.length > 10){
+				alert("10자 이하로 입력해주세요");
+				bighouse.idbox.focus();
+				return;
+			}
+		}
+		/*이름*/
+		if(bighouse.namebox.value==""){
+			alert("이름 입력");
+			bighouse.namebox.focus();
+			return;
+		}else{
+			if(bighouse.namebox.value.length > 5){
+				alert("5글자 이하로 입력해주세요");
+				bighouse.namebox.focus();
+				return;
+			}
+		}
+	
+		/*비밀번호*/
+		if(bighouse.pwbox.value==""){
+			alert("비밀번호 입력");
+			bighouse.pwbox.focus();
+			return;
+		}
+		/*비밀번호 확인*/
+		if(bighouse.trpwbox.value==""){
+			alert("비밀번호 확인 입력");
+			bighouse.trpwbox.focus();
+			return;
+		}else{
+			if(bighouse.trpwbox.value != bighouse.pwbox.value){
+				alert("비밀번호가 일치하지 않습니다.");
+				bighouse.trpwbox.focus();
+				return;
+			}
+		}
+		/*지역*/
+		if(bighouse.areabox.value==""){
+			alert("지역 확인");
+			bighouse.areabox.focus();
+			return;
+		}
+		/*주소*/
+		if(bighouse.juso.value==""){
+			alert("주소 입력");
+			bighouse.juso.focus();
+			return;
+		}
+
+		if(bighouse.num1.value==""){
+			alert("연락처 입력");
+			bighouse.num1.focus();
+			return;
+		}
+
+		if(bighouse.num2.value==""){
+			alert("연락처 입력");
+			bighouse.num2.focus();
+			return;
+		}
+
+		if(bighouse.num3.value==""){
+			alert("연락처 입력");
+			bighouse.num3.focus();
+			return;
+		}
+
+		alert("회원가입이 완료 되었습니다.")
+
+	}
+
+	function gomsg(){
+		alert("중복 확인되었습니다.")
+	}
+</script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet"> <!--CDN 링크 -->
+</head>
+<body>
+
+<div id ="containar">
+<div id ="main_fix">
+
+	<div id ="main_top">
+		<ul class ="main_top_menu">
+			<li><a href ="./mushlogin.html">로그인</a></li>
+			<li><a href ="./join.html">회원가입</a></li>
+			<li><a href ="">마이페이지</a></li>
+			<li><a href ="">장바구니</a></li>
+		</ul>
+	</div>
+
+	<div id ="main_menu">
+		<div class ="main_menu_left">
+			<a href="layout_0812_4.html">JUHAN MUSH FARM</a>
+		</div>
+		<div class ="main_menu_right">
+			<ul class ="menu">
+				<li><a href="#">회사소개</a></li>
+				<li><a href="#">상품안내</a></li>
+				<li><a href="#">상품주문</a></li>
+				<li><a href="./mushnotice.html">공지사항</a></li>
+				<li><a href="#">찾아오시는길</a></li>
+			</ul>	
+		</div>
+	</div>
+</div>
+
+    <div id ="main_bottom">
+    </div>
+    <!--작은 메뉴창-->
+
+    <div id ="noticemenu">
+		<div class ="ganpan">
+		<h2><a class="ganpan">NOTICE & NEWS</a></h2>
+		</div>
+			<ul class ="noticemenu1">
+				<li><h3><a href ="./mushlogin.html">LOG-IN</a></h3></li>
+				<li><h3><a href ="./join.html">회원 가입</a></h3></li>
+				<li><h3><a href ="">ID/PW 찾기</a></h3></li>
+			</ul>
+		
+	</div>
+
+	<!--회원가입창-->
+<form name="bighouse">
+	<table id ="bigtable">
+		<colgroup>
+			<col width="18%">
+			<col width="*">
+		</colgroup>
+		<thead>
+		<tr>
+			<td colspan="2"><h1>화면구현 평가 회원가입 이정환</h1></td>
+		</tr>		
+		</thead>
+		<tbody>
+			<tr>
+				<th class="ID_name">I D</th>
+				<td class="box">
+					<input type="text" name="idbox" size ="14" maxlength="14" style="padding: 5 0 5 0px;">
+					<input type="button" name="tridbox" value="ID 중복검사" onclick="gomsg()" style="padding: 2 5 5 5px;">
+				</td>
+				
+			</tr>	
+			<tr>
+				<th>성 명</th>
+                <td class="box">
+                    <input type="text" name="namebox" size ="12" maxlength="12" style="padding: 5 0 5 0px;" /> 
+				</td>
+			</tr>
+			<tr>
+				<th>비밀번호</th>
+                <td class="box">
+                    <input type="password" name="pwbox" size ="14" maxlength="14" style="padding: 5 0 5 0px;" /> 
+                </td>
+			</tr>
+			<tr>
+				<th>비밀번호확인</th>
+                <td class="box">
+                    <input type="password" name="trpwbox" size ="14" maxlength="14" style="padding: 5 0 5 0px;" /> 
+                </td>
+			</tr>
+			<tr>
+                <th>지역</th>
+				<td>
+					<select name="areabox" style="padding: 5 0;">
+						<option value=""></option>
+                        <option value="서울">서울</option>
+                        <option value="부산">부산</option>
+                        <option value="대구">대구</option>
+                        <option value="인천">인천</option>
+                        <option value="광주">광주</option>
+                        <option value="대전">대전</option>
+                        <option value="울산">울산</option>
+                        <option value="제주">제주</option>
+                    </select>
+				</td>
+			</tr>
+            <tr>
+                <th>주소</th>
+                <td class="box">
+                    <input type="text" name="juso" size ="62" maxlength="58" style="padding: 5 0 5 0px;" /> 
+				</td>
+			</tr>
+            <tr>
+                <th>연락처</th>
+				<td>
+                    <input type="text" name="num1" size ="4" maxlength="4" style="padding: 5 0 5 0px;" /> -
+                    <input type="text" name="num2" size ="4" maxlength="4" style="padding: 5 0 5 0px;" /> -
+                    <input type="text" name="num3" size ="4" maxlength="4" style="padding: 5 0 5 0px;" /> 
+				</td>
+			</tr>
+            <tr>
+                <th>성별</th>
+				<td>
+					<input type="radio" value="m" name="receive" checked/>남
+                    <input type="radio" value="W" name="receive" />여
+				</td>
+			</tr>
+            <tr>
+                <th>선호 품종</th>
+				<td>
+					<input type="checkbox" value="송이"> 송이</input>
+                    <input type="checkbox" value="새송이"> 새송이</input>
+                    <input type="checkbox" value="표고"> 표고</input>
+                    <input type="checkbox" value="느타리"> 느타리</input>
+					<input type="checkbox" value="팽이"> 팽이</input>
+				</td>
+			</tr>
+            <tr>
+                <td class="joinbutton" colspan="2">
+                    <input type="button" onclick="send()" id="join" value="회원가입" style="padding: 2 5 5 5;">
+                </td>
+            </tr>
+		</tbody>
+	</table>
+</form>
+	<div>
+		
+	</div>
+
+	<div id="footer">
+		<address>서울시 양천구 목1동 323-14 현대드림타워 1312호 연락처 : 02-1111-2222<br />COPYRIGHT &copy; iCox. All Rights Reserved</address>
+	</div>

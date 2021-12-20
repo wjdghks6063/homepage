@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+   <meta charset="utf-8" />
+   <title>javascript 연습</title>
+   <style>
+      TABLE {
+         width: 900px;
+         border-top: 1px solid #444444;
+         border-collapse: collapse;
+      }
+
+      th,
+      td {
+         text-align: center;
+         border-bottom: 1px solid #444444;
+         padding: 10px;
+      }
+   </style>
+   <script type="text/javascript" src="js/common.js"></script>
+   <script type="text/javascript">
+/* ******
+   function checkValue(obj, msg){    //자바스크립트는 타입이 필요없다. score.kor_1이 곧 obj라는 말 , v에는 국어점수가 들어간다
+                        //ovj에는 score.kor_1이 들어있다. 그래서 이것을 불러낼 때 일일히 score.kor_1 부르지 않고 obj. 이런식으로 부름
+      var objvalue = obj.value;
+      var tf = false;
+
+      if (objvalue == "") {
+            alert(msg+"입력하세요!");
+            obj.focus();
+            //score.kor_1.focus();
+            return true;                  //값을 잘못입력하면 true 출력 제대로 되면 맨 밑 false 감.
+         } else {
+            //if (kor >100{
+            if (Number(objvalue) > 100) {
+               alert("점수 100점 이하");
+               obj.focus();
+            //   score.kor_1.focus();
+               return true;
+            }
+            if (Number(objvalue) < 0) {
+               alert("점수 0점 이상");
+               obj.focus();
+               //score.kor_1.focus();
+               return true;
+            }
+
+            }
+            return false;
+      //   alert("국어:"+objvalue+"점");   }
+         }
+
+***** */
+
+      function cal1() {
+         var kor = score.kor_1.value;
+         var eng = score.eng_1.value;
+         var mat = score.mat_1.value;
+
+   //      var msg = checkValue(score.kor_1, "국어점수" );   //국어점수에서 오류나면 영어점수는 할 필요 없으니 국어에 오류가 있으면 영어쪽이 나오지 않고 끝내야 된다
+   //      if(msg)//if가 true이면 작동
+         if(checkValue(score.kor_1, "국어점수" ))      //true 아니면 false 를 체크하기 때문에 가능한 if문.
+         return;
+         if(checkValue(score.eng_1, "영어점수" ))      //true 아니면 false 를 체크하기 때문에 가능한 if문.
+         return;   
+         if(checkValue(score.mat_1, "수학점수" ))      //true 아니면 false 를 체크하기 때문에 가능한 if문.
+         return;
+
+   //      var msg = checkValue(score.eng_1, "영어점수" );
+         //alert(msg);
+      }
+
+            if (kor == "") {
+            alert("국어점수 입력!");
+            score.kor_1.focus();
+            return;
+         } else {
+            if (Number(kor) > 100) {
+               alert("점수 100점 이하");
+               score.kor_1.focus();
+               return;
+            }
+            if (Number(kor) < 0) {
+               alert("점수 0점 이상");
+               score.kor_1.focus();
+               return;
+            }
+         }
+         if (eng == "") {
+            alert("영어점수 입력!");
+            score.eng_1.focus();
+            return;
+         } else {
+            if (Number(eng) > 100) {
+               alert("점수 100점 이하");
+               score.eng_1.focus();
+               return;
+            }
+            if (Number(eng) < 0) {
+               alert("점수 0점 이상");
+               score.eng_1.focus();
+               return;
+            }
+            if (score.mat_1.value == "") {
+               alert("수학점수 입력!");
+               score.mat_1.focus();
+               return;
+            } else {
+               if (Number(mat) > 100) {
+                  alert("점수 100점 이하");
+                  score.mat_1.focus();
+                  return;
+               }
+               if (Number(mat) < 0) {
+                  alert("점수 0점 이상");
+                  score.mat_1.focus();
+                  return;
+               }
+                  var total = Number(kor) +
+                     Number(eng) +
+                     Number(mat);
+                  score.tot_1.value = total;
+
+                  var ave = total / 3;
+                  score.ave_1.value = ave;
+                  //alert(total);
+               
+            }
+         }
+      }
+
+/*
+
+      function cal2() {
+         var kor = score.kor_2.value;
+         var eng = score.eng_2.value;
+         var mat = score.mat_2.value;
+         if (kor == "") {
+            alert("국어점수 입력!");
+            score.kor_2.focus();
+            return;
+            } else {
+            if (Number(kor) > 100) {
+               alert("점수 100점 이하");
+               score.kor_2.focus();
+               return;
+            }
+            if (Number(kor) < 0) {
+               alert("점수 0점 이상");
+               score.kor_2.focus();
+               return;
+            }
+         }
+         
+         if (eng == "") {
+            alert("영어점수 입력!");
+            score.eng_2.focus();
+            return;
+         }else {
+            if (Number(eng) > 100) {
+               alert("점수 100점 이하");
+               score.eng_2.focus();
+               return;
+            }
+            if (Number(eng) < 0) {
+               alert("점수 0점 이상");
+               score.eng_2.focus();
+               return;
+            }
+         }
+         
+         if (score.mat_2.value == "") {
+            alert("수학점수 입력!");
+            score.mat_2.focus();
+            return;
+         } else {
+            if (Number(mat) > 100) {
+               alert("점수 100점 이하");
+               score.mat_2.focus();
+               return;
+            }
+            if (Number(mat) < 0) {
+               alert("점수 0점 이상");
+               score.mat_2.focus();
+               return;
+            }
+         }
+         
+         var total = Number(kor) +
+            Number(eng) +
+            Number(mat);
+         score.tot_2.value = total;
+
+         var ave = total / 3;
+         score.ave_2.value = ave;
+         //alert(total);
+      
+   }
+   */
+
+   </script>
+
+</head>
+
+<body>
+   <form name="score">
+      <TABLE id="t1">
+         <TR align="center" bgcolor="yellow">
+            <th width="200">성 명</th>
+            <th width="200">국어</th>
+            <th>영어</th>
+            <th>수학</th>
+            <th>총점</th>
+            <th>평균</th>
+         </TR>
+         <TR align="center" bgcolor="gray">
+            <TD width="30%">홍길동</TD>
+            <TD><input id="kor" name="kor_1" type="text" size="5"></TD>
+            <TD><input id="eng" name="eng_1" type="text" size="5"></TD>
+            <TD><input id="mat" name="mat_1" type="text" size="5"></TD>
+            <TD><input id="tot" name="tot_1" type="text"  readonly value="0" size="5"></TD>
+            <TD><input id="ave" name="ave_1" type="text" readonly value="0" size="5"></TD>
+         </TR>
+         <TR align="center" bgcolor="gray">
+            <TD width="30%">이순신</TD>
+            <TD><input id="kor" name="kor_2" type="text" min="0" size="5"></TD>
+            <TD><input id="eng" name="eng_2" type="text" min="0" size="5"></TD>
+            <TD><input id="mat" name="mat_2" type="text" min="0" size="5"></TD>
+            <TD><input id="tot" name="tot_2" type="text" readonly value="0" size="5"></TD>
+            <TD><input id="ave" name="ave_2" type="text" readonly value="0" size="5"></TD>
+         </TR>
+         <tr>
+            <td colspan="6">
+               <input type="button" onclick="cal1()" id="button1" value="홍길동계산" />
+               <input type="button" onclick="cal2()" id="button1" value="이순신계산" />
+            </td>
+         </tr>
+      </TABLE>
+   </form>
+</body>
+
+</html>

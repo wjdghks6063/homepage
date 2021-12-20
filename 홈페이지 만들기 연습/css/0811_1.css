@@ -1,0 +1,186 @@
+*{margin:0; padding:0}
+li{list-style-type:none}
+a{text-decoration:none;color:#500000}
+body{
+	font:16px sans-serif;
+}	
+#containar{
+	margin:0 auto;
+	width:1000px;	
+}
+
+#main_top{
+	width:1000px; /*굳이 주지 않아도 containar에 사이즈 맞춰지지만 화면이 작아지면 축소하므로 고정한다 */
+	height:25px;
+	background:#E9DAD4;
+}
+
+.main_top_menu{
+	float:right;
+	height:20px;
+	padding-top:3px;
+}
+
+.main_top_menu li{display:inline}
+
+.main_top_menu li a{
+	float:left; /*딱붙이고 싶을땐 float를 사용 */ 
+	//display:inline-block; /*공간을 주고 싶으면 inline-block 사용 */ 
+	width:80px;
+	font-size:13px;
+	text-align:center;
+	border-right: 1px solid #500000;
+}
+
+.main_top_menu li:last-child a{ /*main_top_manu li의 마지막 a태그 안의 border의 속성값을 주지 않겠다. */
+	border:none;
+}
+
+#main_menu{
+	height:90px;
+	background:green;
+}	
+
+.main_menu_left{
+	float:left;
+	width:300px;
+	height:68px;
+	padding-top:22px;
+	text-align:center;
+	font-size:30px;
+	color:white;
+	background:#E9DAD4;
+}
+
+.main_menu_right{
+	float:right;
+	width:700px;
+	height:57px; /* 57, 90px; */
+	padding-top:33px;
+	background:#BCADA8;
+}	
+
+.menu li{display:inline;}
+
+.menu li a{
+	float:left;
+	width:140px;
+	height:25px;
+	text-align:center;
+	font-size:18px;
+	color:white;
+//	margin-top:30px; /* main_menu_right에 padding-top 값을 주고 height를 조절해 맞춰도 되고 이렇게 해도된다. */
+}	
+
+#main_bottom{
+	height:200px;
+	background:url("../image/abc.gif");
+}
+
+/*content*/
+#content{
+	height:500px;
+	margin-top:20px;
+}
+
+#content > div{height:500px;}
+
+#content_left{
+	float:left;
+	width:600px;
+//	height:500px;
+	background:#EBC9B6;
+	
+	
+}
+
+#content_right{
+	float:right;
+	width:380px;
+//	height:500px;
+}		
+
+#content_right > div{height:240px;}	/*content_right 안에 상자들에 높이를 따로 주지않아도 된다 */
+
+.content_right_top{
+	width:380px;
+//	height:240px;
+	margin-bottom:20px;
+	background:#D5A99A;
+}
+
+.content_right_bottom{
+	width:380px;
+//	height:240px;
+	background:#D5A99A;
+}
+.smallmenu {
+	height:30px;
+	border-bottom:1px solid red;
+}	
+
+.notice {
+	float:left;
+	padding-top:3px;
+	font-size:19px;
+	font-weight:volume;
+	color:#775A50;
+}
+
+.more {
+	float:right;
+	padding:10px 5px 0 0;
+	color:#5D5D5D;
+	font-size:14px;
+}
+
+.memo {
+	padding:5px 3px;
+}
+
+.memo li {
+	padding:3px 0;
+	border-bottom:1px dotted #5D5D5D;
+}
+
+.memo li a{
+	font-size:14px;
+}
+
+.memo li a span{	
+	float:right;
+	font-size:13px;
+	color:#E9DAD4;
+	padding-top:4px;
+}	
+
+
+#box{
+	width:1000px;
+	height:300px;
+}
+
+#box > div{width:320px; height:280px; margin-top:20px;}
+
+.box1{
+	float:left;
+	background:#E9DAD4;
+}	
+
+.box2{
+	float:left;
+	margin-left:20px;
+	background:#E9DAD4;
+}	
+
+.box3{
+	float:right;
+	margin-left:20px;
+	background:#E9DAD4;
+}	
+
+#footer{
+	height:150px;
+	margin-top:20px;
+	background:#775A50;
+}

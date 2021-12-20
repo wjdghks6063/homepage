@@ -1,0 +1,255 @@
+/************************* 공통*********************************/
+	#member{
+		margin-top:40px;
+	}
+	#member:after{
+		content:"";
+		display:block;
+		clear:both;
+	}	
+	#b_left{
+		float:left;
+		width:250px;
+		height:500px;
+//		background:green;
+	}
+	#b_right{
+		float:right;
+		width:704px;
+		//height:500px;
+		padding:20px;
+		margin-bottom:10px;
+//		background:green;	
+	}
+	#b_left p{
+		width:250px;
+		height:40px;
+		padding-top:20px;
+		text-align:center;
+		font-size:20px;
+		color:#652e5b;
+		border-bottom:2px dotted gray;
+		background:#f3afe7;
+	}
+	#b_left a{
+		display:block;
+		width:220px;
+		height:30px;
+		color:#652e5b;
+		letter-spacing:3px;
+		padding-left:30px;
+		padding-top:10px;
+		border-bottom:1px dotted gray;
+//		background:yellow;
+	}
+	.n_title{
+		width:704px;
+		height:28px;
+		text-align:left;
+		font:25px "myFont_1";
+		border-bottom:1px dotted gray;
+		margin-bottom:20px;
+		margin-top:10px;
+		color:#652e5b;
+		//background:yellow;
+	}	
+	
+	
+/************************* 게시판 공통 *********************************/	
+	.boardForm{
+		width:100%;
+		font-size: 15px;
+	}
+	.boardForm th{ 
+		padding:10px 0;
+		letter-spacing:3px;
+		border-bottom:1px solid #e0e0e0; 		
+	}
+	.boardForm tbody td{ 
+		text-align:left;
+		border-bottom:1px solid #e0e0e0;
+		padding:8px 0;
+	}
+	.boardForm .t_center{
+		text-align:left;
+	}	
+	.boardForm .inputBox{
+		//width:100px;
+		height:23px;
+	}	
+	.boardForm select{
+		//width:100px;
+		height:23px;
+	}		
+	.buttonGroup_center{
+		text-align:center;
+	}	
+	.buttonGroup_center .butt{
+		display:inline-block;
+		margin-top:20px;
+		width:100px;
+		height:30px;
+		text-align:center;
+		padding-top:10px;
+		background:#f3afe7;
+		margin-left:5px;
+	}
+	.boardForm .input100{
+		width:100px;
+		height:23px;
+	}	
+	.boardForm .input130{
+		width:130px;
+		height:23px;
+	}
+	.inputBox_500{
+		width:500px;
+		height:23px;
+	}	
+	.boardForm .input500{
+		width:500px;
+		height:23px;
+	}	
+	.boardForm .inputFile{
+		height:30px;
+	}	
+	.boardForm .textArea_H250{
+		width:500px;
+		height:250px;
+	}	
+	.boardForm .textArea_H250_noBorder{
+		width:500px;
+		height:250px;
+		border:0;
+	}
+	/* 검색*/
+		.select_box{
+			width:704px;
+			height:25px;
+			text-align:right;
+		//	background:yellow;
+		}
+		.sel_box{
+			width:80px;
+			height:22px;
+		}
+		.sel_text{
+			width:120px;
+			height:22px;
+		}	
+		.sel_button{
+			width:80px;
+			height:22px;
+		}
+	/* 게시판 목록*/
+		.boardList{
+			width:100%;
+			font: 13px "nanum";
+		}
+		.boardList th{ 
+			padding:10px 0;
+			border-top:1px solid #848484;
+			border-bottom:1px solid #848484; 		
+		}
+		.boardList tbody td{ 
+			text-align:center;
+			border-bottom:1px solid #e0e0e0;
+			padding:8px 0;
+		}
+		.boardList .t_center{
+			text-align:left;
+		}	
+	/*게시판 페이지*/
+		.paging{
+			margin-top:20px;
+			text-align:center;
+	//		background:yellow;
+		}
+		.paging:after{
+			content:""; display:block; clear:both;	
+		}	
+		.paging a{
+			padding:4px;
+			font-size:12px;
+			border:1px solid #e0e0e0;
+		}
+		.paging .active{
+			background:#81BEF7;
+			color:#fff;
+		}
+		.paging .write{
+			float:right;
+			padding:5px 10px;
+			background:#f3afe7;
+			color: #000;
+		}
+		.paging i{
+			color:gray;
+		}	
+
+		.paging a:hover, .buttonGroup a:hover{
+			color:#fff;	
+			background:#424242;
+		}	
+	
+/************************* 로그인 *********************************/	
+	.member_boxL {
+		position: relative;
+		padding: 40px;
+		width: 450px;
+		height: 200px;
+		border-right: 1px solid #ddd;
+		border-left: 1px solid #ddd;
+		border-bottom: 2px solid #aa87a2;
+		border-top: 2px solid #aa87a2;
+		margin:50px auto 0 auto;
+	}
+	.login_form {
+		position: absolute;
+		top: 105px;
+		left: 50px;
+	}
+	.login_form label {
+		display: inline-block;
+		width: 85px;
+		color: #333;
+		font-family: 'NGothicB';
+	}
+	.login_form input {
+		border: 1px solid #ddd;
+		height: 40px;
+		width: 220px;
+		background: #f1eef0;
+	}
+	.login_form .fl_clear {
+		margin: 0 0 4px;
+	}
+
+	.login_form .btn_login {
+		position: absolute;
+		top: 0;
+		right: -108px;
+		display: block;
+		width: 98px;
+		height: 84px;
+		line-height: 84px;
+		text-align: center;
+		font-size: 18px;
+		background:#f3afe7;
+		color: #fff;
+	}	
+	
+/************************* 공지사항 *********************************/	
+	.notice tr th{
+		text-align:left;
+	}
+	.notice i{
+		font-size:8px;
+		color:gray;
+	}
+	.notice .important{
+		color:red;
+	}	
+	.notice .hei30 file{
+			height:20px;
+	}	

@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<title>javascript 연습</title>
+<style>
+TABLE {
+	width: 900px;
+	border-top:1px solid #444444;
+	border-collapse: collapse;
+}
+th, td { 
+	text-align:center;
+	border-bottom: 1px solid #444444;
+	padding: 10px;
+}
+</style>
+<script type="text/javascript">
+
+	function checkValue(obj , msg){
+		var objValue = obj.value;
+		var tf = false;
+		if(objValue == ""){
+			alert(msg + "입력!");
+			obj.focus();
+			return true;
+		}else{
+			if(Number(objValue) > 100){
+				alert("100점 이하로 입력!");
+				obj.focus();
+				return true;
+			}
+			if(Number(objValue) < 0){
+				alert("0점 이상으로 입력");
+				obj.focus();
+				return true;
+			}
+		}
+		return tf;
+	
+	
+	function cal(){
+		var kor = score.kor_1.value;
+		var eng = score.eng_1.value;
+		var mat = score.mat_1.value;
+		
+		var msg = checkValue(score.kor_1, "국어점수");
+		if(msg) return; /*국어 점수에서 오류가 나면 return 된다.*/
+		if(checkValue(score.kor_1, "국어점수")) return; /*위 방법이랑 같은 방법*/
+		if(checkValue(score.kor_1, "영어점수")) return;
+		if(checkValue(score.kor_1, "수학점수")) return;
+	
+	}	
+}
+	
+	
+	function cal2() {
+		var kor = score.kor_2.value;
+		var eng = score.eng_2.value;
+		var mat = score.mat_2.value;
+		
+		if(kor == ""){
+			alert("국어 점수 입력!");
+			score.kor_2.select();
+			return;
+		}else{
+			if(Number(kor) > 100){
+				alert("100점 이하로 입력!");
+				score.kor_2.select();
+				return;
+			}
+			if(Number(kor) < 0){
+				alert("0점 이상으로 입력");
+				score.eng_2.select();
+				return;
+			}
+		}
+		if(eng == ""){
+			alert("영어점수 입력!");
+			score.eng_2.select();
+			return;
+		}else{
+			if(Number(eng) > 100){
+				alert("100점 이상으로 입력!");
+				score.eng_2.select();
+				return;
+			}
+			if(Number(eng) < 0){
+			alert("0점 이상으로 입력!");
+			score.eng_2.select();
+			return;
+			}
+		}
+		if(mat ==""){
+			alert("수학 점수 입력!");
+			score.mat_2.select;
+			return;
+		}else{
+			if(Number(mat) > 100){
+				alert("100점 이하로 입력!");
+				score.mat_2.select();
+				return;
+			}
+			if(Number(mat) < 0){
+				alert("0점 이상으로 입력!");
+				score.mat_2.select();
+				return;
+			}	
+		}
+		
+		var total = Number(kor) +
+					Number(eng) +
+					Number(mat);
+		
+		score.tot_2.value = total;
+		
+		var ave = total / 3;
+		
+		score.ave_2.value = ave;
+		
+		alert("계산 완료");
+	}	
+</script>
+
+</head> 
+<body>
+<form name="score">
+<TABLE id="t1">
+    <TR align="center" bgcolor="yellow">
+		<th width=200>성 명</th>
+		<th width=200>국어</th>
+		<th>영어</th>
+		<th>수학</th>
+		<th>총점</th>
+		<th>평균</th>
+    </TR>
+    <TR align="center" bgcolor="gray">
+        <TD width="30%">홍길동</TD>
+		<TD><input id="kor" name="kor_1" type="text" size="5"></TD>
+		<TD><input id="eng" name="eng_1" type="text" size="5"></TD>
+		<TD><input id="met" name="mat_1" type="text" size="5"</TD>
+		<TD><input id="tot" name="tot_1" type="text" value="0" size="5"></TD>
+		<TD><input id="ave" name="ave_1" type="text" value="0" size="5"></TD>
+    </TR>
+    <TR align="center" bgcolor="gray">
+        <TD width="30%">이순신</TD>
+		<TD><input id="kor" name="kor_2" type="text" size="5"></TD>
+		<TD><input id="eng" name="eng_2" type="text" size="5"></TD>
+		<TD><input id="met" name="mat_2" type="text" size="5"></TD>
+		<TD><input id="tot" name="tot_2" type="text" value="0" size="5"></TD>
+		<TD><input id="ave" name="ave_2" type="text" value="0" size="5"></TD>
+    </TR>
+    <tr>
+		<td colspan="6">
+		<input type="button" onclick="cal1()" id="button1" value="홍길동계산" />
+		<!--onclick="cal()을 누르면 cal()의 스크립트 값이 실행된다.!-->
+		<input type="button" onclick="cal2()" id="button1" value="이순신계산" />
+		</td>
+	</tr>	
+</TABLE>
+</form>
+ </body>
+</html>
+

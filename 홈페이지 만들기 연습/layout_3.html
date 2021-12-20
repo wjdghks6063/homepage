@@ -1,0 +1,221 @@
+<html lang="ko">
+<head>
+<title>CSS</title>
+<meta charset="utf-8">
+<style type="text/css">
+*{margin:0; padding:0;}
+li{list-style-type:none;}
+body{font:12px "굴림",Gulim; 
+background:url("image/bg_grid.gif"); }
+*{text-decoration:none;} 
+
+#box {	width:960px;
+		padding:10px;
+		border:10px solid green;
+		margin:0 auto;
+	}
+
+.box1{	position:relative;
+		width:960px;
+		height:150px;
+		background:orange;
+	}
+.menu {position:absolute;
+		top:125px;}
+		
+.menu li{display:inline;}
+
+.menu li a:hover{background:#369;}
+
+.menu li a {//display:inline-block;
+			float:left;
+			width:192px;
+			height:22px;
+			text-align:center;
+			padding-top:3px;
+			background:yellow;
+						
+			}
+
+
+.box2{
+	float:left;
+	width:310px;
+	height:450px;
+	//background:orange;
+	margin-top:10px;
+	//margin-right:10px;
+	}
+	
+.menu2 {position:absolute;}	
+
+.menu2 li {display:inline;}
+
+.menu2 li a:hover{background:pink;
+				  font-size:16px;}
+
+.menu2 li a {float:left;
+			width:104.4px;
+			height:23px;
+			text-align:center;
+			padding-top:7px;
+			background:green;
+			}
+
+
+.box3{
+	float:left;
+	width:310px;
+	height:448px;
+	border:1px solid orange;
+	margin-top:10px;
+	//margin-right:5px;
+	margin-left:10px;
+}
+.menu3 {position:absolute;}
+
+.menu3 li {display:inline;}	
+
+.menu3 li a:hover{background:gray;
+				  font-size:16px;}
+				  
+.menu3 li a {
+			float:left;
+			width:77.7px;
+			text-align:center;
+			background:#00BFFF;
+			
+			}		  
+
+
+
+.box4{
+	float:right;
+	width:293.3px;
+	height:430px;
+	padding:5px;
+	border:5px solid orange;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
+.boxall{		/*미니 박스 3개를 넣어둠 */
+	float:left;
+}
+
+.boxmini1{
+	width:123px;
+	height:120px;
+	padding:5px;
+	border:5px solid red;
+}
+
+.boxmini2{
+	width:123px;
+	height:120px;
+	padding:5px;
+	border:5px solid red;
+	margin-top:5px;
+}
+
+.boxmini3{
+	width:123px;
+	height:120px;
+	padding:5px;
+	border:5px solid red;
+	margin-top:5px;
+}
+
+.boxmini4{
+	float:right;
+	width:123px;
+	height:410px;
+	padding:5px;
+	border:5px solid red;
+}	
+	
+.box5{
+	clear:both;
+	height:80px;
+	padding:5px;
+	border:5px solid blue;
+}
+
+.box6{
+	clear:both;
+	height:60px;
+	padding:5px;
+	border:5px solid blue;
+	margin-top:10px;
+}	
+	
+
+#box:after{             /*이 상자의 마지막에 folat" "가 있다면 감쌀수있다 */
+content:"";					/*""안에는 내용이 없어 안보이지만 공간은 존재한다 */   
+display:block;					/*display는 블럭 요소 */
+clear:both;}
+
+
+</style></head>
+<body>
+<div id = "box"> 
+
+<div class = "box1">
+<a>box1</a>
+	<ul class ="menu">
+		<li><a href="#">회사소개</a></li>
+		<li><a href="#">상품안내</a></li>
+		<li><a href="#">상품주문</a></li>
+		<li><a href="#">찾아오시는길</a></li>
+		<li><a href="#">공지사항</a></li>
+	</ul>	
+</div>
+
+<div class = "box2">
+	<ul class ="menu2">
+		<li><a href ="#">menu1</a></li>
+		<li><a href ="#">menu2</a></li>
+		<li><a href ="#">menu3</a></li>
+	</ul>
+</div>
+
+<div class = "box3">
+	<ul class ="menu3">
+		<li><a href="#">menu1</a></li>
+		<li><a href="#">menu2</a></li>
+		<li><a href="#">menu3</a></li>
+		<li><a href="#">menu4</a></li>
+	</ul>	
+</div>
+
+<div class = "box4">
+<div class = "boxall">
+<div class = "boxmini1">
+<a>boxmini1</a>
+</div>
+<div class = "boxmini2">
+<a>boxmini2</a>
+</div>
+<div class = "boxmini3">
+<a>boxmini3</a>
+</div>
+</div>
+<div class = "boxmini4">
+<a>boxmini4</a>
+</div>
+</div>
+
+<div class = "box5">
+<a>box5</a>
+</div>
+
+<div class = "box6">
+<a>box6</a>
+</div>
+
+
+</div>
+
+</body>
+
+</html>

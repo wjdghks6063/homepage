@@ -1,0 +1,228 @@
+<html>
+<head>
+<title>젤스엘</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+	<script type="text/javascript" src="../js/jquery-1.8.1.min.js"></script>  
+	<link rel="stylesheet" type="text/css" href="../css/base.css" /> 	
+	<link rel="stylesheet" type="text/css" href="../css/main_menu.css" />
+	<link rel="stylesheet" type="text/css" href="../css/subpage.css" />
+<script type="text/javascript">
+    //<![CDATA[
+    $(function(){
+    	$(".top_menu_main_right > ul > li > a").mouseover(function(){
+			$(".top_menu_main_right div").hide();
+			$(this).next().slideDown(1000);
+    	});    
+    	$(".top_menu_main_right").mouseleave(function(){
+			$(".top_menu_main_right div").slideUp(1000);
+		}) 
+    });     
+
+ //]]>
+</script>
+</head>
+<body>
+
+<div id="container_top">
+
+	<div id="top_menu">
+		<div class="top_menu_top">
+			<ul class="topRight">
+				<!--<li><span class="wid"></span></li>-->
+				<li><a href=""><i class="fa fa-home"></i>홈</a></li>
+				<li><a href="">로그인</a></li>
+				<li><a href="">회원가입</a></li>
+				<li><a href="">마이페이지</a></li>
+				<li><a href="">장바구니</a></li>
+			</ul>
+			<ul class="topLeft">
+				<li><a class="snsBasic"><i class="fab fa-instagram"></i></a></li>
+				<li><a class="snsBasic"><i class="fab fa-facebook"></i></a></li>
+				<li><a class="snsBasic"><i class="fab fa-twitter"></i></a></li>
+				<li><a class="snsBasic"><i class="fab fa-youtube"></i></a></li>
+				<li><a class="snsBasic"><i class="fas fa-comment-dots"></i></a></li>
+			</ul>			
+		</div>
+		
+		<div class="top_menu_main">
+			<div class="top_menu_main_left">
+				<a href=""><img src="img/images/logo.jpg"></a>
+			</div>
+			<div class="top_menu_main_right">
+				<ul>
+					<li><a href="">Toner<br>Skin</a>
+						<div id="ddd">
+							<ul>
+								<li><a href="">Toner</a></li>
+								<li><a href="">Skin</a></li>
+							</ul>
+						</div>					
+					</li>
+					<li><a href="">Essence<br>Ample<br>Serum</a>
+						<div>
+							<ul>
+								<li><a href="">Essence</a></li>
+								<li><a href="">Ample</a></li>
+								<li><a href="">Serum</a></li>
+							</ul>
+						</div>					
+					</li>
+					<li><a href="">Emulsion<br>Lotion</a>
+						<div>
+							<ul>
+								<li><a href="">Emulsion</a></li>
+								<li><a href="">Lotion</a></li>
+							</ul>
+						</div>					
+					</li>
+					<li><a href="">Cream</a>
+						<div>
+							<ul>
+								<li><a href="">바니싱</a></li>
+								<li><a href="">콜드</a></li>
+								<li><a href="">마사지</a></li>
+								<li><a href="">데이</a></li>
+								<li><a href="">나이트</a></li>
+							</ul>
+						</div>						
+					</li>
+					<li><a href="">Oil</a>
+						<div>
+							<ul>
+								<li><a href="">Body</a></li>
+								<li><a href="">Face</a></li>
+							</ul>
+						</div>					
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+<div id="container">
+
+	<div id="top_main">
+		<!--<img src="img/images/top_back_1.jpg">-->
+	</div>
+
+	<div id="member">
+		<div id="b_left">
+			<P>MEMBER</P>
+			<ul>
+				<li><a href="member_login.html">LOGIN</a></li>
+				<li><a href="">ID / PASSWORD</a></li>
+				<li><a href="member_join.html"><i class="fas fa-apple-alt"></i> JOIN</a></li>
+			</ul>
+		</div>
+		
+		<div id="b_right">
+			<p class="n_title">
+				MEMBER JOIN
+			</p>
+			
+			<table class="boardForm">
+			  <colgroup>
+				<col width="200" />
+				<col width="500" />
+			  </colgroup>
+			  <tbody>
+				<tr>
+				  <th><label for="id">I D</label></th>
+				  <td>
+					<input name="t_id" type="text" size="10" class="inputBox" title="id입력하세요">
+					<input type="button" onclick="checkId()" value="ID중복검사" class="checkB">
+				  </td>
+				</tr>
+				<tr>
+				  <th><label for="nana">성 명</label></th>
+				  <td><input type="text" size="8" class="inputBox"></td>
+				</tr>
+				<tr>
+				  <th>비빌번호</th>
+				  <td><input type="text" size="13" class="inputBox"></td>
+				</tr>
+				<tr>
+				  <th>비밀번호확인</th>
+				  <td><input type="text" size="13" class="inputBox"></td>
+				</tr>
+				<tr>
+				  <th>지역</th>
+				  <td>
+					<select>
+						<option value="">서울</option>
+						<option value="">대전</option>
+						<option value="">부산</option>
+						<option value="">대구</option>        
+					</select>	  
+				  </td>
+				</tr>	
+				
+				<tr>
+				  <th>주소</th>
+				  <td><input type="text" size="40" class="inputBox"></td>
+				</tr>
+				<tr>
+				  <th>연락처</th>
+				  <td>
+					<input type="text" size="2" class="inputBox"> -
+					<input type="text" size="3" class="inputBox"> -
+					<input type="text" size="3" class="inputBox">
+				  </td>
+				</tr>
+				<tr>
+				  <th>남여구분</th>
+				  <td>
+					  <input type="radio" value="y" name="receive" class="middleCheck" /> 여&nbsp;&nbsp;        
+					  <input type="radio" value="y" name="receive" class="middleCheck" /> 남        
+				  </td>
+				</tr>
+				<tr>
+				  <th>취미</th>
+				  <td>
+					  <input type="checkbox" value="" name="chk1" class="middleCheck" /> 여행&nbsp;&nbsp; 
+					  <input type="checkbox" value="" name="chk2" class="middleCheck" /> 독서&nbsp;&nbsp; 
+					  <input type="checkbox" value="" name="chk3" class="middleCheck" /> 운동
+				  </td>
+				</tr>
+			  </tbody>
+			</table>
+			<div class="buttonGroup_center">
+				<a href="" class="butt">JOIN</a>
+			</div>	
+		</div>	
+	
+	</div>
+</div>
+<div id="footer_div">	
+	<div id="footer">
+		<div class="footer_left">
+			<img src="img/images/footer_logo.jpg">
+		</div>
+		<div class="footer_center">
+			<p>개인정보처리방침  | 개인정보보호정책 | 이용약관 | 협회소개</p>
+			우편번호 (26349) 강원 원주시 호저면 우무개로 365 2층, 2호 | 사업자번호 : 209-82-64664<br>
+			TEL: 033-747-4012 | FAX: 033-747-4014 | E-mail: korbamtb@daum.net<br>
+			COPYRIGHT 2012 KOREA OFF ROAD BIKE ASSOCIATION. ALL RIGHT RESERVED		
+		</div>
+		<div class="footer_right">
+			서울사무소: (02) 4545- 8545<br>
+			대전사무소: (042) 5417- 8842<br>
+			광주사무소: (052) 4545- 2214<br>
+			부산사무소: (048) 4545- 7546
+		</div>	
+	</div>
+</div>	
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

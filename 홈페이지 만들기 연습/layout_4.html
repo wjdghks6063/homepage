@@ -1,0 +1,217 @@
+<html lang="ko">
+<head>
+<title>CSS</title>
+<meta charset="utf-8">
+<style type="text/css">
+	*{margin:0; padding:0;}
+
+	li{list-style-type:none;}
+	body{font:13px "흘림",Cursive; font:bold;}
+	.boxmini1{font:8px "굴림",Gulim;}
+	*{text-decoration:none}
+
+	#box {
+		width:1000px;
+		border:1px solid #BCADA8;
+		margin:0; auto;
+	}
+	 
+	.box1 {
+		position:relative;
+		width:1000px;
+		height:40px;
+		background:#BCADA8;
+	}
+	
+	.boxmini1 {
+		position:absolute;
+		left:680px;
+	}
+				
+	.boxmini1 li{display:inline;}
+			
+	.boxmini1 li a{
+		float:left;
+		width:80px;
+		height:28px;
+		text-align:center;
+		padding-top:12px;
+		background:#E9DAD4;
+		//border-right:1px solid black; 
+		last-child none;
+	}
+
+.box2
+{	
+	width:1000px;
+	height:100px;
+	background:orange;
+}	
+	.boxname {
+				position:absolute;
+				width:300px;
+				height:100px;
+				background:#7F6D67;
+			}
+	
+	.boxmini2 {position:absolute;
+				left:300px}
+	
+	.boxmini2 li{display:inline;}
+	
+	.boxmini2 li a{
+				float:left;
+				width:140px;
+				height:60px;
+				text-align:center;
+				padding-top:40px;
+				background:#AB8173;
+			}
+
+	
+	
+.box3
+{	
+	width:1000px;
+	height:200px;
+	background: #3CB371;
+	background:url("image/abc.gif");
+}
+
+.box4
+{	
+	float:left;
+	width:590px;
+	height:390px;
+	background:#EBC9B6;
+	margin:5px;
+}
+
+.hiddenbox
+{
+	float:right;
+	width:400px;
+	height:400px;
+}	
+
+.box5
+{	
+	width:390px;
+	height:190px;
+	background:#D5A99A;
+	margin:5px;
+	
+}
+
+.box6
+{
+	width:390px;
+	height:190px;
+	background:#D5A99A;
+	margin:5px;
+	margin-top:10px;
+	
+	
+}
+
+.box7
+{	clear:both;
+	width:1000px;
+	height:120px;
+	background:#775A50;
+}	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#box:after{             /*이 상자의 마지막에 folat" "가 있다면 감쌀수있다 */
+content:"";					/*""안에는 내용이 없어 안보이지만 공간은 존재한다 */   
+display:block;					/*display는 블럭 요소 */
+clear:both;}
+
+
+
+</style></head>
+<body>
+<div id ="box">
+
+	<div class ="box1">
+		<ul class = "boxmini1">
+			<li><a href="#">로그인</a></li>
+			<li><a href="#">회원가입</a></li>				
+			<li><a href="#">마이페이지</a></li>
+			<li><a href="#">장바구니</a></li>
+		</ul>
+	</div>	
+	
+	<div class ="box2">
+		<div class ="boxname">
+		<a>mush company</a>
+		</div>
+		
+		<ul class ="boxmini2">
+			<li><a href="#">회사소개</a></li>
+			<li><a href="#">상품안내</a></li>
+			<li><a href="#">상품주문</a></li>
+			<li><a href="#">공지사항</a></li>
+			<li><a href="#">찾아오시는길</a></li>
+		</ul>	
+	</div>
+	
+	<div class ="box3">
+	<a>box3</a>
+	</div>
+	
+	<div class ="box4">
+	<a>box4</a>
+	</div>
+	
+	<div class ="hiddenbox">
+	
+		<div class ="box5">
+		<a>box5</a>
+		</div>
+	
+		<div class ="box6">
+		<a>box6</a>
+		</div>
+	</div>
+	
+	<div class="box7">
+	<a>box7</a>
+	</div>
+	
+	
+	
+</div>
+
+
+</body>
+
+</html>
