@@ -103,13 +103,10 @@ address,strong{font-style:normal; font-weight:normal;}
     border-top: 1px solid #e1e1e1;
 
 }
-
 .main-box2{
 	position: relative;
     transition: background-color .5s;
 }
-
-
 .slick-slider{
     position: relative;
     display: block;
@@ -125,7 +122,7 @@ address,strong{font-style:normal; font-weight:normal;}
     touch-action: pan-y;
     -webkit-tap-highlight-color: transparent;
 }
-
+/*배너 왼쪽 오른쪽 버튼*/
 .ban-left-btn{
     left: 50%;
     margin: 35px 0 0 -620px;
@@ -151,7 +148,6 @@ address,strong{font-style:normal; font-weight:normal;}
     transform: rotate(
         179deg) translateY(50%);
 }
-
 .ban-right-btn{
     right: 50%;
     margin: 35px -620px 0 0;
@@ -177,13 +173,12 @@ address,strong{font-style:normal; font-weight:normal;}
     color: #b1df8e;
     font-size: 30px;
 }
-
 .slick-list{
     transform: translateZ(0);
     overflow: visible;
     /*표시용 지울것 ! */ background-color: rgb(231, 124, 124);
 }
-
+/*상위 배너 */
 .box-img{
     position: relative;
     display: block!important;
@@ -207,7 +202,7 @@ address,strong{font-style:normal; font-weight:normal;}
     background-image:url(../img/1.png);
 }
 
-/*중간 자금 운용 현황*/
+/*후원금 사용 공개 내역*/
 .mid-money-box{
     width: 1140px;
     margin: 55px auto 0;
@@ -354,6 +349,9 @@ address,strong{font-style:normal; font-weight:normal;}
     margin: 20px 24px 0 0;
     background-color: #10c838;
 }
+.ability-box .ability-content-a:last-child{ /*ability-box의 마지막 박스에 magin을 주지않아 꽉 채운다.*/
+    margin:20px 0 0 0;
+}
 .ability-content-a::after{
     position: absolute;
     top: 0;
@@ -402,4 +400,77 @@ address,strong{font-style:normal; font-weight:normal;}
     right: 20px;
     margin-top: -33px;
     border-radius: 50%;
+}
+/*기부 금액 현황-----------------------------------------------------*/
+.uses-today-box{
+    margin-top: 70px;
+    background-color: #21ce55;
+}
+.uses-today-sec-box{
+    position: relative;
+    width: 1140px;
+    margin: 0 auto;
+    padding: 45px 0;
+    font-family: NanumSquareWebFont,dotum,Sans-serif;
+    line-height: 1.2;
+}
+.donation-today-h3{
+    display: inline-block;
+    padding: 6px 10px 4px;
+    border-radius: 15px;
+    background-color: #0eaa30;
+    font-size: 17px;
+    color: hsla(0,0%,100%,.85);
+    vertical-align: top;
+}
+.donation-today-msg{
+    display: block;
+    margin-top: 24px;
+    font-size: 24px;
+    color: #fff;
+}
+.donation-today-text-box{
+    position: absolute;
+    top: 45px;
+    right: 0;
+    width: 650px;
+    text-align: right;
+}
+.donation-today-text-small-box{
+    display: inline-block;
+    margin-bottom: 15px;
+    vertical-align: top;
+}
+.donation-today-text-small-box:after {
+    display: block;
+    clear: both;
+    content: "";
+}
+/*오늘의 후원 금액 표시 글자 및 숫자*/
+.donation-t-msg-box{
+    float: left;
+    margin-right: 20px;
+    margin-left: 38px;
+}
+.donation-t-num-box{
+    overflow: hidden;
+}
+.donation-t-msg-box, .donation-t-num-box { /*2가지 클래스에 속성을 준다.*/
+    font-size: 18px;
+    line-height: 36px;
+    color: hsla(0,0%,100%,.85);
+}
+.donation-today-text-small-box:nth-child(odd) .donation-t-num-box {
+    width: 130px;
+}
+.donation-today-text-small-box:nth-child(2n) .donation-t-num-box {
+    width: 220px;
+}
+
+.donation-t-money{
+    display: inline-block;
+    font-size: 33px;
+    font-weight: 700;
+    color: #fff;
+    vertical-align: top;
 }
