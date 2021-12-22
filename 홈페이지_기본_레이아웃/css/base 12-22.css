@@ -8,11 +8,6 @@ h1,h2,h3,h4,h5,h6 { font-size:100%; }
 /*string 사용하기 때문에 뺌*/
 address,strong{font-style:normal; font-weight:normal;}
 
-/*마우스 드레그 시 색상 변경*/
-::selection {
-    background-color: #18be12;
-    color: #FFFFFF;
-}
 
 @font-face{font-family:'NGothic'; src:url('../font/NanumGothic.woff') format('woff');}
 @font-face{font-family:'NGothicB'; src:url('../font/NanumGothicBold.woff') format('woff');}
@@ -212,117 +207,18 @@ address,strong{font-style:normal; font-weight:normal;}
     background-repeat: no-repeat;
     background-size: auto 292px;
     background-position: 50%;
+    /*이미지 확인용*/    background-color: rgb(104, 201, 156);
     background-image:url(../img/1.png);
 }
 
-/*후원금 사용 공개 내역-----------------------------------------------------*/
-.mid-money-clean-box{
-    z-index: 320;
-    width: 1140px;
-    margin: 30px auto 0;
-    clear: both;
-}
-.mid-money-clean-title{
-    border-width: 0px;
-    border-style: solid;
-    border-color: transparent;
-    text-align: center;
-}
-.mid-money-clean-title h3 {
-    font-size: 28px;
-    font-family: '__NanumGothicBold_5';
-    font-weight: 600;
-    color: #333;
-    letter-spacing: -1.5px;
-    text-align: center;
-}
-.mid-money-title-line{
-    width: 120px;
-    height: 3px;
-    background-color: #333;
-    position: relative;
-    margin: 30px auto 50px;
-}
-/*왼쪽 상자*/
-.mid-money-l-content-box{
-    width: 50%;
-    max-width: 700px;
-    float: left;
-}
-.mid-money-l-content-box ul{
-    width: 95%;
-    margin: 0 auto;
-    max-width: 960px;
-}
-.mid-money-l-content-box li{
-    float: left;
-    width: 33%;
-    padding: 0 2%;
-    font-size: 13px;
-    line-height: 1.4;
-    color: #666;
-    text-align: center;
-    list-style: none;
-}
-.mid-money-l-content-box li img {
-    display: block;
-    margin: 0 auto 15px;
-    width: 100%;
-    max-width: 148px;
-    border: 0px;
-    border-style: solid;
-    transform-origin: left top;
-}
-/*오른쪽 상자*/
-.mid-money-r-content-box{
-    margin-top: 10px;
-    float: left;
-    width: 50%;
-    margin-bottom: 20px;
-}
-.mid-money-r-content-box p {
-    margin-left: 8.34%;
-    font-size: 18px;
-    line-height: 1.7;
-    color: #333;
-    font-family: '__NanumGothicBold_5';
-    font-weight: 600;
-}
-.mid-r-content-btn{
-    margin-left: 8.34%;
-    margin-top: 44px;
-}
-.mid-r-content-btn .r-btn {
-    display: block;
-    width: 90%;
-    max-width: 400px;
-    text-align: left;
-
-    margin-bottom: 5px;
-    padding: 1px 20px;
-    -webkit-transition-duration: .2s;
-    -webkit-transition-delay: 0;
-    -webkit-transition-timing-function: ease;
-    transition-duration: .2s;
-    transition-delay: 0;
-    transition-timing-function: ease;
-    border-width: 0;
-    border-color: transparent;
-    background: #f60 no-repeat 24px 50%;
-    border-radius: 2px;
-    color: #fff;
-    line-height: 38px;
-    font-size: 16px;
-    text-align: center;
-    font-family: '__NanumGothicBold_5';
-    font-weight: 600;
-}
-/*임시 보류 파일*/
+/*후원금 사용 공개 내역*/
 .mid-money-box{
     width: 1140px;
     margin: 55px auto 0;
     background-color: antiquewhite;
-    
+}
+.mid-money-box-content{
+    text-align: center;
 }
 
 /*기부 박스----------------------------------------------------------------*/
@@ -460,7 +356,7 @@ address,strong{font-style:normal; font-weight:normal;}
     width: 364px;
     height: 356px;
     margin: 20px 24px 0 0;
-    background-color: rgb(231, 124, 124);
+    background-color: #10c838;
 }
 .ability-box .ability-content-a:last-child{ /*ability-box의 마지막 박스에 magin을 주지않아 꽉 채운다.*/
     margin:20px 0 0 0;
@@ -517,7 +413,7 @@ address,strong{font-style:normal; font-weight:normal;}
 /*기부 금액 현황-----------------------------------------------------*/
 .uses-today-box{
     margin-top: 70px;
-    background-color: rgb(236, 193, 193);
+    background-color: #21ce55;
 }
 .uses-today-sec-box{
     position: relative;
@@ -531,7 +427,7 @@ address,strong{font-style:normal; font-weight:normal;}
     display: inline-block;
     padding: 6px 10px 4px;
     border-radius: 15px;
-    background-color: #d88a87;
+    background-color: #0eaa30;
     font-size: 17px;
     color: hsla(0,0%,100%,.85);
     vertical-align: top;
@@ -571,8 +467,7 @@ address,strong{font-style:normal; font-weight:normal;}
 .donation-t-msg-box, .donation-t-num-box { /*2가지 클래스에 속성을 준다.*/
     font-size: 18px;
     line-height: 36px;
-    color: #9b7373;
-    font-weight: bolder;
+    color: hsla(0,0%,100%,.85);
 }
 .donation-today-text-small-box:nth-child(odd) .donation-t-num-box {
     width: 130px;
@@ -584,7 +479,7 @@ address,strong{font-style:normal; font-weight:normal;}
     display: inline-block;
     font-size: 33px;
     font-weight: 700;
-    color: #af6e6e;
+    color: #fff;
     vertical-align: top;
 }
 /*footer------------------------------------------------------------------------*/
@@ -722,9 +617,7 @@ ul{
 .company-logo {
     width: 220px;
     position: absolute;
-    object-position: -25px -65px;
-    -webkit-filter: opacity(.5) drop-shadow(0 0 0 gray);
-    filter: opacity(.5) drop-shadow(0 0 0 gray);
+    object-position: -25px -65px
 }
 .Copyright {
     margin-left: 170px;
