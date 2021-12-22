@@ -10,7 +10,7 @@ address,strong{font-style:normal; font-weight:normal;}
 
 /*마우스 드레그 시 색상 변경*/
 ::selection {
-    background-color: #18be12;
+    background-color: #db907a;
     color: #FFFFFF;
 }
 
@@ -446,7 +446,6 @@ address,strong{font-style:normal; font-weight:normal;}
 .ability-box{
     margin: 70px auto 0;
     width: 1140px;
-    background-color: aliceblue;
 }
 .ability-box::after{
     display: table;
@@ -460,7 +459,6 @@ address,strong{font-style:normal; font-weight:normal;}
     width: 364px;
     height: 356px;
     margin: 20px 24px 0 0;
-    background-color: rgb(231, 124, 124);
 }
 .ability-box .ability-content-a:last-child{ /*ability-box의 마지막 박스에 magin을 주지않아 꽉 채운다.*/
     margin:20px 0 0 0;
@@ -502,7 +500,6 @@ address,strong{font-style:normal; font-weight:normal;}
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     margin-top: 6px;
-    font-family: NanumSquareWebFont,dotum,Sans-serif;
     font-size: 17px;
     letter-spacing: -.5px;
     color: #333;
@@ -513,6 +510,22 @@ address,strong{font-style:normal; font-weight:normal;}
     right: 20px;
     margin-top: -33px;
     border-radius: 50%;
+}
+.ability-content-gage{
+    position: absolute;
+    top: 50%;
+    height: 60px;
+    margin-top: -30px;
+    right: 20px;
+    width: 60px;
+    border: 1px solid #0f92e0;
+    border-radius: 50%;
+    font-family: NanumSquareWebFont,dotum,Sans-serif;
+    font-size: 18px;
+    line-height: 60px;
+    letter-spacing: -.2px;
+    text-align: center;
+    color: #0f92e0;
 }
 /*기부 금액 현황-----------------------------------------------------*/
 .uses-today-box{
