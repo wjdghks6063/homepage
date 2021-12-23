@@ -191,11 +191,34 @@ address,strong{font-style:normal; font-weight:normal;}
     color: #ffffff;
     font-size: 30px;
 }
+
 .slick-list{
     transform: translateZ(0);
     overflow: visible;
     /*표시용 지울것 ! */ background-color: rgb(231, 124, 124);
 }
+/*배너 이미지 색상 변경*/
+.slick-list {
+	-webkit-animation: color-change-2x 12s linear infinite alternate both;
+	animation: color-change-2x 12s linear infinite alternate both;
+}
+@-webkit-keyframes slick-list {
+    0% {
+        background: #19dcea;
+        }
+        100% {
+          background: #b22cff;
+        }
+      }
+      @keyframes color-change-2x {
+        0% {
+          background: #19dcea;
+        }
+        100% {
+          background: #b22cff;
+        }
+      }
+
 /*상위 배너 */
 .box-img{
     position: relative;
@@ -421,9 +444,9 @@ address,strong{font-style:normal; font-weight:normal;}
     text-overflow: ellipsis;
     white-space: nowrap;
     margin-top: 12px;
-    color: #6f6d6da3;
-    font-family: 'dajung';
-    font-size: large;
+    color: #5e5c5c9e;
+    font-weight: 600;
+    font-size: 14px;
 }
 .donation-parameter-bar{
     height: 5px;
@@ -492,7 +515,7 @@ address,strong{font-style:normal; font-weight:normal;}
     content: "";
 }
 .ability-content-pic{
-    width: 364px;
+    width: 362px;
     height: 242px;
     background-color: #ccc;
 }
@@ -504,9 +527,9 @@ address,strong{font-style:normal; font-weight:normal;}
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    color: #828282;
-    font-family: 'dajung';
-    font-size: large;
+    color: #5e5c5c9e;
+    font-weight: 600;
+    font-size: 14px;
 }
 .ability-content-text{
     overflow: hidden;
@@ -625,7 +648,7 @@ address,strong{font-style:normal; font-weight:normal;}
 }
 /*함께하는 파트너----------------------------------------------------------------*/
 .partnerlogo-box{
-    position: relative;
+    position: relative; /*width 끝으로 가면 흐려지는 효과 생김*/
     overflow: hidden;
     width: 1140px;
     margin: 0 auto -96px;
@@ -639,15 +662,23 @@ address,strong{font-style:normal; font-weight:normal;}
     pointer-events: none;
     content: "";
 }
-.partnerlogo-box:before { /*로고 이미지 움직임*/
+.partnerlogo-box:before { /*왼쪽으로 가면 끝부분 투명하게 효과 줌*/
     left: 0;
     width: 238px;
     background-image: linear-gradient(270deg,hsla(0,0%,100%,0),#fff 59%,#fff 0);
 }
-.partnerlogo-box:after { /*로고 이미지 움직임*/
+.partnerlogo-box:after { /*오른쪽으로 가면 끝부분 투명하게 효과 줌*/
     right: 0;
     width: 110px;
     background-image: linear-gradient(90deg,hsla(0,0%,100%,0),hsla(0,0%,100%,.5) 47%,#fff 95%);
+}
+.partnerlogo-box:after, .partnerlogo-box:before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    pointer-events: none;
+    content: "";
 }
 .partnerlogo-title{
     float: left;
@@ -664,39 +695,26 @@ address,strong{font-style:normal; font-weight:normal;}
     display: inline-block;
     vertical-align: top;
 }
-.partnerlogo-list{
-    -webkit-animation: partnerlogo-list-img 60s linear infinite;
-    animation: partnerlogo-list-img 60s linear infinite;
 
-    -webkit-animation: 4s linear 0s infinite alternate move_eye;
-    animation: 4s linear 0s infinite alternate move_eye; /*0초는 시작 딜레이 = 0초면 바로 시작*/
-    white-space: nowrap;
-}
 /*-----------------------이미지 움직이기 작업--------------------------*/
-@-webkit-keyframes move_eye { 
+.partnerlogo-list{
+    -webkit-animation: partnerlogo-list 1s linear infinite;
+    animation: partnerlogo-list 1s linear infinite;
+
+}
+@-webkit-keyframes partnerlogo-list { 
     from { margin-left: -20%; 
     } to { 
         margin-left: 100%; 
     }  
 }
-@keyframes move_eye {
+@keyframes partnerlogo-list {
     from { margin-left: -20%; 
     } to { 
         margin-left: 100%; 
     }  
 }
 
-@keyframes slidein {
-    from {
-    margin-left: 100%;
-    width: 300%
-    }
-
-    to {
-        margin-left: 0%; 
-        width: 100%;
-    }
-}
 /*------------------------------------------------------------------*/
 .partnerlogo-list-img{
     display: inline-block;
@@ -731,11 +749,6 @@ left: 0;
 border-radius: 50%;
 border: 1px solid rgba(0,0,0,.06);
 content: "";
-}
-.partnerlogo-list {
-    animation-duration: 3s;
-    animation-name: slidein;
-    
 }
 /*footer------------------------------------------------------------------------*/
 .footer-box{
