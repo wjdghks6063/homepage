@@ -45,7 +45,7 @@
 }
 
 .partnerlogo-list { /*로고리스트에 애니메이션을 준다. / 이름은 move_left / 시간은 60초 /속도 조절은 평균 / 무한 반복/ */
-  animation: move_left 10s linear infinite;
+  animation: move_left 50s linear infinite;
   white-space: nowrap;
 }
 

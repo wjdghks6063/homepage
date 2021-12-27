@@ -2,7 +2,7 @@
 
 /*a 태그 색상 #999 에서 변경*/
 a { text-decoration:none; color:inherit; }
-a:hover { color:#666; }
+a:hover { color:#666; } /*a 태그는 가까이 대면 색이 회색으로 바뀐다.*/
 
 h1,h2,h3,h4,h5,h6 { font-size:100%; }
 /*string 사용하기 때문에 뺌*/
@@ -119,6 +119,7 @@ address,strong{font-style:normal; font-weight:normal;}
     z-index: 20;
 }
 /*배너 이미지------------------------------------------------------------*/
+/*
 .main-box{
     overflow: hidden;
     position: relative;
@@ -145,7 +146,9 @@ address,strong{font-style:normal; font-weight:normal;}
     touch-action: pan-y;
     -webkit-tap-highlight-color: transparent;
 }
+*/
 /*배너 왼쪽 오른쪽 버튼*/
+/*
 .ban-left-btn{
     left: 50%;
     margin: 35px 0 0 -620px;
@@ -195,9 +198,10 @@ address,strong{font-style:normal; font-weight:normal;}
 .slick-list{
     transform: translateZ(0);
     overflow: visible;
-    /*표시용 지울것 ! */ background-color: rgb(231, 124, 124);
 }
+*/
 /*배너 이미지 색상 변경*/
+/*
 .slick-list {
 	-webkit-animation: color-change-2x 12s linear infinite alternate both;
 	animation: color-change-2x 12s linear infinite alternate both;
@@ -218,8 +222,9 @@ address,strong{font-style:normal; font-weight:normal;}
         background: #b22cff;
     }
 }
-
+*/
 /*상위 배너 */
+/*
 .box-img{
     position: relative;
     display: block!important;
@@ -241,7 +246,7 @@ address,strong{font-style:normal; font-weight:normal;}
     background-position: 50%;
     background-image:url(../img/1.png);
 }
-
+*/
 /*후원금 사용 공개 내역-----------------------------------------------------*/
 .mid-money-clean-box{
     z-index: 320;

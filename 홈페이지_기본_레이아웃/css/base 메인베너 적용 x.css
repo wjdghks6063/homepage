@@ -2,7 +2,7 @@
 
 /*a 태그 색상 #999 에서 변경*/
 a { text-decoration:none; color:inherit; }
-a:hover { color:#666; }
+a:hover { color:#666; } /*a 태그는 가까이 대면 색이 회색으로 바뀐다.*/
 
 h1,h2,h3,h4,h5,h6 { font-size:100%; }
 /*string 사용하기 때문에 뺌*/
@@ -202,22 +202,22 @@ address,strong{font-style:normal; font-weight:normal;}
 	-webkit-animation: color-change-2x 12s linear infinite alternate both;
 	animation: color-change-2x 12s linear infinite alternate both;
 }
-@-webkit-keyframes slick-list {
+@-webkit-keyframes color-change-2x {
     0% {
         background: #19dcea;
-        }
-        100% {
-          background: #b22cff;
-        }
-      }
-      @keyframes color-change-2x {
-        0% {
-          background: #19dcea;
-        }
-        100% {
-          background: #b22cff;
-        }
-      }
+    }
+    100% {
+        background: #b22cff;
+    }
+}
+@keyframes color-change-2x {
+    0% {
+        background: #19dcea;
+    }
+    100% {
+        background: #b22cff;
+    }
+}
 
 /*상위 배너 */
 .box-img{
@@ -647,109 +647,8 @@ address,strong{font-style:normal; font-weight:normal;}
     vertical-align: top;
 }
 /*함께하는 파트너----------------------------------------------------------------*/
-.partnerlogo-box{
-    position: relative; /*width 끝으로 가면 흐려지는 효과 생김*/
-    overflow: hidden;
-    width: 1140px;
-    margin: 0 auto -96px;
-    padding: 40px 0 80px;
-}
-.partnerlogo-box:after, .partnerLogo-box:before {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    z-index: 1;
-    pointer-events: none;
-    content: "";
-}
-.partnerlogo-box:before { /*왼쪽으로 가면 끝부분 투명하게 효과 줌*/
-    left: 0;
-    width: 238px;
-    background-image: linear-gradient(270deg,hsla(0,0%,100%,0),#fff 59%,#fff 0);
-}
-.partnerlogo-box:after { /*오른쪽으로 가면 끝부분 투명하게 효과 줌*/
-    right: 0;
-    width: 110px;
-    background-image: linear-gradient(90deg,hsla(0,0%,100%,0),hsla(0,0%,100%,.5) 47%,#fff 95%);
-}
-.partnerlogo-box:after, .partnerlogo-box:before {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    z-index: 1;
-    pointer-events: none;
-    content: "";
-}
-.partnerlogo-title{
-    float: left;
-    position: relative;
-    z-index: 1;
-    margin-top: 15px;
-    font-family: 'galmat';
-    font-size: 24px;
-    font-weight: 900;
-    line-height: 34px;
-    letter-spacing: -.5px;
-}
-.partnerlogo-link{
-    display: inline-block;
-    vertical-align: top;
-}
+/*partner css 로 대체함 */
 
-/*-----------------------이미지 움직이기 작업--------------------------*/
-.partnerlogo-list{
-    -webkit-animation: partnerlogo-list 1s linear infinite;
-    animation: partnerlogo-list 1s linear infinite;
-
-}
-@-webkit-keyframes partnerlogo-list { 
-    from { margin-left: -20%; 
-    } to { 
-        margin-left: 100%; 
-    }  
-}
-@keyframes partnerlogo-list {
-    from { margin-left: -20%; 
-    } to { 
-        margin-left: 100%; 
-    }  
-}
-
-/*------------------------------------------------------------------*/
-.partnerlogo-list-img{
-    display: inline-block;
-    position: relative;
-    width: 100px;
-    height: 100px;
-    padding: 6px;
-    background-color: #fff;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-origin: content-box;
-    border-radius: 50%;
-    text-align: center;
-    vertical-align: top;
-    background-image: url(../img/heart.png);
-}
-.partnerlogo-list-img::before{
-    display: inline-block;
-    width: 1px;
-    height: 100%;
-    margin-left: -1px;
-    vertical-align: middle;
-    content: "";
-}
-.partnerlogo-list-img::after{
-position: absolute;
-top: 0;
-right: 0;
-bottom: 0;
-left: 0;
-border-radius: 50%;
-border: 1px solid rgba(0,0,0,.06);
-content: "";
-}
 /*footer------------------------------------------------------------------------*/
 .footer-box{
     position: relative;

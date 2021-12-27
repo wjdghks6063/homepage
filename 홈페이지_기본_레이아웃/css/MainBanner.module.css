@@ -1,20 +1,20 @@
-.wrap {
+.mainbanner-box {
     overflow: hidden;
     position: relative;
     height: 332px;
     border-top: 1px solid #e1e1e1;
   }
   
-  .MainBanner_inner__1uvuL {
+  .mainbanner-background {
     position: relative;
     transition: background-color 0.5s;
   }
   
-.MainBanner_inner__1uvuL .slick-list {
+.slick-list { /*.MainBanner_inner__1uvuL .slick-list*/
   overflow: visible;
 }
   
-  .inner :global(.slick-arrow) {
+.mainbanner-background .slick-arrow { /*원본 : .inner :global(.slick-arrow)*/
     position: relative;
     display: inline-block;
     width: 22px;
@@ -25,7 +25,7 @@
     box-sizing: content-box;
   }
   
-.MainBanner_inner__1uvuL .slick-arrow:before {
+  .mainbanner-background .slick-arrow:before { /*변환 .MainBanner_inner__1uvuL*/
     content: "";
     position: absolute;
     top: 50%;
@@ -43,12 +43,12 @@
       background-color: rgba(0, 0, 0, 0.15);
     }
   }
-  .inner :global(.slick-prev) {
+  .mainbanner-background .slick-prev  { /*왼쪽 버튼 원본: .inner :global(.slick-prev)*/
     left: 50%;
     margin: 35px 0 0 -620px;
   }
   
-.MainBanner_inner__1uvuL .slick-prev {
+.mainbanner-background .slick-prev { /*변환 */
     margin-left: -570px;
     left: 50%;
     margin: 35px 0 0 -620px;
@@ -60,7 +60,7 @@
     padding: 10px;
     box-sizing: content-box;
 }
-.MainBanner_inner__1uvuL .slick-arrow:before {
+.mainbanner-background .slick-arrow:before { /*배너 왼쪽 버튼*/
   content: "";
   position: absolute;
   top: 50%;
@@ -81,17 +81,17 @@
     transform: rotate(180deg) translateY(50%);
   }
   
-.MainBanner_inner__1uvuL .slick-next {
+.mainbanner-background .slick-next { /*변환  MainBanner_inner__1uvuL*/
   margin-right: -570px;
 }
-.MainBanner_inner__1uvuL .slick-next {
+.mainbanner-background .slick-next { /*변환  MainBanner_inner__1uvuL*/
   right: 50%;
   /* margin: 35px -620px 0 0; */
   -ms-transform: rotate(180deg) translateY(50%);
   transform: rotate(
 180deg) translateY(50%);
 }
-.MainBanner_banner__3lkfC {
+.MainBanner_banner__3lkfC { /*배너 리스트 내용*/
   position: relative;
   display: block!important;
   width: 1140px!important;
@@ -100,7 +100,7 @@
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
 } 
-.MainBanner_link__3g5bR {
+.MainBanner_link__3g5bR { /*메인베너 a href class */
   display: block;
   position: relative;
   top: 40px;
@@ -110,7 +110,7 @@
   background-size: auto 292px;
   background-position: 50%;
 } 
-  .progress {
+.MainBanner_progress__3ji22 {
     position: absolute;
     left: 50%;
     bottom: 13px;
@@ -118,7 +118,7 @@
     margin-left: -480px;
   }
   
-  .progress_bar {
+  .MainBanner_progress_bar__366VW {
     position: relative;
     width: 50px;
     height: 1px;
@@ -126,7 +126,7 @@
     background-color: rgba(0, 0, 0, 0.3);
   }
   
-  .bar_current {
+  .MainBanner_bar_current__1jzTA {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -134,7 +134,7 @@
     background-color: rgba(0, 0, 0, 0.4);
   }
   
-  .progress_current, .progress_total {
+.MainBanner_progress_current__d2xPy, .MainBanner_progress_total__1xhhd{
     position: absolute;
     top: 0;
     font-size: 13px;
@@ -142,27 +142,27 @@
     line-height: 20px;
   }
   
-  .progress_current {
+  .MainBanner_progress_current__d2xPy {
     right: 55px;
     color: #000;
   }
   
-  .progress_total {
+  .MainBanner_progress_total__1xhhd {
     left: 76px;
     color: rgba(0, 0, 0, 0.5);
   }
   
-  .button_progress {
+  .MainBanner_button_progress__10EMu { /*배너 재생 버튼 일시정지모양*/
     position: absolute;
     top: -1px;
     z-index: 10;
     left: 95px;
     width: 20px;
     height: 20px;
-    background: url(~svg/pc/icons/icon_banner_stop.svg) no-repeat;
+    background: url(https://happybean.naver.com/build/static/media/icon_banner_stop.e59efcf0.svg) no-repeat;
     background-size: 100%;
   }
   
-  .button_progress:global(.is_paused) {
-    background-image: url(~svg/pc/icons/icon_banner_play.svg);
+  .button_progress:global(.is_paused) { /*배너 재생 멈췃을 때 재생버튼*/
+    background-image: url(https://happybean.naver.com/build/static/media/icon_banner_play.cf37e5bf.svg);
   }

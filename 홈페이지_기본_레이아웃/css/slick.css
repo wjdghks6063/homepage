@@ -1,11 +1,7 @@
 /* Slider */
-.slick-slider
-{
-    position: relative;
 
-    display: block;
+.slick-slider {
     box-sizing: border-box;
-
     -webkit-user-select: none;
        -moz-user-select: none;
         -ms-user-select: none;
@@ -18,11 +14,13 @@
     -webkit-tap-highlight-color: transparent;
 }
 
+.slick-list, .slick-slider {
+    position: relative;
+    display: block;
+}
+
 .slick-list
 {
-    position: relative;
-
-    display: block;
     overflow: hidden;
 
     margin: 0;
@@ -40,14 +38,14 @@
 
 .slick-slider .slick-track,
 
-.slick-slider .slick-list, .slick-slider .slick-track {
+.slick-slider .slick-list, .slick-slider .slick-track { /*중복 요소*/
     -ms-transform: translateX(50%);
     transform: translateX(50%);
 }
 
 .slick-slider .slick-list, .slick-slider .slick-track {
-    transform: perspective(500px) translateZ(200px);
-    background-color: pink;
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
 }
 .slick-track
 {

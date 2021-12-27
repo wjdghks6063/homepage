@@ -37,10 +37,11 @@
 	outline: none;
 	background: transparent;
 }
-
+/* 왼쪽 버튼이랑 중복
 .slick-prev {
 	left: 0px;
 }
+*/
 [dir='rtl'] .slick-prev {
 	right: 0px;
 	left: auto;
