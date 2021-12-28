@@ -80,9 +80,6 @@ address,strong{font-style:normal; font-weight:normal;}
     left: 100px;
     text-align: center;
 }
-.main-top-menu a:hover {
-    color: #d2a5a5;
-}
 .main-text{ /*메인 메뉴 글자*/
     display: inline-block;
     padding: 0 25px;
@@ -124,8 +121,7 @@ address,strong{font-style:normal; font-weight:normal;}
 
 
 /*배너 이미지------------------------------------------------------------*/
-
-
+/*
 .main-box{
     overflow: hidden;
     position: relative;
@@ -152,10 +148,10 @@ address,strong{font-style:normal; font-weight:normal;}
     touch-action: pan-y;
     -webkit-tap-highlight-color: transparent;
 }
-
+*/
 /*배너 왼쪽 오른쪽 버튼*/
-
-.slick-prev{
+/*
+.ban-left-btn{
     left: 50%;
     margin: 35px 0 0 -620px;
     width: 22px;
@@ -175,11 +171,10 @@ address,strong{font-style:normal; font-weight:normal;}
     background: rgba(0,0,0,0);
     color: #ffffff;
     font-size: 30px;
-    font-weight: bold;
     transform: rotate(
         180deg) translateY(50%);
 }
-.slick-next{
+.ban-right-btn{
     right: 50%;
     margin: 35px -620px 0 0;
     
@@ -200,42 +195,15 @@ address,strong{font-style:normal; font-weight:normal;}
     background: rgba(0,0,0,0);
     color: #ffffff;
     font-size: 30px;
-    font-weight: bold;
 }
-/*하단 목록 번호*/
-.slick-dots li button{
-    display: inline-block;
-    position: relative;
-    cursor: pointer;
-    height: 16px;
-    width: 16px;
-    margin: 0 12px;
-    background-color: #e0e0e0;
-    -webkit-transition: background-color .3s;
-    -moz-transition: background-color .3s;
-    -o-transition: background-color .3s;
-    -ms-transition: background-color .3s;
-    transition: background-color .3s;
-    border-radius: 50%;
 
-    /* 보류
-    margin: 0 8px;
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background: #bb1616;
-    opacity: 0.5;
-    position: relative;
-    top: 0;
-    */
-}
 .slick-list{
     transform: translateZ(0);
     overflow: visible;
 }
+*/
 /*배너 이미지 색상 변경*/
-
+/*
 .slick-list {
 	-webkit-animation: color-change-2x 12s linear infinite alternate both;
 	animation: color-change-2x 12s linear infinite alternate both;
@@ -256,7 +224,7 @@ address,strong{font-style:normal; font-weight:normal;}
         background: #b22cff;
     }
 }
-
+*/
 /*상위 배너 */
 /*
 .box-img{

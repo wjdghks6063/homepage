@@ -8,19 +8,15 @@
 <script type="text/javascript" src="js/jquery-1.8.1.min.js"></script>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet"> <!--CDN 링크 -->
 
+<link href="css/slick.css" rel="stylesheet"> <!--배너 css-->
+<link href="css/slick-theme.css" rel="stylesheet"> <!--배너 css-->
 <link href="css/MainBanner.module.css" rel="stylesheet"> <!--배너 css-->
 <link href="css/global.css" rel="stylesheet"> <!--배너 css-->
 
 <link href="css/partner.css" rel="stylesheet"> <!--파트너 css-->
 
-<!-- slick css -->
-<link rel="stylesheet" type="text/css" href="css/slick-1.8.1/slick/slick.css"/> 
-<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js">
-</script> 
-<script type="text/javascript" src="css/slick-1.8.1/slick/slick.min.js">
-</script>
-
-
+<link href='https://fonts.googleapis.com/css?family=Anton' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Neucha' rel='stylesheet' type='text/css'>
 
 </head>
 <body>
@@ -49,49 +45,181 @@
         </div>
     </div>
     </header>
-</div>
+
+
+<script>
+//current position
+var pos = 0;
+//number of slides
+var totalSlides = $('#slider-wrap ul li').length;
+totalSlides = 5;
+alert("total :"+totalSlides);
+//get the slide width
+var sliderWidth = $('#slider-wrap').width();
+
+
+$(document).ready(function(){
+  
+  
+  /*****************
+   BUILD THE SLIDER
+  *****************/
+  //set width to be 'x' times the number of slides
+  $('#slider-wrap ul#slider').width(sliderWidth*totalSlides);
+  
+    //next slide  
+  $('#next').click(function(){
+    slideRight();
+  });
+  
+  //previous slide
+  $('#previous').click(function(){
+    slideLeft();
+  });
+  
+  
+  
+  /*************************
+   //*> OPTIONAL SETTINGS
+  ************************/
+  //automatic slider
+  var autoSlider = setInterval(slideRight, 3000);
+  
+  //for each slide 
+  $.each($('#slider-wrap ul li'), function() { 
+
+     //create a pagination
+     var li = document.createElement('li');
+     $('#pagination-wrap ul').append(li);    
+  });
+  
+  //counter
+  countSlides();
+  
+  //pagination
+  pagination();
+  
+  //hide/show controls/btns when hover
+  //pause automatic slide when hover
+  $('#slider-wrap').hover(
+    function(){ $(this).addClass('active'); clearInterval(autoSlider); }, 
+    function(){ $(this).removeClass('active'); autoSlider = setInterval(slideRight, 3000); }
+  );
+  
+  
+
+});//DOCUMENT READY
+  
+
+
+/***********
+ SLIDE LEFT
+************/
+function slideLeft(){
+  pos--;
+  if(pos==-1){ pos = totalSlides-1; }
+  $('#slider-wrap ul#slider').css('left', -(sliderWidth*pos));  
+  
+  //*> optional
+  countSlides();
+  pagination();
+}
+
+
+/************
+ SLIDE RIGHT
+*************/
+function slideRight(){
+  pos++;
+  if(pos==totalSlides){ pos = 0; }
+  $('#slider-wrap ul#slider').css('left', -(sliderWidth*pos)); 
+  
+  //*> optional 
+  countSlides();
+  pagination();
+}
+
+
+
+  
+/************************
+ //*> OPTIONAL SETTINGS
+************************/
+function countSlides(){
+  $('#counter').html(pos+1 + ' / ' + totalSlides);
+}
+
+function pagination(){
+  $('#pagination-wrap ul li').removeClass('active');
+  $('#pagination-wrap ul li:eq('+pos+')').addClass('active');
+}
     
-    <div class ="main-box">
-        <div class ="main-box2"> <!-- 이미지 색상 교체 박스 -->
-            <div class="slick-slider">
-                <div class="slick-list">
-                    <div id="slider-div">
-                        <div>
-                            <div class="MainBanner_banner__3lkfC" tabindex="-1" style="width: 100%; display: inline-block;">
-                            <a href="https://happybean.naver.com/campaign/2021happyalliance" title="캠페인_행복얼라이언스" target="캠페인_행복얼라이언스" class="MainBanner_link__3g5bR" style="background-image: url(&quot;https://happybean-phinf.pstatic.net/20211215_48/16395343909159zwy7_JPEG/211215.PC_%25B4%25ED%25BC%25EB_2280x584.jpg&quot;);">
-                                <span class="blind">캠페인_행복얼라이언스</span>
-                            </a>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="MainBanner_banner__3lkfC" tabindex="-1" style="width: 100%; display: inline-block;">
-                            <a href="https://happybean.naver.com/campaign/2021happyalliance" title="캠페인_행복얼라이언스" target="캠페인_행복얼라이언스" class="MainBanner_link__3g5bR" style="background-image: url(&quot;https://happybean-phinf.pstatic.net/20211215_48/16395343909159zwy7_JPEG/211215.PC_%25B4%25ED%25BC%25EB_2280x584.jpg&quot;);">
-                                <span class="blind">캠페인_행복얼라이언스</span>
-                            </a>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="MainBanner_banner__3lkfC" tabindex="-1" style="width: 100%; display: inline-block;">
-                            <a href="https://happybean.naver.com/campaign/2021happyalliance" title="캠페인_행복얼라이언스" target="캠페인_행복얼라이언스" class="MainBanner_link__3g5bR" style="background-image: url(&quot;https://happybean-phinf.pstatic.net/20211215_48/16395343909159zwy7_JPEG/211215.PC_%25B4%25ED%25BC%25EB_2280x584.jpg&quot;);">
-                                <span class="blind">캠페인_행복얼라이언스</span>
-                            </a>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="MainBanner_banner__3lkfC" tabindex="-1" style="width: 100%; display: inline-block;">
-                            <a href="https://happybean.naver.com/campaign/2021happyalliance" title="캠페인_행복얼라이언스" target="캠페인_행복얼라이언스" class="MainBanner_link__3g5bR" style="background-image: url(&quot;https://happybean-phinf.pstatic.net/20211215_48/16395343909159zwy7_JPEG/211215.PC_%25B4%25ED%25BC%25EB_2280x584.jpg&quot;);">
-                                <span class="blind">캠페인_행복얼라이언스</span>
-                            </a>
-                            </div>
-                        </div>
-                    </div> 
+</script>
+
+
+
+
+<div id="wrapper">
+      <div id="slider-wrap">
+          <ul id="slider">
+             <li>
+                <div>
+                    <h3>Slide #1</h3>
+                    <span>Sub-title #1</span>
+                </div>                
+<img src="https://fakeimg.pl/350x200/960a96/000?text=11111">
+             </li>
+             
+             <li>
+                <div>
+                    <h3>Slide #2</h3>
+                    <span>Sub-title #2</span>
                 </div>
-            </div>
-        </div>
-    </div>
+<img src="https://fakeimg.pl/350x200/D27328/000?text=22222">
+             </li>
+             
+             <li>
+                <div>
+                    <h3>Slide #3</h3>
+                    <span>Sub-title #3</span>
+                </div>
+<img src="https://fakeimg.pl/350x200/FF607F/000?text=33333">
+             </li>
+             
+             <li>
+                <div>
+                    <h3>Slide #4</h3>
+                    <span>Sub-title #4</span>
+                </div>
+<img src="https://fakeimg.pl/350x200/0A6E0A/000?text=44444">
+             </li>
+             
+             <li>
+                <div>
+                    <h3>Slide #5</h3>
+                    <span>Sub-title #5</span>
+                </div>
+<img src="https://fakeimg.pl/350x200/0064CD/000?text=55555">
+             </li>
+             
+             
+          </ul>
+          
+           <!--controls-->
+          <div class="btns" id="next"><i class="fa fa-arrow-right"></i></div>
+          <div class="btns" id="previous"><i class="fa fa-arrow-left"></i></div>
+          <div id="counter"></div>
+          
+          <div id="pagination-wrap">
+            <ul>
+            </ul>
+          </div>
+          <!--controls-->  
+                 
+      </div>
+  
+   </div>
     
-
-
 
 <!-- 
     <div class ="main-box">
@@ -358,51 +486,7 @@
             <a href="" class="partnerlogo-list-img"></a>
 
         </div>
-    </div>  
-    
-    
-
-    <script>
-        $(function(){
-          $('#slider-div').slick({
-              slide: 'div',		//슬라이드 되어야 할 태그 ex) div, li 
-              infinite : true, 	//무한 반복 옵션	 
-              slidesToShow : 1,		// 한 화면에 보여질 컨텐츠 개수
-              slidesToScroll : 1,		//스크롤 한번에 움직일 컨텐츠 개수
-              speed : 1000,	 // 다음 버튼 누르고 다음 화면 뜨는데까지 걸리는 시간(ms)
-              arrows : true, 		// 옆으로 이동하는 화살표 표시 여부
-              dots : true, 		// 스크롤바 아래 점으로 페이지네이션 여부
-              autoplay : true,			// 자동 스크롤 사용 여부
-              autoplaySpeed : 5000, 		// 자동 스크롤 시 다음으로 넘어가는데 걸리는 시간 (ms)
-              pauseOnHover : true,		// 슬라이드 이동시 마우스 호버하면 슬라이더 멈추게 설정
-              vertical : false,		// 세로 방향 슬라이드 옵션 false로 해야 세로로 움직임
-              prevArrow : "<button type='button' class='slick-prev'>></button>",		// 이전 화살표 모양 설정 //css에서 디자인 설정을 주면 된다.
-              nextArrow : "<button type='button' class='slick-next'>></button>",		// 다음 화살표 모양 설정
-              dotsClass : "slick-dots", 	//아래 나오는 페이지네이션(점) css class 지정
-              draggable : true, 	//드래그 가능 여부 
-              
-              responsive: [ // 반응형 웹 구현 옵션
-                  {  
-                      breakpoint: 960, //화면 사이즈 960px
-                      settings: {
-                          //위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
-                          slidesToShow:3 
-                      } 
-                  },
-                  { 
-                      breakpoint: 768, //화면 사이즈 768px
-                      settings: {	
-                          //위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
-                          slidesToShow:2 
-                      } 
-                  }
-              ]
-
-          });
-        })
-  </script>
-
-    
+    </div>    
 </body>
 <!--footer -->
     <footer class="footer-box">
