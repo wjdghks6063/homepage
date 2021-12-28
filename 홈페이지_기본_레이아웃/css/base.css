@@ -125,34 +125,6 @@ address,strong{font-style:normal; font-weight:normal;}
 
 /*배너 이미지------------------------------------------------------------*/
 
-
-.main-box{
-    overflow: hidden;
-    position: relative;
-    height: 332px;
-    border-top: 1px solid #e1e1e1;
-
-}
-.main-box2{
-	position: relative;
-    transition: background-color .5s;
-}
-.slick-slider{
-    position: relative;
-    display: block;
-
-    box-sizing: border-box;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    -webkit-touch-callout: none;
-    -khtml-user-select: none;
-    -ms-touch-action: pan-y;
-    touch-action: pan-y;
-    -webkit-tap-highlight-color: transparent;
-}
-
 /*배너 왼쪽 오른쪽 버튼*/
 
 .slick-prev{
@@ -234,9 +206,9 @@ address,strong{font-style:normal; font-weight:normal;}
     transform: translateZ(0);
     overflow: visible;
 }
-/*배너 이미지 색상 변경*/
+/*배너 뒷배경 색상 변경*/
 
-.slick-list {
+.mainbanner-background {
 	-webkit-animation: color-change-2x 12s linear infinite alternate both;
 	animation: color-change-2x 12s linear infinite alternate both;
 }
@@ -385,17 +357,6 @@ address,strong{font-style:normal; font-weight:normal;}
     font-family: '__NanumGothicBold_5';
     font-weight: 600;
 }
-
-
-/*임시 보류 파일--------------------------------*/
-.mid-money-box{
-    width: 1140px;
-    margin: 55px auto 0;
-    background-color: antiquewhite;
-    
-}
-/*임시 보류 파일--------------------------------*/
-
 
 /*기부 박스----------------------------------------------------------------*/
 .donation-box{
@@ -644,7 +605,7 @@ address,strong{font-style:normal; font-weight:normal;}
     position: absolute;
     top: 45px;
     right: 0;
-    width: 650px;
+    width: 750px; /*650px에서 750px으로 교체*/
     text-align: right;
 }
 .donation-today-text-small-box{
@@ -672,10 +633,12 @@ address,strong{font-style:normal; font-weight:normal;}
     color: #9b7373;
     font-weight: bolder;
 }
+/* 인구가 많을 걸 대비해 폐기
 .donation-today-text-small-box:nth-child(odd) .donation-t-num-box {
     width: 130px;
 }
-.donation-today-text-small-box:nth-child(2n) .donation-t-num-box {
+*/
+.donation-t-num-box { /*.donation-today-text-small-box:nth-child(2n) 폐기*/
     width: 220px;
 }
 .donation-t-money{

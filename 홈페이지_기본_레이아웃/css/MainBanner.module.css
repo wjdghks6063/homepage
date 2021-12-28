@@ -1,20 +1,25 @@
 .mainbanner-box {
-    overflow: hidden;
-    position: relative;
-    height: 332px;
-    border-top: 1px solid #e1e1e1;
-  }
+  overflow: hidden;
+  position: relative;
+  height: 332px;
+  border-top: 1px solid #e1e1e1;
+}
   
-  .mainbanner-background {
-    position: relative;
-    transition: background-color 0.5s;
-  }
+.mainbanner-background {
+  position: relative;
+  transition: background-color 0.5s;
+}
   
 .slick-list { /*.MainBanner_inner__1uvuL .slick-list*/
   overflow: visible;
 }
-  
-.mainbanner-background .slick-arrow { /*원본 : .inner :global(.slick-arrow)*/
+
+.mainbanner-background .slick-prev  { /*왼쪽 버튼 원본: .inner :global(.slick-prev)*/
+  left: 50%;
+  margin: 35px 0 0 -620px;
+}
+
+.mainbanner-background .slick-arrow { /* 배너 왼쪽 위치 원본 : .inner :global(.slick-arrow)*/
     position: relative;
     display: inline-block;
     width: 22px;
@@ -25,7 +30,7 @@
     box-sizing: content-box;
   }
   
-  .mainbanner-background .slick-arrow:before { /*변환 .MainBanner_inner__1uvuL*/
+  .mainbanner-background .slick-arrow:before { /* 배너 오른쪽 위치 변환 .MainBanner_inner__1uvuL*/
     content: "";
     position: absolute;
     top: 50%;
@@ -43,12 +48,8 @@
       background-color: rgba(0, 0, 0, 0.15);
     }
   }
-  .mainbanner-background .slick-prev  { /*왼쪽 버튼 원본: .inner :global(.slick-prev)*/
-    left: 50%;
-    margin: 35px 0 0 -620px;
-  }
   
-.mainbanner-background .slick-prev { /*변환 */
+ .slick-prev { /*변환 */
     margin-left: -570px;
     left: 50%;
     margin: 35px 0 0 -620px;
@@ -59,6 +60,30 @@
     z-index: 10;
     padding: 10px;
     box-sizing: content-box;
+}
+.mainbanner-background .slick-prev{
+  left: 50%;
+  margin: 35px 0 0 -620px;
+  width: 22px;
+  height: 44px;
+  z-index: 10;
+  box-sizing: content-box;
+
+  line-height: 0;
+  position: absolute;
+  top: 50%;
+  display: block;
+  padding: 0;
+
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: rgba(0,0,0,0);
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: bold;
+  transform: rotate(
+      180deg) translateY(50%);
 }
 .mainbanner-background .slick-arrow:before { /*배너 왼쪽 버튼*/
   content: "";
@@ -86,7 +111,7 @@
 }
 .mainbanner-background .slick-next { /*변환  MainBanner_inner__1uvuL*/
   right: 50%;
-  /* margin: 35px -620px 0 0; */
+  margin: 35px -620px 0 0;
   -ms-transform: rotate(180deg) translateY(50%);
   transform: rotate(
 180deg) translateY(50%);

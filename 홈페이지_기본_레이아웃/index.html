@@ -10,15 +10,13 @@
 
 <link href="css/MainBanner.module.css" rel="stylesheet"> <!--배너 css-->
 <link href="css/global.css" rel="stylesheet"> <!--배너 css-->
-
 <link href="css/partner.css" rel="stylesheet"> <!--파트너 css-->
 
 <!-- slick css -->
 <link rel="stylesheet" type="text/css" href="css/slick-1.8.1/slick/slick.css"/> 
-<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js">
-</script> 
-<script type="text/javascript" src="css/slick-1.8.1/slick/slick.min.js">
-</script>
+<link rel="stylesheet" type="text/css" href="css/slick-1.8.1/slick/slick.min.js"/> 
+<!-- js끼리 충돌되나 느려짐 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>-->
+<script type="text/javascript" src="css/slick-1.8.1/slick/slick.min.js"></script>
 
 
 
@@ -51,8 +49,8 @@
     </header>
 </div>
     
-    <div class ="main-box">
-        <div class ="main-box2"> <!-- 이미지 색상 교체 박스 -->
+    <div class ="mainbanner-box">
+        <div class ="mainbanner-background"> <!-- 이미지 색상 교체 박스 -->
             <div class="slick-slider">
                 <div class="slick-list">
                     <div id="slider-div">
@@ -90,26 +88,6 @@
         </div>
     </div>
     
-
-
-
-<!-- 
-    <div class ="main-box">
-        <div class ="main-box2"> 
-            <div class="slick-slider">
-                <button type="button" class="ban-left-btn"><i class="fas fa-chevron-right"></i></button>
-                <div class="slick-list">
-                    <div class="box-img">
-                        <div class="box-img-content">
-                            <p>움직이는 사진 들어갈 공간 옆으로 누르면 이동 5초 간격으로 이동 사진속 이미지 재생버튼 기능과 목록 몇개인지 count 필요</p>
-                        </div>
-                    </div>
-                </div>
-                <button type="button" class="ban-right-btn"><i class="fas fa-chevron-right"></i></button>
-            </div>
-        </div>
-    </div>
-상위 배너 이미지-->
 
 <!--자금 운용 현황 --> 
 <div class ="mid-money-clean-box">
@@ -281,25 +259,25 @@
                 <div class="donation-today-text-small-box">
                     <dt class="donation-t-msg-box">기부 참여</dt>
                     <dd class="donation-t-num-box">
-                        <span class="donation-t-money">1,123</span> 명
+                        <span class="donation-t-money"></span> 명
                     </dd>
                 </div>
                 <div class="donation-today-text-small-box">
                     <dt class="donation-t-msg-box">기부 참여</dt>
                     <dd class="donation-t-num-box">
-                        <span class="donation-t-money">1,123</span> 명
+                        <span class="donation-t-money"></span> 명
                     </dd>
                 </div>
                 <div class="donation-today-text-small-box">
                     <dt class="donation-t-msg-box">기부 참여</dt>
                     <dd class="donation-t-num-box">
-                        <span class="donation-t-money">1,123</span> 명
+                        <span class="donation-t-money"></span> 명
                     </dd>
                 </div>
                 <div class="donation-today-text-small-box">
                     <dt class="donation-t-msg-box">기부 참여</dt>
                     <dd class="donation-t-num-box">
-                        <span class="donation-t-money">1,123</span> 명
+                        <span class="donation-t-money"></span> 명
                     </dd>
                 </div>
             </dl>
@@ -313,7 +291,7 @@
                 함께하는<br>파트너 > > <!-- 보류 <i class="fas fa-chevron-right"></i>-->
             </a>
         </h3>
-        <div class="partnerlogo-list" style="width: 14280px;">
+        <div class="partnerlogo-list">
             <a href="" class="partnerlogo-list-img"></a>
             <a href="" class="partnerlogo-list-img"></a>
             <a href="" class="partnerlogo-list-img"></a>
@@ -362,45 +340,73 @@
     
     
 
-    <script>
-        $(function(){
-          $('#slider-div').slick({
-              slide: 'div',		//슬라이드 되어야 할 태그 ex) div, li 
-              infinite : true, 	//무한 반복 옵션	 
-              slidesToShow : 1,		// 한 화면에 보여질 컨텐츠 개수
-              slidesToScroll : 1,		//스크롤 한번에 움직일 컨텐츠 개수
-              speed : 1000,	 // 다음 버튼 누르고 다음 화면 뜨는데까지 걸리는 시간(ms)
-              arrows : true, 		// 옆으로 이동하는 화살표 표시 여부
-              dots : true, 		// 스크롤바 아래 점으로 페이지네이션 여부
-              autoplay : true,			// 자동 스크롤 사용 여부
-              autoplaySpeed : 5000, 		// 자동 스크롤 시 다음으로 넘어가는데 걸리는 시간 (ms)
-              pauseOnHover : true,		// 슬라이드 이동시 마우스 호버하면 슬라이더 멈추게 설정
-              vertical : false,		// 세로 방향 슬라이드 옵션 false로 해야 세로로 움직임
-              prevArrow : "<button type='button' class='slick-prev'>></button>",		// 이전 화살표 모양 설정 //css에서 디자인 설정을 주면 된다.
-              nextArrow : "<button type='button' class='slick-next'>></button>",		// 다음 화살표 모양 설정
-              dotsClass : "slick-dots", 	//아래 나오는 페이지네이션(점) css class 지정
-              draggable : true, 	//드래그 가능 여부 
-              
-              responsive: [ // 반응형 웹 구현 옵션
-                  {  
-                      breakpoint: 960, //화면 사이즈 960px
-                      settings: {
-                          //위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
-                          slidesToShow:3 
-                      } 
-                  },
-                  { 
-                      breakpoint: 768, //화면 사이즈 768px
-                      settings: {	
-                          //위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
-                          slidesToShow:2 
-                      } 
-                  }
-              ]
+<script>
+    $(function(){ // 메인 배너 이동
+        $('#slider-div').slick({
+            slide: 'div',		//슬라이드 되어야 할 태그 ex) div, li 
+            infinite : true, 	//무한 반복 옵션	 
+            slidesToShow : 1,		// 한 화면에 보여질 컨텐츠 개수
+            slidesToScroll : 1,		//스크롤 한번에 움직일 컨텐츠 개수
+            speed : 1000,	 // 다음 버튼 누르고 다음 화면 뜨는데까지 걸리는 시간(ms)
+            arrows : true, 		// 옆으로 이동하는 화살표 표시 여부
+            dots : true, 		// 스크롤바 아래 점으로 페이지네이션 여부
+            autoplay : true,			// 자동 스크롤 사용 여부
+            autoplaySpeed : 5000, 		// 자동 스크롤 시 다음으로 넘어가는데 걸리는 시간 (ms)
+            pauseOnHover : true,		// 슬라이드 이동시 마우스 호버하면 슬라이더 멈추게 설정
+            vertical : false,		// 세로 방향 슬라이드 옵션 false로 해야 세로로 움직임
+            prevArrow : "<button type='button' class='slick-prev'></button>",		// 이전 화살표 모양 설정 //css에서 디자인 설정을 주면 된다.
+            nextArrow : "<button type='button' class='slick-next'></button>",		// 다음 화살표 모양 설정
+            dotsClass : "slick-dots", 	//아래 나오는 페이지네이션(점) css class 지정
+            draggable : true, 	//드래그 가능 여부 
+            
+            responsive: [ // 반응형 웹 구현 옵션
+                {  
+                    breakpoint: 960, //화면 사이즈 960px
+                    settings: {
+                        //위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
+                        slidesToShow:3 
+                    } 
+                },
+                { 
+                    breakpoint: 768, //화면 사이즈 768px
+                    settings: {	
+                        //위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
+                        slidesToShow:2 
+                    } 
+                }
+            ]
 
-          });
-        })
-  </script>
+        });
+    })
+
+    $({ val : 0 }).animate({ val : 150000 }, { /*val : 0 /시작 숫자 / val : 150000 종료 숫자 */
+        duration: 1500,
+        step: function() {
+            var num = numberWithCommas(Math.floor(this.val)); 
+            $(".donation-t-money").text(num);
+        },
+        complete: function() {
+            var num = numberWithCommas(Math.floor(this.val));
+            $(".donation-t-money").text(num);
+        }
+        });
+
+        $({ val : 0 }).animate({ val : 1.5 }, { /*소숫점 표시시 사용*/
+        duration: 1000,
+        step: function() {
+            var num = numberWithCommas(this.val.toFixed(1));
+            $(".count_num2").text(num);
+        },
+        complete: function() {
+            var num = numberWithCommas(this.val.toFixed(1));
+            $(".count_num2").text(num);
+        }
+    });
+
+function numberWithCommas(x) { //numberWithCommas 3자리마다 콤마
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+</script>
 
     
 </body>
