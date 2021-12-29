@@ -1,0 +1,53 @@
+.header {
+    position: relative;
+    z-index: 30
+}
+
+:global .is-scroll {
+    padding-top: 70px
+}
+
+:global .is-scroll [class*='gnb'] {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 30;
+    border-bottom: 1px solid #e8e8e8
+}
+
+.gnb {
+    border-bottom: 1px solid #f0f0f0;
+    background-color: #fff;
+    text-align: right
+}
+
+.inner {
+    position: relative;
+    width: 1140px;
+    height: 70px;
+    margin: 0 auto
+}
+
+.inner::after {
+    display: table;
+    table-layout: fixed;
+    clear: both;
+    content: ''
+}
+
+.logo {
+    float: left;
+    margin-top: 21px
+}
+
+.logo svg {
+    display: inline-block;
+    vertical-align: top
+}
+
+.btn_search {
+    display: inline-block;
+    margin-top: 24px;
+    vertical-align: top
+}
