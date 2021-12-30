@@ -45,7 +45,7 @@ address,strong{font-style:normal; font-weight:normal;}
 }
 /*header  -------------------------------------------------------------*/
 
-/*로그인 및 메뉴 베너 */
+/*로그인 및 메뉴 베너 
 #header-header{
     position: relative;
     z-index: 30;
@@ -61,7 +61,7 @@ address,strong{font-style:normal; font-weight:normal;}
     height: 70px;
     margin: 0 auto;
 }
-/* 로고 */
+/* 로고 
 .logo-box{
     float: left;
 }
@@ -83,7 +83,7 @@ address,strong{font-style:normal; font-weight:normal;}
 .main-top-menu a:hover {
     color: #d2a5a5;
 }
-.main-text{ /*메인 메뉴 글자*/
+.main-text{ /*메인 메뉴 글자
     display: inline-block;
     padding: 0 25px;
     font-family:'maru-buri-reg';
@@ -92,7 +92,7 @@ address,strong{font-style:normal; font-weight:normal;}
     line-height: 24px;
     color: #070808b5;
 }
-/*로그인 및 검색*/
+/*로그인 및 검색
 .login{
     display: inline-block;
     position: relative;
@@ -103,7 +103,7 @@ address,strong{font-style:normal; font-weight:normal;}
     font-weight: bold;
     font-family: 'maru-buri-reg';
 }
-.longbar{ /*로그인 검색 사이 | 막대 */
+.longbar{ /*로그인 검색 사이 | 막대 
     display: inline-block;
     width: 1px;
     height: 14px;
@@ -111,18 +111,19 @@ address,strong{font-style:normal; font-weight:normal;}
     background-color: #d8d8d8;
     vertical-align: top;
 }
-.search-img{ /*검색 버튼*/
+.search-img{ /*검색 버튼
     margin-top: 22px;
     display: inline-block;
     vertical-align: top;
 }
-/*몸통 내용*/
+/*몸통 내용
 #content{
     position: relative;
     z-index: 20;
 }
-
-/*메인 배너는 배너 mainbanner.css로 */
+*/
+/*메인 배너는 배너 */
+/* mainbanner.css로 ----------------------------------------------------*/ 
 
 
 /*후원금 사용 공개 내역-----------------------------------------------------*/

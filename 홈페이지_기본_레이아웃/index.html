@@ -8,7 +8,8 @@
 <script type="text/javascript" src="js/jquery-1.8.1.min.js"></script>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet"> <!--CDN 링크 -->
 
-<link href="css/MainBanner.module.css" rel="stylesheet"> <!--배너 css-->
+<link href="css/header.css" rel="stylesheet"> <!-- header css-->
+<link href="css/mainbanner.css" rel="stylesheet"> <!--배너 css-->
 <link href="css/global.css" rel="stylesheet"> <!--배너 css-->
 <link href="css/partner.css" rel="stylesheet"> <!--파트너 css-->
 
@@ -24,7 +25,7 @@
 <body>
 <div id ="containar">
 <div id ="warp" class="warp">    
-    <header id="header" class="header-header_1">
+    <header id="header" class="header-header-1">
     <div id ="header-main">
         <div id ="header-top">
             <h1 class="logo-box">
@@ -459,14 +460,14 @@
                     breakpoint: 960, //화면 사이즈 960px
                     settings: {
                         //위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
-                        slidesToShow:3 
+                        slidesToShow:1 
                     } 
                 },
                 { 
                     breakpoint: 768, //화면 사이즈 768px
                     settings: {	
                         //위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
-                        slidesToShow:2 
+                        slidesToShow:1 
                     } 
                 }
             ]
@@ -502,45 +503,22 @@
         return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
 
-    /*메인 header 따라 오기
-    $(function () {
-        var didScroll;
-        var lastScrollTop = 0;
-        var delta = 5; // 이벤트를 발생시킬 스크롤의 이동 범위
-        var navbarHeight = $("header").outerHeight();
+    /*메인 header 따라 오기 */
+    let header = document.querySelector(".header-header-1");
+        let headerHeight = header.offsetHeight;
 
-        $(window).scroll(function(event){
-            didScroll = true;
-        });
-
-        setInterval(function() {
-            if (didScroll) {
-                hasScrolled();
-                didScroll = false;
-            }
-        }, 250); // 스크롤이 멈춘 후 동작이 실행되기 까지의 딜레이
-
-        function hasScrolled() {
-            var st = $(this).scrollTop(); // 현재 window의 scrollTop 값
-
-            // delta로 설정한 값보다 많이 스크롤 되어야 실행된다.
-            if(Math.abs(lastScrollTop - st) <= delta)
-                return;
-
-            if (st > lastScrollTop && st > navbarHeight){
-                // 스크롤을 내렸을 때
-                $("header").slideUp("fast"); // header 숨기기
-            } else {
-                // 스크롤을 올렸을 때
-                if(st + $(window).height() < $(document).height()) {
-                    $("header").slideDown("fast"); // header 보이기
-                }
-            }
-
-            lastScrollTop = st; // 현재 멈춘 위치를 기준점으로 재설정
+        window.onscroll = function () {
+        let windowTop = window.scrollY;
+        if (windowTop >= headerHeight) {
+            header.classList.add("is-scroll");
+        } else {
+            header.classList.remove("is-scroll");
         }
-    })
-    */
+    };
+// 
+
+
+
     var kkeys = [], konami = "38,38,40,40,37,39,37,39,66,65";
 $(document).keydown(function(e) {
     kkeys.push( e.keyCode );
