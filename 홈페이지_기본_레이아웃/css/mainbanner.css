@@ -144,7 +144,8 @@
     background-color: #d89694fa; /*버튼 색상*/
     
     text-indent: -9999px; /*버튼 안의 숫자 지워 줌*/
-    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%); /*버튼 주변 그림자*/
+    /*box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%); / x축 y축 0해야 보임 rgb(색상값) #% 투명도 */
+    box-shadow: 2px 5px 0 rgb(221 155 155 / 14%), 0 2px 10px 0 rgb(237 87 87 / 77%);
     border: 2px solid #ffffff;
 }
 
