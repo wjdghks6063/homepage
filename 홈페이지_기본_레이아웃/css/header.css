@@ -10,7 +10,7 @@
     right: 0;
     left: 0;
     z-index: 30;
-    border-bottom: 1px solid #e8e8e8;
+    border-bottom: 1px solid #fef4f1; /*#e8e8e8*/
     animation: dropHeader 0.3s;
  }
 
@@ -24,9 +24,12 @@
  }
  
  #header-main { /*.gnb */
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 1px solid #ffeae3; /*1px solid #f0f0f0;*/
     background-color: #fff;
     text-align: right;
+    background: rgb(255,233,226);
+    background: linear-gradient(
+0deg, rgba(255,233,226,1) 0%, rgba(254,243,240,1) 24%, rgba(255,255,255,1) 74%);
  }
  
  #header-top { /*.inner */
@@ -49,7 +52,7 @@
  }
  .logo-img{
    float: left;
-   width: 130px;
+   width: 120px;
    height: 70px;
    background-position: 50% 50%;
    background-size: cover;

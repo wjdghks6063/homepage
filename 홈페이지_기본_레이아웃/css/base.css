@@ -372,7 +372,7 @@ address,strong{font-style:normal; font-weight:normal;}
 /*기부 금액 현황-----------------------------------------------------*/
 .uses-today-box{
     margin: 50px 0px 10px 0px;
-    background-color: rgb(236, 193, 193);
+    background-color: #FFE0E0;
 }
 .uses-today-sec-box{
     position: relative;
@@ -395,7 +395,7 @@ address,strong{font-style:normal; font-weight:normal;}
     display: block;
     margin-top: 24px;
     font-size: 24px;
-    color: #fff;
+    color: #c32525bf;
     font-family: 'maru-buri-reg';
 }
 .donation-today-text-box{
@@ -446,7 +446,69 @@ address,strong{font-style:normal; font-weight:normal;}
     vertical-align: top;
 }
 
-/*동영상 및 실종 아동 찾기*/
+/*동영상 및 실종 아동 찾기-----------------------------------------------------------*/
+
+/*뉴 카드 뉴스*/
+/*post slider*/
+.post-slider{
+    width: 380px;
+    margin: 0px auto;
+    position: relative;
+    float: left;
+  }
+ /* 일단 보류 제목
+  .post-slider .silder-title{
+    text-align:center;
+    margin:30px auto;
+  }
+  */
+  .post-slider .next{
+    position:absolute;
+    top:50%;
+    right:30px;
+    font-size:2em;
+    color:gray;
+    cursor: pointer;
+    z-index: 10;
+  }
+  .post-slider .prev{
+    position:absolute;
+    top:50%;
+    left:30px;
+    font-size:2em;
+    color:gray;
+    cursor: pointer;
+    z-index: 10;
+  }
+  .post-slider .post-wrapper{
+  
+    width:84%;
+    height:350px;
+    margin:0px auto;
+    overflow: hidden;
+    padding:10px 0px 10px 0px;
+  }
+  .post-slider .post-wrapper .post{
+    width:300px;
+    height:300px;
+    margin:0px 10px;
+    display:inline-block;
+    background:white;
+    border-radius: 5px;
+  }
+  .post-slider .post-wrapper .post .post-info{
+    font-size:15px;
+    height:30%;
+    padding-left:10px;
+  }
+  .post-slider .post-wrapper .post .slider-image{
+    width:100%;
+    height:175px;
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+  }
+
+/*카드 뉴스 예전 것*/
 .card-news-box{
     margin: 70px auto 0;
     width: 1140px;
@@ -478,147 +540,6 @@ address,strong{font-style:normal; font-weight:normal;}
     height: 420px;
     float: left;
     margin-right: 10px;
-}
-/*실종 아동 찾기*/
-.missing-child-box {
-    width: 270px;
-    margin: 0px auto;
-    position: relative;
-    float: left;
-    border: 3px solid #9f9999;
-    background-color: rgb(237 221 221 / 23%);
-}
-.missing-child-box .silder-title{
-    text-align: center;
-    padding-top: 4px;
-    margin: 20px 0 16px 0px;
-    font-size: 28px;
-    height: 30px;
-    font-family: 'galmat';
-    background: linear-gradient(to right top, #b34e4e, #ad8a8a);
-    color: transparent;
-    -webkit-background-clip: text;
-}
-.missing-child-box .next{
-    position:absolute;
-    top: 45%;
-    right:5px;
-    font-size:2em;
-    color:white;
-    cursor: pointer;
-    z-index: 10;
-    text-shadow: 2px 4px 5px grey;
-}
-.missing-child-box .prev{
-    position:absolute;
-    top: 45%;
-    left: 5px;
-    font-size:2em;
-    color:white;
-    cursor: pointer;
-    z-index: 10;
-    text-shadow: 2px 4px 5px grey;
-}
-.missing-child-box .post-wrapper{
-    width: 78%;
-    height:350px;
-    margin:0px auto;
-    overflow: hidden;
-    padding:10px 0px 10px 0px;
-}
-.missing-child-box .post-wrapper .post{
-    width: 300px;
-    height: 300px;
-    margin: 0px 3px;
-    display: inline-block;
-    background: #ffc69457;
-    border-radius: 5px;
-    border: 3px solid #e7dfdf;
-}
-.missing-child-box .post-wrapper .post .post-info{
-    font-size: 15px;
-    height: 30%;
-    text-align: center;
-}
-.missing-child-box .post-wrapper .post .slider-image{
-    width:100%;
-    height:175px;
-    border-radius: 2px;
-}
-.missing-child-title{
-    margin: 10px;
-    font-family: 'galmat';
-    font-size: 20px;
-}
-.missing-child-content{
-    font-family: 'galmat';
-    font-size: 18px;
-}
-.tip-child {
-    display: block;
-    border-width: 0;
-    border: 2px solid #f60;
-    background-color: transparent;
-    border-radius: 2px;
-    color: #f60;
-    line-height: 20px;
-    font-size: 15px;
-    text-align: center;
-    font-family: '__NanumGothicBold_5';
-    font-weight: 400;
-    position: relative;
-    transition-duration: .2s;
-    transition-delay: 0;
-    transition-timing-function: ease;
-    width: 144px;
-    min-height: 38px;
-    margin-top: 10px;
-    margin-left: 28px;
-    padding: 5px 0;
-    border-radius: 5px;
-}
-
-.tip-child:hover {
-    background-color: #f60;
-    color: #fff;
-    text-decoration: none
-}
-
-.card-news-video{
-    background-color: #a9a9d7;
-    width: 480px;
-    height: 420px;
-    float: left;
-    margin-right: 10px;
-}
-.card-news-child{
-    background-color: #a9a9d7;
-    width: 250px;
-    height: 420px;
-    padding-top: 10px;
-    float: left;
-    text-align: -webkit-center;
-}
-.missing-child {
-    position: relative;
-    width: 200px;
-    margin-top: 20px;
-    padding-top: 20px;
-    height: 360px;
-    background-color: #0f92e0;
-}
-.child-pic{
-    margin-top: 20px;
-    width: 140px;
-    height: 180px;
-    background-color: #1b1b8d;
-
-}
-.child-text-box{
-    margin-top: 10px;
-    width: 160px;
-    height: 80px;
-    background-color: aquamarine;
 }
 .card-news-content-pic{
     width: 338px;
@@ -658,6 +579,119 @@ address,strong{font-style:normal; font-weight:normal;}
     font-size: 20px;
     letter-spacing: -.5px;
     color: #333;
+}
+/*실종 아동 찾기 */
+.missing-child-box {
+    width: 270px;
+    margin: 0px auto;
+    position: relative;
+    float: left;
+    border: 3px solid #9f9999;
+    background-color: rgb(255 255 255);
+}
+.missing-child-box .missing-main-title{
+    text-align: center;
+    padding-top: 4px;
+    margin: 20px 0 16px 0px;
+    font-size: 28px;
+    height: 30px;
+    font-family: 'galmat';
+    background: linear-gradient(to right top, #ff6060, #8f5937);
+    color: transparent;
+    -webkit-background-clip: text;
+}
+.missing-child-box .child-next{
+    position:absolute;
+    top: 45%;
+    right:5px;
+    font-size:2em;
+    color:white;
+    cursor: pointer;
+    z-index: 10;
+    text-shadow: 2px 4px 5px grey;
+}
+.missing-child-box .child-prev{
+    position:absolute;
+    top: 45%;
+    left: 5px;
+    font-size:2em;
+    color:white;
+    cursor: pointer;
+    z-index: 10;
+    text-shadow: 2px 4px 5px grey;
+}
+.missing-child-box .child-wrapper{
+    width: 78%;
+    height:350px;
+    margin:0px auto;
+    overflow: hidden;
+    padding:10px 0px 10px 0px;
+}
+.missing-child-box .child-wrapper .post{
+    width: 300px;
+    height: 300px;
+    margin: 0px 3px;
+    display: inline-block;
+    background: white;
+    border-radius: 5px;
+    border: 4px solid #6a6763;
+}
+.missing-child-box .child-wrapper .post .post-info{
+    font-size: 15px;
+    height: 30%;
+    text-align: center;
+}
+.missing-child-box .child-wrapper .post .slider-image{
+    width: 100%;
+    height: 175px;
+    border-bottom: 3px solid #6a6763;
+}
+.missing-child-title{
+    margin: 8px 8px 8px 0;
+    font-family: 'galmat';
+    font-size: 20px;
+}
+.missing-child-content{
+    font-family: 'galmat';
+    font-size: 18px;
+}
+.tip-child {
+    display: block;
+    border-width: 0;
+    border: 2px solid #f60;
+    background-color: transparent;
+    border-radius: 2px;
+    color: #f60;
+    line-height: 20px;
+    font-size: 15px;
+    text-align: center;
+    font-family: 'haerye';
+    font-weight: 400;
+    position: relative;
+    transition-duration: .2s;
+    transition-delay: 0;
+    transition-timing-function: ease;
+    width: 144px;
+    min-height: 38px;
+    margin-top: 10px;
+    margin-left: 28px;
+    padding: 5px 0;
+    border-radius: 5px;
+}
+
+.tip-child:hover {
+    background-color: #f60;
+    color: #fff;
+    text-decoration: none
+}
+
+/*유튜브 영상 */
+.card-news-video{
+    background-color: #a9a9d7;
+    width: 480px;
+    height: 420px;
+    float: left;
+    margin-right: 10px;
 }
 
 /*함께하는 파트너----------------------------------------------------------------*/
