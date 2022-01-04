@@ -70,7 +70,7 @@ a, button, :before, :after { transition:background-color .3s, border .3s, color 
 .scrollDisable {height:100%; min-height:100%; overflow:hidden !important; touch-action:none;}
 .js-visible { display:block !important; opacity:0 !important; }
 
-/****************************** ICON ******************************/
+/****************************** ICON ***************************** 서브 헤더로 이동
 .ir, .ir-b:before, .ir-a:after { display:inline-block; vertical-align:middle; background-position:999px 999px; background-repeat:no-repeat; font-size:0; }
 .ir-b:before, .ir-a:after { content:''; }
 .ir { padding:0; margin:0; white-space:nowrap; font-size:1px; overflow:hidden; text-indent:-999px; color:transparent; line-height:0; }
@@ -79,7 +79,7 @@ a, button, :before, :after { transition:background-color .3s, border .3s, color 
 .i-help::before { content:'?'; position:absolute; left:0; right:0; top:0; text-align:center; font-size:13px; font-weight:700; line-height:21px; text-indent:0; }
 .i-arr-go::after { margin:0 0 1px 7px; width:6px; height:6px; border:0 solid #666; border-width:2px 2px 0 0; transform:rotate(45deg); background:none !important; }
 .i-arr-go.ty-i::after { border-color:#ff5000; }
-
+*/
 /****************************** TEXT ICON ******************************/
 
 /****************************** FORM ******************************/
@@ -422,8 +422,10 @@ body .fixed-scroll { position:fixed; left:0; top:0; width:100%; height:100%; ove
 	.header-in { left:50%; width:100%; margin:0; transform:translate(-50%); }
 
 	/* ICON */
+	/* 서브 헤더로 이동 
 	.ir, .ir-b:before, .ir-a:after { background-image:url("/resources/images/common/sprite.png"); }
 	.i-home { background-position:-456px 0; width: 19px; height: 17px; }
+	*/
 	.black .i-home, .lnb.fixed .i-home { background-position:-481px 0; }
 	.i-facebook { background-position:-190px -32px; width:13px; height:27px; }
 	.i-vimeo { background-position:-213px -32px; width:25px; height:27px; }
@@ -660,37 +662,9 @@ body .fixed-scroll { position:fixed; left:0; top:0; width:100%; height:100%; ove
 	.quick-menu .first-guide { bottom:8px; margin-right:18px; padding:8px 20px 10px 20px; font-size:14px; line-height:1.14; }
 	.quick-menu .help-msg { margin-right:18px; height:26px; line-height:24px; }
 	.quick-menu .first-guide::before, .quick-menu .help-msg::before { right:-8px; margin-top:-8px; border-width:8px 0 8px 11px; }
-	.contents { padding-top:88px; padding-bottom:130px; }
+	.contents { padding-top:88px; padding-bottom:130px; width:1140px; } /*홈페이지 사이즈에 맞에 width 부여*/
 
-	#footer { padding:0 0 34px; }
-	.footer-in { max-width:1536px; }
-	.footer-in .fmenu { display:block; flex-wrap:inherit; margin:0 0 20px; padding-bottom:21px; text-align:center; }
-	.footer-in .fmenu a { position:relative; display:inline-block; width:auto; margin:0; padding:0 18px; text-decoration:none; }
-	.footer-in .fmenu a + a::before { content:''; position:absolute; left:-2px; top:0.25em; width:1px; height:13px; background:#3e3e3e; }
-	.footer-in .i-logo-footer::before { left:0; top:50%; margin-top:-10px; width:214px; height:23px; }
-	.footer-in .office { font-size:14px; padding-left:278px; padding-right:318px; margin-top:30px; }
-	.footer-in .office dd, .footer-in .office .address { display:inline-block; margin-right:15px; line-height:1.5; }
-	.footer-in .office .copyright { margin-top:33px; }
-	.footer-in .outlink { position:absolute; right:20px; top:96px; width:290px; margin-top:0; display:flex; flex-wrap:wrap; }
-	.footer-in .familysite { width:100%; font-size:14px; }
-	.footer-in .familysite .list { padding-left:14px; padding-right:14px; }
-	.footer-in .familysite .list a { padding:6px 0; }
-	.footer-in .familysite .subj { width:100%; }
-	.footer-in .sns-area { position:relative; z-index:2; right:-10px; width:100%; margin:0 0 14px 0; text-align:right; order:-1; }
-	.footer-in .sns-area a { margin-left:4px; }
-	.footer-in .page-top { width:66px; height:66px; padding:27px 0 0; margin-bottom:20px; }
-	.footer-in .page-top::before { width:18px; height:18px; border-width:2px 0 0 2px; }
-
-	.footer-subscribe { display:flex; justify-content: center; align-items: center; padding:19px 0 21px; font-size:16px; border-top-width:2px; }
-	.footer-subscribe .ss-fm { width:490px; margin:0 0 0 40px; }
-	.footer-subscribe .ss-fm .ss-ipt { line-height:50px; padding:0 20px; font-size:16px; }
-	.footer-subscribe .ss-fm .ss-send { width:150px; line-height:50px; font-size:16px; }
-
-	/* 2021-07-30 추가 :: S */
-	.footer-subscribe .chk-g {margin-top: 0; margin-left: 16px;}
-	.footer-subscribe .fm-chk + .fm-chk-lb, .footer-subscribe .fm-chk + .checked-i {padding-left: 30px;}
-	/* 2021-07-30 추가 :: E */
-
+	
 	/*.sub-vis { height:330px; } 서브가 너무 커서 축소 시킴*/
 	.sub-vis .sub-title {font-size:60px; }/* padding:72px 118px 0; margin:0 auto;  내용축소로 인해 글자 중앙 정렬 맞지 않음*/
 	.sub-vis .lnb { height:50px; }

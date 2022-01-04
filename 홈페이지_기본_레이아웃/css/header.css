@@ -1,6 +1,6 @@
 .header-header-1 { /*.header*/
     position: relative;
-    z-index: 30
+    z-index: 999;
 }
 
  .header-header-1.is-scroll { /*:global .is-scroll*/
@@ -9,8 +9,7 @@
     top: 0;
     right: 0;
     left: 0;
-    z-index: 30;
-    border-bottom: 1px solid #fef4f1; /*#e8e8e8*/
+    z-index: 999;
     animation: dropHeader 0.3s;
  }
 
@@ -24,12 +23,10 @@
  }
  
  #header-main { /*.gnb */
-    border-bottom: 1px solid #ffeae3; /*1px solid #f0f0f0;*/
+    border-bottom: 1px solid #e7e5e4; /*1px solid #f0f0f0;*/
     background-color: #fff;
     text-align: right;
-    background: rgb(255,233,226);
-    background: linear-gradient(
-0deg, rgba(255,233,226,1) 0%, rgba(254,243,240,1) 24%, rgba(255,255,255,1) 74%);
+    background: rgb(255, 255, 255);
  }
  
  #header-top { /*.inner */
