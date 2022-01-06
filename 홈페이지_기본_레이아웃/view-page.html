@@ -122,18 +122,20 @@
 						<!-- 공유하기 // -->
                         
                         <div data-dropdown="" class="share">
-                            <button type="button" data-act="title" class="btn-share" onclick='toggleDiv()'><span class="ir i-share">공유</span></button>
-                            <div data-act="cont" id="share-cont" class="share-cont" tabindex="-1">
-                                <span class="share-in">
-                                    <a href="javascript:;" onclick="javascript:fnSnsShare($(this));" class="item" data-seq="613" data-img-url="" data-share="facebook" data-title="반짝반짝 빛날 너의 내일을 응원해!" data-cate="hope"><span class="ir-b i-facebook-2"></span><span class="in">페이스북</span></a>
-                                    <a href="javascript:;" onclick="javascript:fnSnsShare($(this));" class="item" data-seq="613" data-img-url="" data-share="twitter" data-title="반짝반짝 빛날 너의 내일을 응원해!" data-cate="hope"><span class="ir-b ir-b i-twitter-2"></span><span class="in">트위터</span></a>
-                                    <a href="javascript:;" onclick="javascript:sendKaKao();" class="item"><span class="ir-b i-kakao"></span><span class="in">카카오톡</span></a>
-                                    <button type="button" class="copy" onclick="fnSnsShare($(this));" title="https://www.smilegatefoundation.org/" data-seq="613" data-img-url="" data-share="url" id="sns_url" data-cate="hope"><span class="in-btn">URL 복사</span></button>
-                                </span>
+                            <button type="button" data-act="title" class="btn-share" id="btn-share"><span class="ir i-share">공유</span></button>
+                            <div class="modal-open">
+                                <div data-act="cont" id="share-cont" class="share-cont" tabindex="-1">
+                                    <span class="share-in">
+                                        <a href="javascript:;" onclick="" class="item" data-seq="613" data-img-url="" data-share="facebook" data-cate="hope"><span class="ir-b i-facebook-2"></span><span class="in">페이스북</span></a>
+                                        <a href="javascript:;" onclick="" class="item" data-seq="613" data-img-url="" data-share="twitter" data-cate="hope"><span class="ir-b ir-b i-twitter-2"></span><span class="in">트위터</span></a>
+                                        <a href="javascript:;" onclick="" class="item"><span class="ir-b i-kakao"></span><span class="in">카카오톡</span></a>
+                                        <button type="button" class="copy" onclick="clip(); return false;" title="https://www.smilegatefoundation.org/" data-seq="613" data-img-url="" data-share="url" id="sns_url" data-cate="hope"><span class="in-btn">URL 복사</span></button>
+                                    </span>
+                                </div>
                             </div>
                         </div>
 					
-								<button type="button" class="btn-act" onclick="fnDonation(); return false;">지금 기부하기</button>
+								<button type="button" class="btn-act" onclick="">지금 기부하기</button>
 						
 					</div>
 					
@@ -146,7 +148,7 @@
 				<div data-empty="true" style="text-align: center;"><img src="https://static2.smilegatefoundation.org/upload/20211222/1640153486768.png" style="width: 750px;" class="fr-fic fr-dib" data-filename="1640153486768.png" data-filerealname="2021.12_세아기부캠페인_컷팅1.png" data-iresult="1" data-seq="20167"><br><img src="https://static2.smilegatefoundation.org/upload/20211222/1640153501526.png" style="width: 750px;" class="fr-fic fr-dib" data-filename="1640153501526.png" data-filerealname="2021.12_세아기부캠페인_컷팅2.png" data-iresult="1" data-seq="20168"><br><a href="https://www.twitch.tv/sea_vtuber"><img src="https://static2.smilegatefoundation.org/upload/20211228/1640653332696.png" style="width: 750px;" class="fr-fic fr-dib" data-filename="1640653332696.png" data-filerealname="2021.12_세아기부캠페인_컷팅3.png" data-iresult="1" data-seq="20262"></a><br><a href="https://www.smilegatefoundation.org/hope/giveDetail?seq=613"><img src="https://static2.smilegatefoundation.org/upload/20211222/1640153517628.png" style="width: 750px;" class="fr-fic fr-dib" data-filename="1640153517628.png" data-filerealname="2021.12_세아기부캠페인_컷팅4.png" data-iresult="1" data-seq="20170"></a><br><img src="https://static2.smilegatefoundation.org/upload/20211222/1640153715441.png" style="width: 750px;" class="fr-fic fr-dib" data-filename="1640153715441.png" data-filerealname="2021.12_세아기부캠페인_컷팅5.png" data-iresult="1" data-seq="20172"></div>
 			</div>
 			<div class="btn-area">
-				<a href="javascript:history.go(-1);" class="btn-5">목록으로</a>
+				<a href="" class="btn-5">목록으로</a>
 			</div>
         </div>
     </div>
@@ -179,7 +181,7 @@ $(document).keydown(function(e) {
     }
 });
 
-/*공유 버튼 클릭 
+/*공유 버튼 클릭 시 창 열리고 다시 클릭시 꺼짐 'id=share-cont' 에 onclick='toggleDiv() 를 집어넣었으나 모달창으로 교체함
 function toggleDiv() {
   var div = document.getElementById('share-cont');
   if(div.style.display == 'none')  {
@@ -191,21 +193,32 @@ function toggleDiv() {
 */
 
 
-/*테스트 2*/
 // 팝업 열기
-$(document).on("click", ".btn-share", function (e){
-    alert("aaa");
-  var target = $(".share-cont");
+$(document).on("click", "#btn-share", function (e){
+  var target = $(".modal-open");
   $(target).addClass("show");
 });
 
 // 외부영역 클릭 시 팝업 닫기
 $(document).mouseup(function (e){
-  var LayerPopup = $(".share-cont");
+  var LayerPopup = $(".modal-open");
   if(LayerPopup.has(e.target).length === 0){
     LayerPopup.removeClass("show");
   }
 });
+
+function clip(){
+
+    var url = '';
+    var textarea = document.createElement("textarea");
+    document.body.appendChild(textarea);
+    url = window.document.location.href;
+    textarea.value = url;
+    textarea.select();
+    document.execCommand("copy");
+    document.body.removeChild(textarea);
+    alert("URL이 복사되었습니다.")
+}
 </script>
 
 </div>

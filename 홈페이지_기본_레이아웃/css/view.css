@@ -413,9 +413,14 @@
     width: 30px;
     height: 30px;
 }
-
-.share-cont {
+.modal-open{
     display: none;
+}
+.modal-open.show{
+    display: block;
+}
+.share-cont {
+    display: block;
     position: absolute;
     right: 0;
     top: 100%;
@@ -426,10 +431,10 @@
     background: #fff;
     border: 1px solid #d8d8d8;
 }
-.share-cont .show {
+
+.board-side .control .share-cont.show {
     display: block;
 }
-
 
 .board-side .control .share-cont {
     top: auto;
@@ -441,6 +446,7 @@
     display: inline-block;
     font-size: 14px;
 }
+
 .i-facebook-2, .i-twitter-2, .i-kakao {
     width: 70px;
     height: 70px;
