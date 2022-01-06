@@ -118,6 +118,7 @@
 					
 					<div class="control">
 						<!-- 공유하기 // -->
+                        <!--
 						<div data-dropdown="" class="share">
 							<button type="button" data-act="title" class="btn-share" onclick="javascript:changeClassName()"><span class="ir i-share">공유</span></button>
 							<div data-act="cont" tabindex="-1" class="" id="control_1" style="outline: 0px; display: none;">
@@ -130,6 +131,19 @@
 								</span>
 							</div>
 						</div>
+                        -->
+                        <div data-dropdown="" class="share">
+                            <button type="button" data-act="title" class="btn-share" onclick='toggleDiv()'><span class="ir i-share">공유</span></button>
+                            <div data-act="cont" class="share-cont" tabindex="-1" style="outline: 0px; display: none;">
+                                <span class="share-in">
+                                    <a href="javascript:;" onclick="javascript:fnSnsShare($(this));" class="item" data-seq="613" data-img-url="" data-share="facebook" data-title="반짝반짝 빛날 너의 내일을 응원해!" data-cate="hope"><span class="ir-b i-facebook-2"></span><span class="in">페이스북</span></a>
+                                    <a href="javascript:;" onclick="javascript:fnSnsShare($(this));" class="item" data-seq="613" data-img-url="" data-share="twitter" data-title="반짝반짝 빛날 너의 내일을 응원해!" data-cate="hope"><span class="ir-b ir-b i-twitter-2"></span><span class="in">트위터</span></a>
+                                    <a href="javascript:;" onclick="javascript:sendKaKao();" class="item"><span class="ir-b i-kakao"></span><span class="in">카카오톡</span></a>
+                                    <button type="button" class="copy" onclick="fnSnsShare($(this));" title="https://www.smilegatefoundation.org/" data-seq="613" data-img-url="" data-share="url" id="sns_url" data-cate="hope"><span class="in-btn">URL 복사</span></button>
+                                    <button type="button" class="close" data-act="close">닫기</button>
+                                </span>
+                            </div>
+                        </div>
 						<!-- // 공유하기 -->
 						
 						<!-- 일시/정기기부 -->
@@ -158,6 +172,8 @@
 			<div class="btn-area">
 				<a href="javascript:history.go(-1);" class="btn-5">목록으로</a>
 			</div>
+        </div>
+    </div>
 
 <!-- 댓글 기능 구현 안함-->
 
@@ -204,11 +220,40 @@ function aaa() {
 	document.getElementById('btn-share').style.display = 'block';
 }
 
+/*뉴 작업 테스트*/
+/*
+function toggleDiv() {
+    alert("aaa");
+  const div = document.getElementById('my_div');
+  
+  if(div.style.display === 'none')  {
+    div.style.display = 'block';
+  }else {
+    div.style.display = 'none';
+  }
+}
+*/
+/*테스트 2*/
+function toggleDiv() {
+    alert("aaa");
+  const div = document.getElementsByClassName('share-cont');
+  div.style.display = 'block';
+  alert(div.style.display);
+  if(div.style.display === 'none')  {
+      alert("aaabb");
+    div.style.display = 'block';
+  }else {
+      alert("none");
+    div.style.display = 'none';
+  }
+} 
+
 
 </script>
 
 </div>
 </body>
+
 <!--footer -->
     <footer class="footer-box">
         <div class="footer-top">

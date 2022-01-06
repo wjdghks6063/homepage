@@ -203,6 +203,7 @@
     top: -233%;
     padding-top: 113px;
     left: 300%;
+    background-color: #eee;
 }
 
 /*왼쪽 기부 창*/
@@ -415,7 +416,7 @@
 }
 
 .share-cont {
-    display: none;
+    display: block;
     position: absolute;
     right: 0;
     top: 100%;
@@ -426,11 +427,6 @@
     background: #fff;
     border: 1px solid #d8d8d8;
 }
-.share-cont .show {
-    display: block;
-}
-
-
 .board-side .control .share-cont {
     top: auto;
     bottom: 100%;

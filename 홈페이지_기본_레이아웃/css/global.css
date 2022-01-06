@@ -113,12 +113,10 @@ i {
   box-sizing: border-box;
 }
 
-input, textarea, select, button {
+input, textarea, select, button { /*background-color: transparent; box-shadow: none;appearance: none;*/
   border: 0;
   border-radius: 0;
   background-color: transparent;
-  box-shadow: none;
-  appearance: none;
 }
 
 button, input[type=button], input[type=reset], input[type=submit], input[type=checkbox] + label, input[type=radio] + label {
@@ -137,7 +135,7 @@ input[type=checkbox]:focus + label {
   outline: -webkit-focus-ring-color auto 5px;
 }
 
-input[type=checkbox], input[type=radio], .blind {
+.blind {
   overflow: hidden;
   position: absolute;
   width: 1px;
@@ -146,6 +144,17 @@ input[type=checkbox], input[type=radio], .blind {
   clip: rect(0 0 0 0);
 }
 
+/*
+input[type=checkbox], input[type=radio], .blind {
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  clip: rect(0 0 0 0);
+}
+*/
+  
 [aria-hidden=true]:not(svg) {
   display: none;
 }
