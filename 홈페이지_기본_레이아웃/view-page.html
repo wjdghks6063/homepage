@@ -123,7 +123,7 @@
                         
                         <div data-dropdown="" class="share">
                             <button type="button" data-act="title" class="btn-share" id="btn-share"><span class="ir i-share">공유</span></button>
-                            <div class="modal-open">
+                            <div class="share-open" id="share-open show">
                                 <div data-act="cont" id="share-cont" class="share-cont" tabindex="-1">
                                     <span class="share-in">
                                         <a href="javascript:;" onclick="" class="item" data-seq="613" data-img-url="" data-share="facebook" data-cate="hope"><span class="ir-b i-facebook-2"></span><span class="in">페이스북</span></a>
@@ -181,7 +181,8 @@ $(document).keydown(function(e) {
     }
 });
 
-/*공유 버튼 클릭 시 창 열리고 다시 클릭시 꺼짐 'id=share-cont' 에 onclick='toggleDiv() 를 집어넣었으나 모달창으로 교체함
+/*공유 버튼 클릭 시 창 열리고 다시 클릭시 꺼짐 'id=share-cont' 에 onclick='toggleDiv() 를 집어넣었으나 모달창으로 교체함*/
+/*
 function toggleDiv() {
   var div = document.getElementById('share-cont');
   if(div.style.display == 'none')  {
@@ -192,16 +193,15 @@ function toggleDiv() {
 }
 */
 
-
 // 팝업 열기
 $(document).on("click", "#btn-share", function (e){
-  var target = $(".modal-open");
+  var target = $(".share-open");
   $(target).addClass("show");
 });
 
 // 외부영역 클릭 시 팝업 닫기
 $(document).mouseup(function (e){
-  var LayerPopup = $(".modal-open");
+  var LayerPopup = $(".share-open");
   if(LayerPopup.has(e.target).length === 0){
     LayerPopup.removeClass("show");
   }

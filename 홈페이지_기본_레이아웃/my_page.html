@@ -15,6 +15,7 @@
     <link href="css/global.css" rel="stylesheet">
 
     <!--페이지 css-->
+    <link href="css/mypage-menu.css" rel="stylesheet">
     <link href="css/mypage.css" rel="stylesheet">
 
 
@@ -23,100 +24,179 @@
 </head>
 
 <body>
-    <div id="containar">
-        <!--script 밑에 body와 </div> 있음-->
-        <div id="warp" class="warp">
-            <header id="header" class="header-header-1">
-                <div id="header-main">
-                    <div id="header-top">
-                        <h1 class="logo-box">
-                            <a href="" class="logo-img"></a>
-                        </h1>
-                        <!-- 헤드 메뉴 내용 -->
-                        <div class="main-top-menu">
-                            <a class="main-text" href="#">기부</a>
-                            <a class="main-text" href="#">봉사</a>
-                            <a class="main-text" href="#">재능 기부</a>
-                            <a class="main-text" href="#">지역 뉴스</a>
-                            <a class="main-text" href="#">정기 후원</a>
-                        </div>
-
-                        <!-- 로그인 및 검색버튼-->
-                        <a class="login" href="">로그인</a>
-                        <span class="longbar"></span>
-                        <!--로그인 돋보기 사이 | 막대기 -->
-                        <a class="search-img" href=""><i class="fas fa-search" style="font-size: 22px;"></i></a>
-
+<div id="containar">
+    <!--script 밑에 body와 </div> 있음-->
+    <div id="warp" class="warp">
+        <header id="header" class="header-header-1">
+            <div id="header-main">
+                <div id="header-top">
+                    <h1 class="logo-box">
+                        <a href="" class="logo-img"></a>
+                    </h1>
+                    <!-- 헤드 메뉴 내용 -->
+                    <div class="main-top-menu">
+                        <a class="main-text" href="#">기부</a>
+                        <a class="main-text" href="#">봉사</a>
+                        <a class="main-text" href="#">재능 기부</a>
+                        <a class="main-text" href="#">지역 뉴스</a>
+                        <a class="main-text" href="#">정기 후원</a>
                     </div>
-                </div>
-            </header>
-        </div>
 
-        <div class="my-page-box">
-            <div class="my-list-left">
-                <div class="my-profile">
-                    <img src="https://phinf.pstatic.net/contact/profile/blog/32/5/wjdghks6063.jpg?type=s160" width="72"
-                        height="72" alt="유저 프로필 사진" class="my-profile-img" id="profileImageArea">
-                    <div class="my_profile_nickname">
-                        <span class="ellipsis" id="nickNameArea">nickname1234</span>
-                    </div>
-                    <div class="my_profile_id" id="maskingIdArea">nickn****</div>
-                </div>
-                <div id="lnb" class="my_lnb" role="menu">
-                    <a href="/my/home" role="menuitem" class="my_lnb_item" id="lnb_my_home" aria-current="true">MY홈</a> 
-                    <a href="/my/notification" role="menuitem" class="my_lnb_item" id="lnb_my_notification" aria-current="false">내 소식</a>
-                    <a href="/my/timeline#type=all" role="menuitem" class="my_lnb_item" id="lnb_my_activity" aria-current="false">활동내역</a> 
-                    <a href="/my/regularPayment?type=donation" role="menuitem" id="my_lnb_item" class="my_lnb_item" aria-current="false">정기결제관리</a>
-                        <div role="menu">
-                            <a href="/my/regularPayment?type=donation" role="menuitem" class="my_lnb_sub_item" id="lnb_my_regular_donation" aria-current="false">정기기부</a> 
-                            <a href="/my/regularPayment?type=deposit" role="menuitem" class="my_lnb_sub_item" id="lnb_my_regular_deposit" aria-current="false">정기저금</a>
-                        </div>
-                    <a href="/my/tax"role="menuitem" class="my_lnb_item" id="lnb_my_tax" aria-current="false">연말정산</a>
-                </div>
+                    <!-- 로그인 및 검색버튼-->
+                    <a class="login" href="">로그인</a>
+                    <span class="longbar"></span>
+                    <!--로그인 돋보기 사이 | 막대기 -->
+                    <a class="search-img" href=""><i class="fas fa-search" style="font-size: 22px;"></i></a>
 
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <div class="my-page-box">
+        <div class="my-list-left">
+            <div class="my-profile">
+                <img src="https://phinf.pstatic.net/contact/profile/blog/32/5/wjdghks6063.jpg?type=s160" width="72"
+                    height="72" alt="유저 프로필 사진" class="my-profile-img" id="profileImageArea">
+                <div class="my_profile_nickname">
+                    <span class="ellipsis" id="nickNameArea">nickname1234</span>
+                </div>
+                <div class="my_profile_id" id="maskingIdArea">nickn****</div>
+            </div>
+            <div id="lnb" class="my_lnb" role="menu">
+                <a href="../홈페이지_기본_레이아웃/my_page.html" role="menuitem" class="my_lnb_item" id="lnb_my_home" aria-current="true">MY홈</a> 
+                <a href="../홈페이지_기본_레이아웃/my_page_news.html" role="menuitem" class="my_lnb_item" id="lnb_my_notification" aria-current="false">내 소식</a>
+                <a href="" role="menuitem" class="my_lnb_item" id="lnb_my_activity" aria-current="false">활동내역</a> 
+                <a href="" role="menuitem" id="my_lnb_item" class="my_lnb_item" aria-current="false">정기결제관리</a>
+                <a href=""role="menuitem" class="my_lnb_item" id="lnb_my_tax" aria-current="false">연말정산</a>
             </div>
         </div>
+        
+            <!--후원 금액 표시 -->
+        <div role="main" id="content" class="my_content">
+            <div class="my_summary_wrap" id="mySummaryAll">
+                <div class="my_summary_box">
+                    <div class="my_summary_title">
+                        <h3 class="title">나의 보유금액</h3>
+                        <span class="number_wrap"><span class="number" id="myCashTotal">0</span>원</span>
+                    </div>
+                    <a href="" class="my_summary_item"><span class="title">보유콩</span><span class="number_wrap"><strong class="number" id="myProject">0</strong>원</span></a> 
+                    <a href="/my/timeline#type=payment" class="my_summary_item"><span class="title">결제금액</span><span class="number_wrap"><strong class="number" id="myCharge">0</strong>원</span></a> 
+                    <a href="/my/timeline#type=deposit" class="my_summary_item"><span class="title">콩저금통</span><span class="number_wrap"><strong class="number" id="myDeposit">0</strong>원</span></a>
+                </div>
+                <div class="my_summary_box">
+                    <div class="my_summary_title">
+                        <h3 class="title">총 후원금액</h3><span class="number_wrap"><strong class="number" id="mySponTotal">4,200</strong>원</span>
+                    </div>
+                        <a href="/my/timeline#type=donation" class="my_summary_item"><span class="title">모금함 기부</span><span class="number_wrap"><strong class="number" id="myDonation">4,200</strong>원</span></a> 
+                        <a href="/my/timeline#type=funding" class="my_summary_item"><span class="title">펀딩참여</span><span class="number_wrap"><strong class="number" id="myFunding">0</strong>원</span></a>
+                </div>
+            </div>
+        
+
+                <!-- 내 소식 -->
+            <div class="my_recent_news_wrap" id="my_notification" style="">
+                <h3 class="my_recent_news_title">내 소식</h3><span class="my_recent_news_count">총<span class="number" id="my_notification_count">42</span>건</span>
+                <p class="my_recent_news_guide"><i class="fas fa-exclamation-circle"></i> 결제 알림은 마케팅 알림 수신 동의 여부와 관계없이 발송됩니다.</p><div class="my_recent_news_feed">
+                    <ol class="list_news" id="my_notification_list">
+                        <li class="item_news type_funding">
+                            <div class="card_news">
+                                <a href="https://happybean.naver.com/my/notification" class="link"></a>
+                                <p class="text_content">
+                                    해피빈 마케팅 정보 수신을 거부하셨습니다. (날짜: 2022-01-07)
+                                </p>
+                                <span class="text_information">해피빈</span>
+                                <span class="text_information">2분전</span>
+                                <button class="button_delete" data-id="61d7a8bc2c5ccf943ae43321">
+                                    <span class="blind">삭제</span>
+                                </button>
+                            </div>
+                        </li>
+                        <li class="item_news type_funding">
+                            <div class="card_news">
+                                <a href="https://happybean.naver.com/my/notification" class="link"></a>
+                                <p class="text_content">
+                                    해피빈 마케팅 정보 수신에 동의하셨습니다. (날짜: 2022-01-07)
+                                </p>
+                                <span class="text_information">해피빈</span>
+                                <span class="text_information">2분전</span>
+                                <button class="button_delete" data-id="61d7a8bc49c1a162a5e711aa">
+                                    <span class="blind">삭제</span>
+                                </button>
+                            </div>
+                        </li>
+                        <li class="item_news type_funding">
+                            <div class="card_news">
+                                <a href="https://happybean.naver.com/my/notification" class="link"></a>
+                                <p class="text_content">
+                                    해피빈 마케팅 정보 수신을 거부하셨습니다. (날짜: 2022-01-07)
+                                </p>
+                                <span class="text_information">해피빈</span>
+                                <span class="text_information">2분전</span>
+                                <button class="button_delete" data-id="61d7a8b94403a833c495ec99">
+                                    <span class="blind">삭제</span>
+                                </button>
+                            </div>
+                        </li>
+                    </ol>
+                </div><a href="/my/notification" class="my_recent_news_link">전체보기 <i class="fas fa-chevron-right"></i></a>
+            </div>
+
+            <div class="my_recent_activity_wrap" id="myActivityAll" aria-hidden="false"><h3 class="blind">나의 최근활동</h3><div id="timelineArea"><div class="my_activity_month"><span class="number">2022.01</span></div>
+            
+            
+                <ul class="my_activity_list" id="timeline202201">
+                    <!-- [D] 콩소멸 -->
+                    <li class="my_activity_cong timeline_root">
+                        <div class="my_activity_inner">
+                            <div class="my_activity_left">
+                                <div class="my_activity_cong_cancelled"></div>
+                            </div>
+                            <div class="my_activity_center">
+                                <strong class="my_activity_date">2022.01.01</strong>
+                                <strong class="my_activity_text2">콩소멸</strong>
+                                <span class="my_activity_title">[2021_3] 지식인 답변채택콩</span>
+                            </div>
+                            <div class="my_activity_right">
+                                <div class="my_activity_price">- <strong class="number">100</strong>원</div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+
+                <div class="my_activity_month"><span class="number">2021.09</span></div>
+                <ul class="my_activity_list" id="timeline202109">
+                    <!-- [D] 콩받음 -->
+                    <li class="my_activity_cong timeline_root">
+                        <div class="my_activity_inner">
+                            <div class="my_activity_left">
+                                <div class="my_activity_cong_success"></div>
+                            </div>
+                            <div class="my_activity_center">
+                                <strong class="my_activity_date">2021.09.23</strong>
+                                <strong class="my_activity_text2">콩받음</strong>
+                                <span class="my_activity_title">[2021_3] 지식인 답변채택콩</span>
+                                <strong class="my_activity_date">2021.12.31 콩소멸 예정</strong>
+                            </div>
+                            <div class="my_activity_right">
+                                <div class="my_activity_price">+ <strong class="number">100</strong>원</div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+            </div><a href="/my/timeline#type=all" class="my_activity_link">활동내역 전체보기</a>
+
+        </div><!-- 활동 내용 div-->
+
+
+        </div>
+    </div>
+
+
 
         <script>
-            /* 후원 금액 숫자 순차적 증가*/
-            $({
-                val: 0
-            }).animate({
-                val: 150000
-            }, {
-                /*val : 0 /시작 숫자 / val : 150000 종료 숫자 */
-                duration: 1500,
-                step: function () {
-                    var num = numberWithCommas(Math.floor(this.val));
-                    $(".donation-t-money").text(num);
-                },
-                complete: function () {
-                    var num = numberWithCommas(Math.floor(this.val));
-                    $(".donation-t-money").text(num);
-                }
-            });
-
-            $({
-                val: 0
-            }).animate({
-                val: 1.5
-            }, {
-                /*소숫점 표시시 사용*/
-                duration: 1000,
-                step: function () {
-                    var num = numberWithCommas(this.val.toFixed(1));
-                    $(".count_num2").text(num);
-                },
-                complete: function () {
-                    var num = numberWithCommas(this.val.toFixed(1));
-                    $(".count_num2").text(num);
-                }
-            });
-
-            function numberWithCommas(x) { //numberWithCommas 3자리마다 콤마
-                return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-            }
-
             /*메인 header 따라 오기 */
             let header = document.querySelector(".header-header-1");
             let headerHeight = header.offsetHeight;
@@ -131,8 +211,6 @@
             };
             // 
 
-
-
             var kkeys = [],
                 konami = "38,38,40,40,37,39,37,39,66,65";
             $(document).keydown(function (e) {
@@ -144,7 +222,7 @@
             });
         </script>
 
-    </div>
+</div>
 </body>
 <!--footer -->
 <footer class="footer-box">

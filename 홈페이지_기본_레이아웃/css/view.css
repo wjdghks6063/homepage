@@ -200,7 +200,7 @@
 
 .board-side .inner {
     position: absolute;
-    top: -233%;
+    top: -232%;
     padding-top: 113px;
     left: 300%;
 }
@@ -413,10 +413,10 @@
     width: 30px;
     height: 30px;
 }
-.modal-open{
+.share-open{
     display: none;
 }
-.modal-open.show{
+.share-open.show{
     display: block;
 }
 .share-cont {
