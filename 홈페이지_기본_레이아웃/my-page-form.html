@@ -65,88 +65,17 @@
                 <div class="my_profile_id" id="maskingIdArea">nickn****</div>
             </div>
             <div id="lnb" class="my_lnb" role="menu"> <!-- aria-current="#" 여부에 따라 색상 불 들어옴-->
-                <a href="../홈페이지_기본_레이아웃/my_page.html" role="menuitem" class="my_lnb_item" id="lnb_my_home" aria-current="false">MY홈</a> 
-                <a href="../홈페이지_기본_레이아웃/my_page_news.html" role="menuitem" class="my_lnb_item" id="lnb_my_notification" aria-current="true">내 소식</a>
-                <a href="" role="menuitem" class="my_lnb_item" id="lnb_my_activity" aria-current="false">활동내역</a> 
-                <a href="" role="menuitem" id="my_lnb_item" class="my_lnb_item" aria-current="false">정기결제관리</a>
+                <a href="../홈페이지_기본_레이아웃/my-page-home.html" role="menuitem" class="my_lnb_item" id="lnb_my_home" aria-current="false">MY홈</a> 
+                <a href="../홈페이지_기본_레이아웃/my-page-news.html" role="menuitem" class="my_lnb_item" id="lnb_my_notification" aria-current="true">내 소식</a>
+                <a href="../홈페이지_기본_레이아웃/my-page-activity.html" role="menuitem" class="my_lnb_item" id="lnb_my_activity" aria-current="false">활동내역</a> 
+                <a href="../홈페이지_기본_레이아웃/my-page-regular payment.html" role="menuitem" id="my_lnb_item" class="my_lnb_item" aria-current="false">정기결제관리</a>
                 <a href=""role="menuitem" class="my_lnb_item" id="lnb_my_tax" aria-current="false">연말정산</a>
             </div>
         </div>
         
 
         <!-- 내용 창 -->
-        <div role="main" id="content" class="my_content"><div class="my_news_wrap">
-            <h2 class="my_title">내 소식</h2>
-            <form>
-                <div class="my_news_option">
-                    <div class="list_category">
-                        <span class="item_category type_donation">
-                            <input id="noti_agreement_donation" type="checkbox" class="input_checkbox"> <label for="noti_agreement_donation" class="label_checkbox"><span class="icon_checkbox"></span>기부</label> 
-                        </span>
-                        <span class="item_category type_funding">
-                            <input id="noti_agreement_funding" type="checkbox" class="input_checkbox"> <label for="noti_agreement_funding" class="label_checkbox"><span class="icon_checkbox"></span>펀딩</label>
-                        </span>
-                    </div>
-                    <div class="my_news_receiption">
-                        <strong class="title">마케팅 알림</strong> 
-                        <input id="noti_agreement" type="checkbox" class="input_switch"> 
-                        <label for="noti_agreement" class="label_switch"><span class="label_switch_handler"></span></label>
-                    </div>
-                    <ul class="list_guide">
-                        <li class="item_guide highlight">결제 알림은 마케팅 알림 수신 동의 여부와 관계없이 발송됩니다.</li>
-                        <li class="item_guide">마케팅 알림 수신에 동의하시면 해피빈의 새 소식과 이벤트를 빠르게 보내드립니다.</li>
-                        <li class="item_guide">마케팅 알림 수신을 거부하시면, 펀딩 프리뷰 알림을 받아보실 수 없습니다.</li>
-                        <li class="item_guide">최근 30일 내 수신한 소식만 노출됩니다.</li>
-                        <li class="item_guide">푸시 알림은 '네이버앱&gt;설정&gt;알림'에서 변경 가능합니다.</li>
-                    </ul>
-                </div>
-            </form>
-
-            <div class="my_news_feed" id="my_notification">
-                <ol class="list_news" id="my_notification_list">	
-                    <li class="item_news type_funding">
-                        <div class="card_news">
-                            <a href="https://happybean.naver.com/my/notification" class="link"></a>
-                            <p class="text_content">
-                                해피빈 마케팅 정보 수신에 동의하셨습니다. (날짜: 2022-01-07)
-                            </p>
-                            <span class="text_information">해피빈</span>
-                            <span class="text_information">2시간전</span>
-                            <button class="button_delete" data-id="61d7a8984403a833c495ec8c">
-                                <span class="blind">삭제</span>
-                            </button>
-                        </div>
-                    </li>
-                    <li class="item_news type_funding">
-                        <div class="card_news">
-                            <a href="https://happybean.naver.com/my/notification" class="link"></a>
-                            <p class="text_content">
-                                해피빈 마케팅 정보 수신을 거부하셨습니다. (날짜: 2022-01-07)
-                            </p>
-                            <span class="text_information">해피빈</span>
-                            <span class="text_information">2시간전</span>
-                            <button class="button_delete" data-id="61d7a8972c5ccf943ae43313">
-                                <span class="blind">삭제</span>
-                            </button>
-                        </div>
-                    </li>
-                    <li class="item_news type_funding">
-                        <div class="card_news">
-                            <a href="https://happybean.naver.com/my/notification" class="link"></a>
-                            <p class="text_content">
-                                해피빈 마케팅 정보 수신에 동의하셨습니다. (날짜: 2022-01-07)
-                            </p>
-                            <span class="text_information">해피빈</span>
-                            <span class="text_information">2시간전</span>
-                            <button class="button_delete" data-id="61d7a89649c1a162a5e7119c">
-                                <span class="blind">삭제</span>
-                            </button>
-                        </div>
-                    </li>
-                </ol>
-            </div>
         
-        </div></div>
 
 
     </div> <!--my-page-box-->

@@ -116,7 +116,7 @@ i {
 input, textarea, select, button { /*background-color: transparent; box-shadow: none;appearance: none;*/
   border: 0;
   border-radius: 0;
-  background-color: transparent;
+  /*background-color: transparent; 투명도 방해 */ 
 }
 
 button, input[type=button], input[type=reset], input[type=submit], input[type=checkbox] + label, input[type=radio] + label {
