@@ -16,7 +16,7 @@
 
     <!--페이지 css-->
     <link href="css/mypage-menu.css" rel="stylesheet">
-    <link href="css/management-page-home.css" rel="stylesheet">
+    <link href="css/mypage-news.css" rel="stylesheet">
 
 
 
@@ -53,115 +53,57 @@
         </header>
     </div>
 
+    <!-- 마이 페이지 메뉴-->
     <div class="my-page-box">
         <div class="my-list-left">
             <div class="my-profile">
-                <img src="https://phinf.pstatic.net/contact/profile/blog/32/5/wjdghks6063.jpg?type=s160" width="72"
-                    height="72" alt="유저 프로필 사진" class="my-profile-img" id="profileImageArea">
+                <img src="../홈페이지_기본_레이아웃/img/heart.png" width="72" height="72" alt="유저 프로필 사진" class="my-profile-img" 
+                    style="background-color: white;" id="profileImageArea">
                 <div class="my_profile_nickname">
                     <span class="ellipsis" id="nickNameArea">nickname1234</span>
                 </div>
                 <div class="my_profile_id" id="maskingIdArea">nickn****</div>
             </div>
-            <div id="lnb" class="my_lnb" role="menu">
-                <a href="../홈페이지_기본_레이아웃/my-pag-home.html" role="menuitem" class="my_lnb_item" id="lnb_my_home" aria-current="true">MY홈</a> 
-                <a href="../홈페이지_기본_레이아웃/my-page-news.html" role="menuitem" class="my_lnb_item" id="lnb_my_notification" aria-current="false">봉사</a>
-                <a href="../홈페이지_기본_레이아웃/my-page-activity.html" role="menuitem" class="my_lnb_item" id="lnb_my_activity" aria-current="false">기부</a> 
-                <a href="../홈페이지_기본_레이아웃/my-page-regular payment.html" role="menuitem" id="my_lnb_item" class="my_lnb_item" aria-current="false">월 별 조회</a>
-                <a href="../홈페이지_기본_레이아웃/my-page-Year-end-settlement.html"role="menuitem" class="my_lnb_item" id="lnb_my_tax" aria-current="false">회원 관리</a>
+            <div id="lnb" class="my_lnb" role="menu"> <!-- aria-current="#" 여부에 따라 색상 불 들어옴-->
+                <a href="../홈페이지_기본_레이아웃/my-page-home.html" role="menuitem" class="my_lnb_item" id="lnb_my_home" aria-current="false">MY홈</a> 
+                <a href="../홈페이지_기본_레이아웃/my-page-news.html" role="menuitem" class="my_lnb_item" id="lnb_my_notification" aria-current="true">내 소식</a>
+                <a href="../홈페이지_기본_레이아웃/my-page-activity.html" role="menuitem" class="my_lnb_item" id="lnb_my_activity" aria-current="false">활동내역</a> 
+                <a href="../홈페이지_기본_레이아웃/my-page-regular payment.html" role="menuitem" id="my_lnb_item" class="my_lnb_item" aria-current="false">정기결제관리</a>
+                <a href="../홈페이지_기본_레이아웃/my-page-Year-end-settlement.html"role="menuitem" class="my_lnb_item" id="lnb_my_tax" aria-current="false">연말정산</a>
             </div>
         </div>
         
-            <!--후원 금액 표시 -->
-        <div role="main" id="content" class="my_content">
-            <div class="my_summary_wrap" id="mySummaryAll">
-                <div class="my_summary_box">
-                    <div class="my_summary_title">
-                        <h3 class="title">오늘의 후원금액</h3>
-                        <span class="number_wrap"><span class="number" id="myCashTotal">0</span> 원</span>
-                    </div>
-                    <a href="" class="my_summary_item"><span class="title">아동</span><span class="number_wrap"><strong class="number" id="myProject">0</strong> 원</span></a>
-                    <a href="" class="my_summary_item"><span class="title">노인</span><span class="number_wrap"><strong class="number" id="myProject">0</strong> 원</span></a> 
-                    <a href="" class="my_summary_item"><span class="title">재난</span><span class="number_wrap"><strong class="number" id="myProject">0</strong> 원</span></a> 
-                    <a href="" class="my_summary_item"><span class="title">보유콩</span><span class="number_wrap"><strong class="number" id="myProject">0</strong> 원</span></a> 
-            
-                </div>
-                <div class="my_summary_box">
-                    <div class="my_summary_title">
-                        <h3 class="title">오늘의 봉사 일정</h3><span class="number_wrap"><strong class="number" id="mySponTotal">15</strong> 건</span>
-                    </div>
-                        <a href="/my/timeline#type=donation" class="my_summary_item"><span class="title">봉사 게시글 작성</span><span class="number_wrap"><strong class="number" id="myDonation">25</strong> 건</span></a> 
-                        <a href="/my/timeline#type=funding" class="my_summary_item"><span class="title">봉사 참여 인원</span><span class="number_wrap"><strong class="number" id="myFunding">125</strong> 명</span></a>
-                </div>
-            </div>
-        
 
-                <!-- 내 소식 -->
-            <div class="my_recent_news_wrap" id="my_notification">
-                <h3 class="my_recent_news_title">진행중인 기부</h3><span class="my_recent_news_count">총<span class="number" id="my_notification_count">42</span>건</span>
-                <div class="my_recent_news_feed"><!--전체 보기-->
-                    <ol class="list_news" id="my_notification_list">
-                        <li class="item_news type_funding">
-                            <div class="card_news">
-                                <a href="https://happybean.naver.com/my/notification" class="link"></a>
-                                <p class="text_content">
-                                    사랑으로 기부해 주세요. (날짜: 2022-01-07 ~ 2022-01-22)
-                                </p>
-                                <span class="text_information">젤리빈즈</span>
-                                <span class="text_information">61% 진행중</span>
-                                <button class="button_delete" data-id="61d7a8bc2c5ccf943ae43321">
-                                    <span class="blind">삭제</span>
-                                </button>
-                            </div>
-                        </li>
-                        <li class="item_news type_funding">
-                            <div class="card_news">
-                                <a href="https://happybean.naver.com/my/notification" class="link"></a>
-                                <p class="text_content">
-                                    훈훈한 열기를 전달해 주세요. (날짜: 2022-01-01~ 2022-01-17)
-                                </p>
-                                <span class="text_information">사랑의 연탄배달</span>
-                                <span class="text_information">목표금액 당성</span>
-                                <button class="button_delete" data-id="61d7a8bc49c1a162a5e711aa">
-                                    <span class="blind">삭제</span>
-                                </button>
-                            </div>
-                        </li>
-                        <li class="item_news type_funding">
-                            <div class="card_news">
-                                <a href="https://happybean.naver.com/my/notification" class="link"></a>
-                                <p class="text_content">
-                                    해피빈 마케팅 정보 수신을 거부하셨습니다. (날짜: 2022-01-07)
-                                </p>
-                                <span class="text_information">해피빈</span>
-                                <span class="text_information">2분전</span>
-                                <button class="button_delete" data-id="61d7a8b94403a833c495ec99">
-                                    <span class="blind">삭제</span>
-                                </button>
-                            </div>
-                        </li>
-                    </ol>
-                </div><a href="/my/notification" class="my_recent_news_link">전체보기 <i class="fas fa-chevron-right"></i></a>
-            </div>
+        <!-- 내용 창 -->
+        <div role="main" id="content" class="my_content"><div class="my_news_wrap">
+            <h2 class="my_title">내 소식</h2>
+            <form>
+                <div class="my_news_option">
+                    <div class="list_category">
+                        <span class="item_category type_donation">
+                            <input id="noti_agreement_donation" type="checkbox" class="input_checkbox"> <label for="noti_agreement_donation" class="label_checkbox"><span class="icon_checkbox"></span>기부</label> 
+                        </span>
+                        <span class="item_category type_funding">
+                            <input id="noti_agreement_funding" type="checkbox" class="input_checkbox"> <label for="noti_agreement_funding" class="label_checkbox"><span class="icon_checkbox"></span>펀딩</label>
+                        </span>
+                    </div>
+                    <div class="my_news_receiption">
+                        <strong class="title">마케팅 알림</strong> 
+                        <input id="noti_agreement" type="checkbox" class="input_switch"> 
+                        <label for="noti_agreement" class="label_switch"><span class="label_switch_handler"></span></label>
+                    </div>
+                    <ul class="list_guide">
+                        <li class="item_guide highlight">결제 알림은 마케팅 알림 수신 동의 여부와 관계없이 발송됩니다.</li>
+                        <li class="item_guide">마케팅 알림 수신에 동의하시면 해피빈의 새 소식과 이벤트를 빠르게 보내드립니다.</li>
+                        <li class="item_guide">마케팅 알림 수신을 거부하시면, 펀딩 프리뷰 알림을 받아보실 수 없습니다.</li>
+                        <li class="item_guide">최근 30일 내 수신한 소식만 노출됩니다.</li>
+                        <li class="item_guide">푸시 알림은 '네이버앱&gt;설정&gt;알림'에서 변경 가능합니다.</li>
+                    </ul>
+                </div>
+            </form>
 
-            <!-- 내 소식 -->
-            <div class="my_recent_news_wrap" id="my_notification">
-            <h3 class="my_recent_news_title">오늘의 봉사 일정</h3><span class="my_recent_news_count">총<span class="number" id="my_notification_count">42</span>건</span>
-            <div class="my_recent_news_feed"><!--전체 보기-->
-                <ol class="list_news" id="my_notification_list">
-                    <li class="item_news type_funding">
-                        <div class="card_news">
-                            <a href="https://happybean.naver.com/my/notification" class="link"></a>
-                            <p class="text_content">
-                                노인분들에게 희망을 전달해 주세요. (장소: 중구 태평로 152-12번지 희망노인회관)
-                            </p>
-                            <span class="text_information">하루나리</span>
-                            <span class="text_information">참여인원 : 23 명</span>
-                            <button class="button_delete" data-id="61d7a8bc2c5ccf943ae43321">
-                                <span class="blind">삭제</span>
-                            </button>
-                        </div>
-                    </li>
+            <div class="my_news_feed" id="my_notification">
+                <ol class="list_news" id="my_notification_list">	
                     <li class="item_news type_funding">
                         <div class="card_news">
                             <a href="https://happybean.naver.com/my/notification" class="link"></a>
@@ -169,8 +111,8 @@
                                 해피빈 마케팅 정보 수신에 동의하셨습니다. (날짜: 2022-01-07)
                             </p>
                             <span class="text_information">해피빈</span>
-                            <span class="text_information">2분전</span>
-                            <button class="button_delete" data-id="61d7a8bc49c1a162a5e711aa">
+                            <span class="text_information">2시간전</span>
+                            <button class="button_delete" data-id="61d7a8984403a833c495ec8c">
                                 <span class="blind">삭제</span>
                             </button>
                         </div>
@@ -182,21 +124,32 @@
                                 해피빈 마케팅 정보 수신을 거부하셨습니다. (날짜: 2022-01-07)
                             </p>
                             <span class="text_information">해피빈</span>
-                            <span class="text_information">2분전</span>
-                            <button class="button_delete" data-id="61d7a8b94403a833c495ec99">
+                            <span class="text_information">2시간전</span>
+                            <button class="button_delete" data-id="61d7a8972c5ccf943ae43313">
+                                <span class="blind">삭제</span>
+                            </button>
+                        </div>
+                    </li>
+                    <li class="item_news type_funding">
+                        <div class="card_news">
+                            <a href="https://happybean.naver.com/my/notification" class="link"></a>
+                            <p class="text_content">
+                                해피빈 마케팅 정보 수신에 동의하셨습니다. (날짜: 2022-01-07)
+                            </p>
+                            <span class="text_information">해피빈</span>
+                            <span class="text_information">2시간전</span>
+                            <button class="button_delete" data-id="61d7a89649c1a162a5e7119c">
                                 <span class="blind">삭제</span>
                             </button>
                         </div>
                     </li>
                 </ol>
-            </div><a href="/my/notification" class="my_recent_news_link">전체보기 <i class="fas fa-chevron-right"></i></a>
-        </div>
+            </div>
+        
+        </div></div>
 
-        </div><!-- 활동 내용 div-->
 
-
-        </div>
-    </div>
+    </div> <!--my-page-box-->
 
 
 
@@ -223,6 +176,21 @@
                     kkeys = [];
                     alert('안녕하세요');
                 }
+            });
+
+            $(document).ready(function() {
+                $("#noti_agreement").click(function() { //<input type="checkbox" id="cbx_chkAll"> 가 체크 될 때 작동한다.
+                    if($("#noti_agreement").is(":checked")) $(".input_checkbox").prop("checked", true); // 전체 체크가 체크 되었다면 input type 이름이 t_check인 것들은 checked 값이 ture(체크)가 된다.
+                    else $(".input_checkbox").prop("checked", false); //input id가 중복 된다면 범위를 지정할수도 있다. .table input[id=t_check] 이런식으로 테이블 범위로만  한정할 수도 있다.
+                });
+                
+                $(".input_checkbox").click(function() { //input name으로 줬었는데 checkbox가 배열로 바뀌면서 name=t_check 나 t_check[] 둘다 인식하지 못해 id로 바꿔줌
+                    var total = $(".input_checkbox").length;
+                    var checked = $(".input_checkbox:checked").length;
+
+                    if(checked == 0) $("#noti_agreement").prop("checked", false);
+                    else $("#noti_agreement").prop("checked", true); 
+                });
             });
         </script>
 

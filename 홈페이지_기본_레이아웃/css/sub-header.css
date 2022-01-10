@@ -190,6 +190,7 @@
     font-size: 16px;
     font-weight: 400;
     color: #fff;
+    background-color: transparent;
 }
 
 .sub-header .sub-menu .dep[data-dropdown] > a::after, .sub-header .sub-menu .dep[data-dropdown] > button::after {

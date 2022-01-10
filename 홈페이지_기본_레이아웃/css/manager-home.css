@@ -248,6 +248,9 @@
 .list_news .item_news.type_funding::before {
     background-color: #0f92e0;
 }
+.list_news .item_news.type_donation::before {
+    background-color: #00ab33;
+}
 .list_news .card_news {
     position: relative;
     padding: 20px 105px 14px 19px;
