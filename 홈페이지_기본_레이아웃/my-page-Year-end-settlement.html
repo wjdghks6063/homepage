@@ -83,7 +83,7 @@
             <!-- 내용 창 -->
             <div role="main" id="content" class="my_content">
                 <h2 class="my_title">연말정산</h2>
-                <p class="my_tax_notice" style="">
+                <p class="my_tax_notice">
                     <em class="point"><i class="fas fa-exclamation-circle"></i> 기부금 영수증 내역 확인 기간이 아닙니다.</em>
                     기부금 영수증 발급을 신청하신 경우, 1월 중 오픈되는 연말정산 페이지에서 기부금 영수증 발급 정보 확인이 가능합니다.
                 </p>
@@ -135,7 +135,7 @@
                                     <label for="radio_disagree" class="my_tax_label">동의하지 않음</label> 
                             </div>
 
-                            <div class="my_tax_personal_area">
+                            <div class="my_tax_personal_area" id="my_tax_personal_area">
                                 <div class="my_tax_personal_group">
                                     <label for="donorName" class="my_tax_personal_label">기부자명</label> 
                                     <input type="text" id="donorName" class="my_tax_personal_input" name="realNameCrt.memberRealName" maxlength="30">
@@ -216,11 +216,12 @@
             document.addEventListener('DOMContentLoaded', function () {
                 // `change` 이벤츠 수신기를 체크박스에 부착
                 document.getElementById('radio_disagree').onchange = toggleBilling;
-                }, false);
+                document.getElementById('radio_agree').onchange = toggleBilling2;
+            }, false);
 
-                function toggleBilling() {
+            function toggleBilling() {
                 // 청구지 텍스트 입력 칸을 모두 선택
-                var billingItems = document.querySelectorAll('.my_tax_personal_area input[type="text"],input[type="radio"],button[type="button"]');
+                var billingItems = document.querySelectorAll('.my_tax_personal_area input[type="text"],.my_tax_personal_area  input[type="radio"],.my_tax_personal_area  button[type="button"]');
 
                 // 하나씩 토글
                 for (var i = 0; i < billingItems.length; i++) {
@@ -228,18 +229,18 @@
                 }
             }
 
-            /*라디오 버튼 제어 2번 방법*/
-            $(document).ready(function(){
-                $("input:radio[name=radio]").click(function(){
-                    if($("input[name=radio]:checked").val() == "1"){
-                    $("input:text[name=text]").attr("disabled",false);
-                    }else if($("input[name=radio]:checked").val() == "0"){
-                    $("input:text[name=text]").attr("disabled",true);
-                    }
-                });
-            });
-        
-    
+            
+
+            function toggleBilling2() {
+                // 청구지 텍스트 입력 칸을 모두 선택
+                var billingItems = document.querySelectorAll('.my_tax_personal_area input[type="text"],.my_tax_personal_area  input[type="radio"],.my_tax_personal_area  button[type="button"]');
+
+                // 하나씩 토글
+                for (var i = 0; i < billingItems.length; i++) {
+                    billingItems[i].disabled = !billingItems[i].disabled;
+                }
+            }
+
         </script>
 
     </div>

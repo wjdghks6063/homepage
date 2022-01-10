@@ -16,7 +16,7 @@
 
     <!--페이지 css-->
     <link href="css/mypage-menu.css" rel="stylesheet">
-    <link href="css/mypage-home.css" rel="stylesheet">
+    <link href="css/management-page-home.css" rel="stylesheet">
 
 
 
@@ -65,10 +65,10 @@
             </div>
             <div id="lnb" class="my_lnb" role="menu">
                 <a href="../홈페이지_기본_레이아웃/my-pag-home.html" role="menuitem" class="my_lnb_item" id="lnb_my_home" aria-current="true">MY홈</a> 
-                <a href="../홈페이지_기본_레이아웃/my-page-news.html" role="menuitem" class="my_lnb_item" id="lnb_my_notification" aria-current="false">내 소식</a>
-                <a href="../홈페이지_기본_레이아웃/my-page-activity.html" role="menuitem" class="my_lnb_item" id="lnb_my_activity" aria-current="false">활동내역</a> 
-                <a href="../홈페이지_기본_레이아웃/my-page-regular payment.html" role="menuitem" id="my_lnb_item" class="my_lnb_item" aria-current="false">정기결제관리</a>
-                <a href="../홈페이지_기본_레이아웃/my-page-Year-end-settlement.html"role="menuitem" class="my_lnb_item" id="lnb_my_tax" aria-current="false">연말정산</a>
+                <a href="../홈페이지_기본_레이아웃/my-page-news.html" role="menuitem" class="my_lnb_item" id="lnb_my_notification" aria-current="false">봉사</a>
+                <a href="../홈페이지_기본_레이아웃/my-page-activity.html" role="menuitem" class="my_lnb_item" id="lnb_my_activity" aria-current="false">기부</a> 
+                <a href="../홈페이지_기본_레이아웃/my-page-regular payment.html" role="menuitem" id="my_lnb_item" class="my_lnb_item" aria-current="false">월 별 조회</a>
+                <a href="../홈페이지_기본_레이아웃/my-page-Year-end-settlement.html"role="menuitem" class="my_lnb_item" id="lnb_my_tax" aria-current="false">회원 관리</a>
             </div>
         </div>
         
@@ -77,36 +77,38 @@
             <div class="my_summary_wrap" id="mySummaryAll">
                 <div class="my_summary_box">
                     <div class="my_summary_title">
-                        <h3 class="title">나의 보유금액</h3>
-                        <span class="number_wrap"><span class="number" id="myCashTotal">0</span>원</span>
+                        <h3 class="title">오늘의 후원금액</h3>
+                        <span class="number_wrap"><span class="number" id="myCashTotal">0</span> 원</span>
                     </div>
-                    <a href="" class="my_summary_item"><span class="title">보유콩</span><span class="number_wrap"><strong class="number" id="myProject">0</strong>원</span></a> 
-                    <a href="/my/timeline#type=payment" class="my_summary_item"><span class="title">결제금액</span><span class="number_wrap"><strong class="number" id="myCharge">0</strong>원</span></a> 
-                    <a href="/my/timeline#type=deposit" class="my_summary_item"><span class="title">콩저금통</span><span class="number_wrap"><strong class="number" id="myDeposit">0</strong>원</span></a>
+                    <a href="" class="my_summary_item"><span class="title">아동</span><span class="number_wrap"><strong class="number" id="myProject">0</strong> 원</span></a>
+                    <a href="" class="my_summary_item"><span class="title">노인</span><span class="number_wrap"><strong class="number" id="myProject">0</strong> 원</span></a> 
+                    <a href="" class="my_summary_item"><span class="title">재난</span><span class="number_wrap"><strong class="number" id="myProject">0</strong> 원</span></a> 
+                    <a href="" class="my_summary_item"><span class="title">보유콩</span><span class="number_wrap"><strong class="number" id="myProject">0</strong> 원</span></a> 
+            
                 </div>
                 <div class="my_summary_box">
                     <div class="my_summary_title">
-                        <h3 class="title">총 후원금액</h3><span class="number_wrap"><strong class="number" id="mySponTotal">4,200</strong>원</span>
+                        <h3 class="title">오늘의 봉사 일정</h3><span class="number_wrap"><strong class="number" id="mySponTotal">15</strong> 건</span>
                     </div>
-                        <a href="/my/timeline#type=donation" class="my_summary_item"><span class="title">모금함 기부</span><span class="number_wrap"><strong class="number" id="myDonation">4,200</strong>원</span></a> 
-                        <a href="/my/timeline#type=funding" class="my_summary_item"><span class="title">펀딩참여</span><span class="number_wrap"><strong class="number" id="myFunding">0</strong>원</span></a>
+                        <a href="/my/timeline#type=donation" class="my_summary_item"><span class="title">봉사 게시글 작성</span><span class="number_wrap"><strong class="number" id="myDonation">25</strong> 건</span></a> 
+                        <a href="/my/timeline#type=funding" class="my_summary_item"><span class="title">봉사 참여 인원</span><span class="number_wrap"><strong class="number" id="myFunding">125</strong> 명</span></a>
                 </div>
             </div>
         
 
                 <!-- 내 소식 -->
             <div class="my_recent_news_wrap" id="my_notification">
-                <h3 class="my_recent_news_title">내 소식</h3><span class="my_recent_news_count">총<span class="number" id="my_notification_count">42</span>건</span>
-                <p class="my_recent_news_guide"><i class="fas fa-exclamation-circle"></i> 결제 알림은 마케팅 알림 수신 동의 여부와 관계없이 발송됩니다.</p><div class="my_recent_news_feed">
+                <h3 class="my_recent_news_title">진행중인 기부</h3><span class="my_recent_news_count">총<span class="number" id="my_notification_count">42</span>건</span>
+                <div class="my_recent_news_feed"><!--전체 보기-->
                     <ol class="list_news" id="my_notification_list">
                         <li class="item_news type_funding">
                             <div class="card_news">
                                 <a href="https://happybean.naver.com/my/notification" class="link"></a>
                                 <p class="text_content">
-                                    해피빈 마케팅 정보 수신을 거부하셨습니다. (날짜: 2022-01-07)
+                                    사랑으로 기부해 주세요. (날짜: 2022-01-07 ~ 2022-01-22)
                                 </p>
-                                <span class="text_information">해피빈</span>
-                                <span class="text_information">2분전</span>
+                                <span class="text_information">젤리빈즈</span>
+                                <span class="text_information">61% 진행중</span>
                                 <button class="button_delete" data-id="61d7a8bc2c5ccf943ae43321">
                                     <span class="blind">삭제</span>
                                 </button>
@@ -116,10 +118,10 @@
                             <div class="card_news">
                                 <a href="https://happybean.naver.com/my/notification" class="link"></a>
                                 <p class="text_content">
-                                    해피빈 마케팅 정보 수신에 동의하셨습니다. (날짜: 2022-01-07)
+                                    훈훈한 열기를 전달해 주세요. (날짜: 2022-01-01~ 2022-01-17)
                                 </p>
-                                <span class="text_information">해피빈</span>
-                                <span class="text_information">2분전</span>
+                                <span class="text_information">사랑의 연탄배달</span>
+                                <span class="text_information">목표금액 당성</span>
                                 <button class="button_delete" data-id="61d7a8bc49c1a162a5e711aa">
                                     <span class="blind">삭제</span>
                                 </button>
@@ -142,51 +144,53 @@
                 </div><a href="/my/notification" class="my_recent_news_link">전체보기 <i class="fas fa-chevron-right"></i></a>
             </div>
 
-            <div class="my_recent_activity_wrap" id="myActivityAll" aria-hidden="false"><h3 class="blind">나의 최근활동</h3><div id="timelineArea"><div class="my_activity_month"><span class="number">2022.01</span></div>
-            
-            
-                <ul class="my_activity_list" id="timeline202201">
-                    <!-- [D] 콩소멸 -->
-                    <li class="my_activity_cong timeline_root">
-                        <div class="my_activity_inner">
-                            <div class="my_activity_left">
-                                <div class="my_activity_cong_cancelled"></div>
-                            </div>
-                            <div class="my_activity_center">
-                                <strong class="my_activity_date">2022.01.01</strong>
-                                <strong class="my_activity_text2">콩소멸</strong>
-                                <span class="my_activity_title">[2021_3] 지식인 답변채택콩</span>
-                            </div>
-                            <div class="my_activity_right">
-                                <div class="my_activity_price">- <strong class="number">100</strong>원</div>
-                            </div>
+            <!-- 내 소식 -->
+            <div class="my_recent_news_wrap" id="my_notification">
+            <h3 class="my_recent_news_title">오늘의 봉사 일정</h3><span class="my_recent_news_count">총<span class="number" id="my_notification_count">42</span>건</span>
+            <div class="my_recent_news_feed"><!--전체 보기-->
+                <ol class="list_news" id="my_notification_list">
+                    <li class="item_news type_funding">
+                        <div class="card_news">
+                            <a href="https://happybean.naver.com/my/notification" class="link"></a>
+                            <p class="text_content">
+                                노인분들에게 희망을 전달해 주세요. (장소: 중구 태평로 152-12번지 희망노인회관)
+                            </p>
+                            <span class="text_information">하루나리</span>
+                            <span class="text_information">참여인원 : 23 명</span>
+                            <button class="button_delete" data-id="61d7a8bc2c5ccf943ae43321">
+                                <span class="blind">삭제</span>
+                            </button>
                         </div>
                     </li>
-                </ul>
-
-
-                <div class="my_activity_month"><span class="number">2021.09</span></div>
-                <ul class="my_activity_list" id="timeline202109">
-                    <!-- [D] 콩받음 -->
-                    <li class="my_activity_cong timeline_root">
-                        <div class="my_activity_inner">
-                            <div class="my_activity_left">
-                                <div class="my_activity_cong_success"></div>
-                            </div>
-                            <div class="my_activity_center">
-                                <strong class="my_activity_date">2021.09.23</strong>
-                                <strong class="my_activity_text2">콩받음</strong>
-                                <span class="my_activity_title">[2021_3] 지식인 답변채택콩</span>
-                                <strong class="my_activity_date">2021.12.31 콩소멸 예정</strong>
-                            </div>
-                            <div class="my_activity_right">
-                                <div class="my_activity_price">+ <strong class="number">100</strong>원</div>
-                            </div>
+                    <li class="item_news type_funding">
+                        <div class="card_news">
+                            <a href="https://happybean.naver.com/my/notification" class="link"></a>
+                            <p class="text_content">
+                                해피빈 마케팅 정보 수신에 동의하셨습니다. (날짜: 2022-01-07)
+                            </p>
+                            <span class="text_information">해피빈</span>
+                            <span class="text_information">2분전</span>
+                            <button class="button_delete" data-id="61d7a8bc49c1a162a5e711aa">
+                                <span class="blind">삭제</span>
+                            </button>
                         </div>
                     </li>
-                </ul>
-
-            </div><a href="/my/timeline#type=all" class="my_activity_link">활동내역 전체보기</a>
+                    <li class="item_news type_funding">
+                        <div class="card_news">
+                            <a href="https://happybean.naver.com/my/notification" class="link"></a>
+                            <p class="text_content">
+                                해피빈 마케팅 정보 수신을 거부하셨습니다. (날짜: 2022-01-07)
+                            </p>
+                            <span class="text_information">해피빈</span>
+                            <span class="text_information">2분전</span>
+                            <button class="button_delete" data-id="61d7a8b94403a833c495ec99">
+                                <span class="blind">삭제</span>
+                            </button>
+                        </div>
+                    </li>
+                </ol>
+            </div><a href="/my/notification" class="my_recent_news_link">전체보기 <i class="fas fa-chevron-right"></i></a>
+        </div>
 
         </div><!-- 활동 내용 div-->
 

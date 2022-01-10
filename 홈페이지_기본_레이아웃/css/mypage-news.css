@@ -265,6 +265,7 @@ button, input[type=button], input[type=checkbox]+label, input[type=radio]+label,
     position: absolute;
     top: 7px;
     right: 7px;
+    background-color:transparent;
 }
 .list_news .button_delete:after, .list_news .button_delete:before {
     content: '';
