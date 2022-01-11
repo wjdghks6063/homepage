@@ -79,12 +79,18 @@
  }
  
  .main-top-menu { /*.menu*/
-    position: absolute;
-    top: 23px;
-    right: 100px;
-    left: 100px;
-    text-align: center
- }
+   position: absolute;
+   display: flex;
+   top: 23px;
+   right: 100px;
+   left: 100px;
+   text-align: center;
+   justify-content: center;
+}
+.main-top-login {
+   display: flex;
+   justify-content: flex-end;
+}
  
  /* 유저 정보 ------------------ */
  
@@ -93,7 +99,7 @@
     position: relative;
     z-index: 1;
     margin: 20px -2px 0 0;
-    line-height: 30px
+    line-height: 30px;
  }
  
  .img {

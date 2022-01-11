@@ -1,101 +1,10 @@
-.my_summary_wrap {
-    display: table;
-    table-layout: fixed;
-    position: relative;
-    width: 100%;
-    border: 1px solid #e0e0e0;
-    margin-bottom: 13px;
-}
-.my_summary_box {
-    display: table-cell;
-    padding: 38px 33px 37px 38px;
-    vertical-align: top;
-}
-.my_summary_box+.my_summary_box {
-    padding: 38px 38px 37px 33px;
-}
-.my_summary_box:before {
-    position: absolute;
-    top: 21px;
-    bottom: 21px;
-    left: 50%;
-    width: 1px;
-    background-color: rgba(0,0,0,.06);
-    content: '';
-}
-.my_summary_title {
-    border-bottom: 1px solid #f0f0f0;
-    padding-bottom: 31px;
-}
-.my_summary_title .title {
-    float: left;
-    margin-top: 8px;
-    font-size: 19px;
-    font-weight: 400;
-    line-height: 1.27;
-}
-
-.my_summary_title .number_wrap {
-    float: right;
-    font-size: 26px;
-    font-weight: 300;
-    line-height: 41px;
-    color: #00ab33;
-}
-.my_summary_title .number {
-    font-family: NanumSquareWebFont,dotum,Sans-serif;
-    font-size: 37px;
-    font-weight: 400;
-    letter-spacing: -.5px;
-    vertical-align: top;
-}
-.my_summary_title:after {
-    display: table;
-    table-layout: fixed;
-    clear: both;
-    content: '';
-}
-.my_summary_item {
-    display: block;
-    margin-top: 16px;
-}
-.my_summary_title+.my_summary_item {
-    margin-top: 20px;
-}
-.my_summary_item .title {
-    display: inline-block;
-    position: relative;
-    margin-top: 4px;
-    padding-right: 12px;
-    font-size: 15px;
-    line-height: 1.26;
-}
-.my_summary_item .number_wrap {
-    float: right;
-    font-size: 16px;
-    line-height: 24px;
-}
-.my_summary_item .number {
-    display: inline-block;
-    font-family: NanumSquareWebFont,dotum,Sans-serif;
-    font-size: 20px;
-    letter-spacing: -.5px;
-    vertical-align: top;
-    font-weight: bold;
-}
-.my_summary_item:after {
-    display: table;
-    table-layout: fixed;
-    clear: both;
-    content: '';
-}
 .my_recent_news_wrap {
     position: relative;
     margin-top: 46px;
 }
 .my_recent_news_title {
     display: inline-block;
-    font-family: NanumSquareWebFont,dotum,Sans-serif;
+    font-family: 'maru-buri-reg';
     font-size: 22px;
     line-height: 27px;
     color: #202020;
@@ -172,6 +81,9 @@
 /*각 기부에 따라 색상 변경*/
 .list_news .item_news.type_funding::before {
     background-color: #0f92e0;
+}
+.list_news .item_news.type_donation::before {
+    background-color: #00ab33;
 }
 .list_news .card_news {
     position: relative;
@@ -399,4 +311,184 @@ i.fas.fa-chevron-right {
     font-size: 15px;
     line-height: 43px;
     text-align: center;
+}
+/*달력 및 검색 부분 css -------------------------------------------------*/
+.my_content {
+    float: right;
+    width: 884px;
+}
+.my_title {
+    font-family: 'maru-buri-reg';
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: -.3px;
+}
+.blind, input[type=checkbox], input[type=radio] {
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    clip: rect(0 0 0 0);
+}
+
+.my_summary_wrap {
+    display: table;
+    table-layout: fixed;
+    position: relative;
+    width: 100%;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 13px;
+}
+.my_summary_box {
+    display: table-cell;
+    padding: 38px 33px 37px 38px;
+    vertical-align: top;
+}
+.my_summary_box+.my_summary_box {
+    padding: 38px 38px 37px 33px;
+}
+.my_summary_box:before {
+    position: absolute;
+    top: 21px;
+    bottom: 21px;
+    left: 33%;
+    width: 1px;
+    background-color: rgb(226 226 226);
+    content: '';
+}
+.my_summary_box+.my_summary_box:before {
+    position: absolute;
+    top: 21px;
+    bottom: 21px;
+    left: 66%;
+    width: 1px;
+    background-color: rgba(0,0,0,.06);
+    content: '';
+}
+.my_summary_title {
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 31px;
+}
+.my_summary_title .title {
+    float: left;
+    margin-top: 8px;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 1.27;
+    font-family: 'maru-buri-reg';
+    color: #515151c9;
+}
+
+.my_summary_title .number_wrap {
+    float: right;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 41px;
+    color: #0f92e0;
+    font-family: 'maru-buri-reg';
+}
+.my_summary_title .number {
+    font-family: NanumSquareWebFont,dotum,Sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: -.5px;
+    vertical-align: top;
+}
+.my_summary_title:after {
+    display: table;
+    table-layout: fixed;
+    clear: both;
+    content: '';
+}
+.my_summary_item {
+    display: block;
+    margin-top: 16px;
+}
+.my_summary_title+.my_summary_item {
+    margin-top: 20px;
+}
+.my_summary_item .title {
+    display: inline-block;
+    position: relative;
+    margin-top: 4px;
+    padding-right: 12px;
+    font-size: 15px;
+    line-height: 1.26;
+}
+.my_summary_item .number_wrap {
+    float: right;
+    font-size: 16px;
+    line-height: 24px;
+}
+.my_summary_item .number {
+    display: inline-block;
+    font-family: NanumSquareWebFont,dotum,Sans-serif;
+    font-size: 20px;
+    letter-spacing: -.5px;
+    vertical-align: top;
+    font-weight: bold;
+}
+.my_summary_item:after {
+    display: table;
+    table-layout: fixed;
+    clear: both;
+    content: '';
+}
+.activity_category {
+    margin: 33px 0 3px;
+    padding-left: 1px;
+}
+.activity_category:after {
+    display: table;
+    table-layout: fixed;
+    clear: both;
+    content: '';
+}
+.activity_category_item {
+    float: left;
+    width: 178px;
+    margin-left: -1px;
+    border: 1px solid #e0e0e0;
+    font-size: 16px;
+    line-height: 41px;
+    letter-spacing: -.3px;
+    text-align: center;
+    color: #828282;
+}
+.activity_category_item:first-child {
+    width: 177px;
+}
+.activity_category_item[aria-pressed=true] {
+    position: relative;
+    z-index: 1;
+    border-color: #0f7be0;
+    background-color: #0f92e0;
+    color: #fff;
+}
+.activity_category_item:first-child+.activity_category_item {
+    width: 177px;
+}
+.activity_category_link {
+    display: block;
+    padding-top: 14px;
+    clear: both;
+    text-align: right;
+}
+.activity_category_link .link {
+    display: inline-block;
+    position: relative;
+    padding: 5px 10px;
+    color: #828282;
+}
+.my_activity_calendar_wrap {
+    padding: 15px 0;
+    border: 1px solid #e0e0e0;
+    background-color: #fcfcfc;
+    text-align: center;
+    border-bottom: 1px;
+}
+.activity_calendar_btn_wrap {
+    display: inline-block;
+    position: relative;
 }
