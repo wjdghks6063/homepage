@@ -67,7 +67,6 @@
                 <a href="../홈페이지_기본_레이아웃/manager-home.html" role="menuitem" class="my_lnb_item" id="lnb_my_home" aria-current="false">MY홈</a> 
                 <a href="../홈페이지_기본_레이아웃/manager-donation.html" role="menuitem" class="my_lnb_item" id="lnb_my_notification" aria-current="true">기부</a>
                 <a href="../홈페이지_기본_레이아웃/manager-volunteer.html" role="menuitem" class="my_lnb_item" id="lnb_my_activity" aria-current="false">봉사</a> 
-                <a href="../홈페이지_기본_레이아웃/manager-regular payment.html" role="menuitem" id="my_lnb_item" class="my_lnb_item" aria-current="false">월 별 조회</a>
                 <a href="../홈페이지_기본_레이아웃/manager-Year-end-settlement.html"role="menuitem" class="my_lnb_item" id="lnb_my_tax" aria-current="false">회원 관리</a>
             </div>
         </div>
@@ -80,15 +79,15 @@
                     <fieldset>
                         <legend class="blind">활동내역 필터</legend>
                         <div class="activity_category" aria-hidden="false"> <!-- aria-pressed="true" 면 색 들어옴 -->
-                            <a href="#" role="button"class="activity_category_item" id="all" aria-pressed="true" data-type="all">전체 내역</a> 
-                            <a href="#" role="button" class="activity_category_item" id="donation" aria-pressed="false" data-type="donation">아동 내역</a> 
-                            <a href="#" role="button" class="activity_category_item" id="funding" aria-pressed="false" data-type="funding">노인 내역</a> 
-                            <a href="#" role="button" class="activity_category_item" id="deposit" aria-pressed="false" data-type="deposit">재난 내역</a>
-                            <a href="#" role="button" class="activity_category_item" id="cong" aria-pressed="false" data-type="cong">콩 내역</a>
-
+                            <a href="#" role="button"class="activity_category_item" id="all" aria-pressed="true" data-type="all">전체 조회</a> 
+                            <a href="#" role="button" class="activity_category_item" id="donation" aria-pressed="false" data-type="donation">아동</a> 
+                            <a href="#" role="button" class="activity_category_item" id="funding" aria-pressed="false" data-type="funding">노인</a> 
+                            <a href="#" role="button" class="activity_category_item" id="deposit" aria-pressed="false" data-type="deposit">중구</a>
+                            <a href="#" role="button" class="activity_category_item" id="cong" aria-pressed="false" data-type="cong">유성구</a>
+                            <a href="#" role="button" class="activity_category_item" id="cong" aria-pressed="false" data-type="cong">재난</a>
+                        </div>
                             <div class="activity_category_link" data-type="payment"><a href="../홈페이지_기본_레이아웃/manager-donation-search.html" class="link" id="activity_category_payment">
-                                <i class="fas fa-search"></i>&nbsp;&nbsp;상세 검색</a>
-                            </div>
+                            <i class="fas fa-search"></i>&nbsp;&nbsp;상세 검색</a>
                         </div>
                     </fieldset>
                     <div class="my_npaybanner_wrap" style="display:none"></div>
@@ -101,7 +100,7 @@
                         <h3 class="title">오늘의 기부 일정</h3>
                         <span class="number_wrap"><span class="number" id="myCashTotal">0</span> 건</span>
                     </div>
-                    <a href="" class="my_summary_item"><span class="title">진행중</span><span class="number_wrap"><strong class="number" id="myProject">0</strong> 건</span></a>
+                    <a href="" class="my_summary_item"><span class="title">진행 중</span><span class="number_wrap"><strong class="number" id="myProject">0</strong> 건</span></a>
                     <a href="" class="my_summary_item"><span class="title">달성 완료</span><span class="number_wrap"><strong class="number" id="myProject">0</strong> 건</span></a> 
                     <a href="" class="my_summary_item"><span class="title">마감</span><span class="number_wrap"><strong class="number" id="myProject">0</strong> 건</span></a> 
                 </div>
@@ -110,7 +109,7 @@
                         <h3 class="title">이번 주 기부 일정</h3>
                         <span class="number_wrap"><span class="number" id="myCashTotal">0</span> 건</span>
                     </div>
-                    <a href="" class="my_summary_item"><span class="title">진행중</span><span class="number_wrap"><strong class="number" id="myProject">0</strong> 건</span></a>
+                    <a href="" class="my_summary_item"><span class="title">진행 중</span><span class="number_wrap"><strong class="number" id="myProject">0</strong> 건</span></a>
                     <a href="" class="my_summary_item"><span class="title">달성 완료</span><span class="number_wrap"><strong class="number" id="myProject">0</strong> 건</span></a> 
                     <a href="" class="my_summary_item"><span class="title">마감</span><span class="number_wrap"><strong class="number" id="myProject">0</strong> 건</span></a> 
                 </div>
@@ -119,9 +118,9 @@
                         <h3 class="title">이번 달 기부 일정</h3>
                         <span class="number_wrap"><span class="number" id="myCashTotal">15</span> 건</span>
                     </div>
-                    <a href="" class="my_summary_item"><span class="title">진행중</span><span class="number_wrap"><strong class="number" id="myProject">0</strong> 건</span></a>
+                    <a href="" class="my_summary_item"><span class="title">진행 중</span><span class="number_wrap"><strong class="number" id="myProject">0</strong> 건</span></a>
                     <a href="" class="my_summary_item"><span class="title">달성 완료</span><span class="number_wrap"><strong class="number" id="myProject">0</strong> 건</span></a> 
-                    <a href="" class="my_summary_item"><span class="title">마감</span><span class="number_wrap"><strong class="number" id="myProject">0</strong> 건</span></a> 
+                    <a href="" class="my_summary_item"><span class="title">마감</span><span class="number_wrap"><strong class="number" id="myProject">0</strong> 건</span></a>
                 </div>
             </div>
         
@@ -244,7 +243,6 @@
                     header.classList.remove("is-scroll");
                 }
             };
-            // 
 
             var kkeys = [],
                 konami = "38,38,40,40,37,39,37,39,66,65";

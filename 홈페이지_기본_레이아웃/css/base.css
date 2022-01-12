@@ -256,6 +256,7 @@ address,strong{font-style:normal; font-weight:normal;}
     background-color: #10c838;
     text-align: right;
     vertical-align: top;
+    max-width: 100%;
 }
 .donation-parameter-orange{
     display: inline-block;

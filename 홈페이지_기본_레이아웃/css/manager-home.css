@@ -35,14 +35,28 @@
     line-height: 1.27;
 }
 
-.my_summary_title .number_wrap {
+.my_summary_title .number_donation {
     float: right;
     font-size: 26px;
     font-weight: 300;
     line-height: 41px;
     color: #00ab33;
 }
+.my_summary_title .number_volunteer {
+    float: right;
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 41px;
+    color: #0f92e0;
+}
 .my_summary_title .number {
+    font-family: NanumSquareWebFont,dotum,Sans-serif;
+    font-size: 37px;
+    font-weight: 400;
+    letter-spacing: -.5px;
+    vertical-align: top;
+}
+.my_summary_title .big_number {
     font-family: NanumSquareWebFont,dotum,Sans-serif;
     font-size: 37px;
     font-weight: 400;

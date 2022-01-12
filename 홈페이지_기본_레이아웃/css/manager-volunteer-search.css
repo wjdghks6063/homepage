@@ -3,7 +3,7 @@
     width: 884px;
 }
 .my_title {
-    font-family: NanumSquareWebFont,dotum,Sans-serif;
+    font-family: 'maru-buri-reg';
     font-size: 22px;
     line-height: 26px;
     letter-spacing: -.3px;
@@ -19,7 +19,6 @@
 .activity_category {
     margin: 33px 0 3px;
     padding-left: 1px;
-    display: flex;
 }
 .activity_category:after {
     display: table;
@@ -29,6 +28,7 @@
 }
 .activity_category_item {
     float: left;
+    width: 178px;
     margin-left: -1px;
     border: 1px solid #e0e0e0;
     font-size: 16px;
@@ -36,8 +36,9 @@
     letter-spacing: -.3px;
     text-align: center;
     color: #828282;
-    flex-grow: 1;
-    flex-basis: min-content;
+}
+.activity_category_item:first-child {
+    width: 177px;
 }
 .activity_category_item[aria-pressed=true] {
     position: relative;
@@ -45,6 +46,9 @@
     border-color: #0fbc35;
     background-color: #10c838;
     color: #fff;
+}
+.activity_category_item:first-child+.activity_category_item {
+    width: 177px;
 }
 .activity_category_link {
     display: block;
@@ -63,7 +67,7 @@
     border: 1px solid #e0e0e0;
     background-color: #fcfcfc;
     text-align: center;
-    margin-top: 20px;
+    margin: 34px 0 15px;
 }
 .activity_calendar_btn_wrap {
     display: inline-block;
@@ -122,17 +126,34 @@ input#calendar_2 {
     background-position-y: 6px;
     background-size: 18px;
 }
+/*목록 버튼*/
+.sorting_area, .sorting_area_stretch {
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+}
+select.select {
+    width: 140px;
+    height: 37px;
+    border: 1px solid #e3e3e3;
+    background-color: #fff;
+    margin-left: 5px;
+}
+/*--------------------------------------*/
 .activity_calendar_search {
     width: 70px;
     min-height: 37px;
     margin-left: 7px;
     padding-top: 1px;
-    border: 1px solid #00ab33;
-    background-color: #10c838;
+    border: 1px solid #0f8fe0;
+    background-color: #0f92e0;
     font-size: 15px;
     line-height: 2.2;
     color: #fff;
     vertical-align: top;
+}
+.my_recent_activity_wrap {
+    margin-top: 50px;
 }
 .my_activity_month {
     position: relative;
@@ -186,11 +207,11 @@ input#calendar_2 {
     border-radius: 50%;
 }
 .my_activity_cong_cancelled:before {
-    background-image: url(../img/coin.png);
+    background-image: url(../img/hand.png);
     filter: invert(85%) sepia(12%) saturate(18%) hue-rotate(345deg) brightness(91%) contrast(85%);
     background-position: 50% 50%;
     background-size: cover;
-    width: 34px;
+    width:  38px;
     height: 36px;
     display: inline-block;
     content: '';
@@ -200,15 +221,15 @@ input#calendar_2 {
     width: 72px;
     height: 72px;
     padding: 17px 18px;
-    border: 1px solid #10c838;
+    border: 1px solid #0f92e0;
     border-radius: 50%;
 }
 .my_activity_cong_success:before {
-    background-image: url(../img/coin.png);
-    filter: invert(50%) sepia(98%) saturate(728%) hue-rotate(88deg) brightness(97%) contrast(90%);
+    background-image: url(../img/hand.png);
+    filter: invert(44%) sepia(46%) saturate(4387%) hue-rotate(178deg) brightness(99%) contrast(88%);
     background-position: 50% 50%;
     background-size: cover;
-    width: 34px;
+    width: 38px;
     height: 36px;
     display: inline-block;
     content: '';
@@ -258,7 +279,7 @@ input#calendar_2 {
 }
 /*더보기 버튼*/
 .btn_horizontal_more {
-    display: none;
+    display: block;
     width: 100%;
     margin-top: 30px;
     padding-top: 1px;
@@ -271,7 +292,6 @@ input#calendar_2 {
 /*조회 내용이 없는 경우*/
 .my_recent_activity_wrap {
     margin-top: 50px;
-    display: block; /*기본을 none 처리후 자바를 통해 block 처리해야함*/
 }
 .none_message {
     height: 492px;

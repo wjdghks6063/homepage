@@ -123,10 +123,11 @@ button, input[type=button], input[type=reset], input[type=submit], input[type=ch
   cursor: pointer;
 }
 
+/*
 button:disabled, input[type=button]:disabled, input[type=reset]:disabled, input[type=submit]:disabled {
   cursor: default;
 }
-
+*/
 input[type=checkbox]:disabled + label, input[type=radio]:disabled + label {
   cursor: default;
 }

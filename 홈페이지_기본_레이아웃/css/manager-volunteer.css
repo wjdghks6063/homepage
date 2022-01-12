@@ -21,7 +21,7 @@
     margin-left: 4px;
     font-family: NanumSquareWebFont,dotum,Sans-serif;
     font-size: 17px;
-    color: #00ab33;
+    color: #0f92e0;
     vertical-align: bottom;
 }
 .my_recent_news_guide {
@@ -438,6 +438,8 @@ i.fas.fa-chevron-right {
 .activity_category {
     margin: 33px 0 3px;
     padding-left: 1px;
+    display: flex;
+    align-items: flex-start;
 }
 .activity_category:after {
     display: table;
@@ -447,7 +449,6 @@ i.fas.fa-chevron-right {
 }
 .activity_category_item {
     float: left;
-    width: 178px;
     margin-left: -1px;
     border: 1px solid #e0e0e0;
     font-size: 16px;
@@ -455,9 +456,8 @@ i.fas.fa-chevron-right {
     letter-spacing: -.3px;
     text-align: center;
     color: #828282;
-}
-.activity_category_item:first-child {
-    width: 177px;
+    flex-grow: 1;
+    flex-basis: min-content;
 }
 .activity_category_item[aria-pressed=true] {
     position: relative;
@@ -465,9 +465,6 @@ i.fas.fa-chevron-right {
     border-color: #0f7be0;
     background-color: #0f92e0;
     color: #fff;
-}
-.activity_category_item:first-child+.activity_category_item {
-    width: 177px;
 }
 .activity_category_link {
     display: block;
@@ -480,6 +477,7 @@ i.fas.fa-chevron-right {
     position: relative;
     padding: 5px 10px;
     color: #828282;
+    padding-bottom: 7px;
 }
 .my_activity_calendar_wrap {
     padding: 15px 0;

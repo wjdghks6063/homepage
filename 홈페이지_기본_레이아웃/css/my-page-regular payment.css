@@ -129,13 +129,14 @@
 .ly_wrapper {
     overflow-y: auto;
     position: fixed;
-    top: 30%;
+    top: 20%;
     right: 0;
     bottom: 0;
     left: 0;
     z-index: 999;
     text-align: center;
     font-size: 0;
+    overflow: hidden;
 }
 .ly_npay_change {
     display: inline-block;

@@ -290,3 +290,45 @@ button, input[type=button], input[type=checkbox]+label, input[type=radio]+label,
     transform: translate(-50%,-50%) rotate(
 135deg);
 }
+/*더보기 버튼*/
+.btn_horizontal_more {
+    display: block; /*몇개 이하인 경우 none 처리후 내용이 많을시 블록처리*/
+    width: 100%;
+    margin-top: 30px;
+    padding-top: 1px;
+    clear: both;
+    border: 1px solid #e5e5e5;
+    background-color: #f6f6f6;
+    line-height: 42px;
+    color: #333;
+}
+/*조회 내용이 없는 경우*/
+.my_recent_activity_wrap {
+    margin-top: 50px;
+    display: block; /*조회 했을 시 내용이 없는 경우 block 처리*/
+}
+.none_message {
+    height: 492px;
+    border: 1px solid #e3e3e3;
+    border-width: 1px 0;
+    font-size: 18px;
+    line-height: 1.11;
+    text-align: center;
+}
+.none_message:before {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    content: '';
+}
+.none_message .none_message_inner {
+    display: inline-block;
+    vertical-align: middle;
+}
+.none_message .small_text {
+    display: block;
+    margin-top: 6px;
+    font-size: 14px;
+    line-height: 1.36;
+    color: #828282;
+}

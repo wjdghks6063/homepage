@@ -89,11 +89,7 @@
                         <div class="activity_category" aria-hidden="false"> <!-- aria-pressed="true" 면 색 들어옴 -->
                             <a href="#" role="button"class="activity_category_item" id="all" aria-pressed="true" data-type="all">전체 내역</a> 
                             <a href="#" role="button" class="activity_category_item" id="donation" aria-pressed="false" data-type="donation">기부 내역</a> 
-                            <a href="#" role="button" class="activity_category_item" id="funding" aria-pressed="false" data-type="funding">펀딩 내역</a> 
-                            <a href="#" role="button" class="activity_category_item" id="deposit" aria-pressed="false" data-type="deposit">저금 내역</a>
-                            <a href="#" role="button" class="activity_category_item" id="cong" aria-pressed="false" data-type="cong">콩 내역</a>
-
-                            <div class="activity_category_link" data-type="payment"><a href="/my/timeline#type=payment" class="link" id="activity_category_payment">결제내역으로 보기</a></div>
+                            <a href="#" role="button" class="activity_category_item" id="funding" aria-pressed="false" data-type="funding">봉사 내역</a> 
                         </div>
                     </fieldset>
                     <div class="my_npaybanner_wrap" style="display:none"></div>
@@ -158,25 +154,26 @@
                             </ul>
                         </div>
                         
-                        <!-- 내용이 많은 경우 더보기 버튼 활성화 -->
-                        <button type="button" style="display:none" class="btn_horizontal_more" disabled="disabled">더보기</button>
+                        <!-- 내용이 많은 경우 더보기 버튼 활성화 --> <!-- 내용이 n개 이상인 경우 none에서 block 처리 해야함 -->
+                        <button type="button" class="btn_horizontal_more" disabled="disabled">더보기</button>
                     </div>
 
                     <!-- 검색 결과가 없거나 활동 내용이 없는 경우 띄울 창 display를 block으로 처리한다.-->
-                    <div class="my_recent_activity_wrap" id="defaultNothing" style="display: none;">
-                        <div class="none_message">
+                    <div class="my_recent_activity_wrap" id="defaultNothing">
+                        <div class="none_message"><!-- 1년 기준 활동이 없는 경우 none에서 block 처리 해야한다.-->
                             <p class="none_message_inner">활동내역이 없습니다. <span class="small_text">조회 기간은 최근 1년 기준으로 설정되어
                                     있습니다.<br>다른 조건을 원하실 경우 검색 기간 설정을 변경해 주세요.</span></p>
                         </div>
                     </div>
-                    <div class="my_recent_activity_wrap" id="searchNothing" style="display:none">
+                    <div class="my_recent_activity_wrap" id="searchNothing"> <!-- 검색 후 결과가 없는 경우 none에서 block 처리 해야함-->
                         <div class="none_message">
                             <p class="none_message_inner">검색결과가 없습니다. <span class="small_text">조회 기간 또는 조건을 확인해
                                     주세요.</span></p>
                         </div>
                     </div>
                     <div class="my_activity_notice" style="display: block;">조회 기간은 최근 1년 기준으로 설정되어 있습니다.<br>다른 조건으로 검색을
-                        원하실 경우 검색 기간 설정을 변경해 주세요.</div>
+                        원하실 경우 검색 기간 설정을 변경해 주세요.
+                    </div>
                 </form>
             </div>
 

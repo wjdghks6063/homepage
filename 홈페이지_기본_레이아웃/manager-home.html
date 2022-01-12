@@ -31,7 +31,7 @@
             <div id="header-main">
                 <div id="header-top">
                     <h1 class="logo-box">
-                        <a href="" class="logo-img"></a>
+                        <a href="../홈페이지_기본_레이아웃/index.html" class="logo-img"></a>
                     </h1>
                     <!-- 헤드 메뉴 내용 -->
                     <div class="main-top-menu">
@@ -66,8 +66,7 @@
             <div id="lnb" class="my_lnb" role="menu">
                 <a href="../홈페이지_기본_레이아웃/manager-home.html" role="menuitem" class="my_lnb_item" id="lnb_my_home" aria-current="true">MY홈</a> 
                 <a href="../홈페이지_기본_레이아웃/manager-donation.html" role="menuitem" class="my_lnb_item" id="lnb_my_notification" aria-current="false">기부</a>
-                <a href="../홈페이지_기본_레이아웃/manager-volunteer.html" role="menuitem" class="my_lnb_item" id="lnb_my_activity" aria-current="false">봉사</a> 
-                <a href="../홈페이지_기본_레이아웃/manager-regular payment.html" role="menuitem" id="my_lnb_item" class="my_lnb_item" aria-current="false">월 별 조회</a>
+                <a href="../홈페이지_기본_레이아웃/manager-volunteer.html" role="menuitem" class="my_lnb_item" id="lnb_my_activity" aria-current="false">봉사</a>
                 <a href="../홈페이지_기본_레이아웃/manager-Year-end-settlement.html"role="menuitem" class="my_lnb_item" id="lnb_my_tax" aria-current="false">회원 관리</a>
             </div>
         </div>
@@ -78,17 +77,19 @@
                 <div class="my_summary_box">
                     <div class="my_summary_title">
                         <h3 class="title">오늘의 후원금액</h3>
-                        <span class="number_wrap"><span class="number" id="myCashTotal">0</span> 원</span>
+                        <span class="number_donation"><span class="big_number" id="myCashTotal">0</span> 원</span>
                     </div>
                     <a href="" class="my_summary_item"><span class="title">아동</span><span class="number_wrap"><strong class="number" id="myProject">0</strong> 원</span></a>
                     <a href="" class="my_summary_item"><span class="title">노인</span><span class="number_wrap"><strong class="number" id="myProject">0</strong> 원</span></a> 
                     <a href="" class="my_summary_item"><span class="title">재난</span><span class="number_wrap"><strong class="number" id="myProject">0</strong> 원</span></a> 
                     <a href="" class="my_summary_item"><span class="title">보유콩</span><span class="number_wrap"><strong class="number" id="myProject">0</strong> 원</span></a> 
+                    <a href="" class="my_summary_item"><span class="title">보유콩</span><span class="number_wrap"><strong class="number" id="myProject">0</strong> 원</span></a> 
             
                 </div>
                 <div class="my_summary_box">
                     <div class="my_summary_title">
-                        <h3 class="title">오늘의 봉사 일정</h3><span class="number_wrap"><strong class="number" id="mySponTotal">15</strong> 건</span>
+                        <h3 class="title">오늘의 봉사 일정</h3>
+                        <span class="number_volunteer"><strong class="big_number" id="mySponTotal">15</strong> 건</span>
                     </div>
                         <a href="/my/timeline#type=donation" class="my_summary_item"><span class="title">봉사 게시글 작성</span><span class="number_wrap"><strong class="number" id="myDonation">25</strong> 건</span></a> 
                         <a href="/my/timeline#type=funding" class="my_summary_item"><span class="title">봉사 참여 인원</span><span class="number_wrap"><strong class="number" id="myFunding">125</strong> 명</span></a>
@@ -142,7 +143,7 @@
                             </div>
                         </li>
                     </ol>
-                </div><a href="/my/notification" class="my_recent_news_link">전체보기 <i class="fas fa-chevron-right"></i></a>
+                </div><a href="../홈페이지_기본_레이아웃/manager-donation.html" class="my_recent_news_link">전체보기 <i class="fas fa-chevron-right"></i></a>
             </div>
 
             <!-- 내 소식 -->
@@ -190,7 +191,7 @@
                         </div>
                     </li>
                 </ol>
-            </div><a href="/my/notification" class="my_recent_news_link">전체보기 <i class="fas fa-chevron-right"></i></a>
+            </div><a href="../홈페이지_기본_레이아웃/manager-volunteer.html" class="my_recent_news_link">전체보기 <i class="fas fa-chevron-right"></i></a>
         </div>
 
         </div><!-- 활동 내용 div-->
@@ -225,6 +226,36 @@
                     alert('안녕하세요');
                 }
             });
+
+            /* 후원 금액 숫자 순차적 증가*/
+    /* 후원 금액 숫자 순차적 증가*/
+    $({ val : 0 }).animate({ val : 150000 }, { /*val : 0 /시작 숫자 / val : 150000 종료 숫자 */
+        duration: 1500,
+        step: function() {
+            var num = numberWithCommas(Math.floor(this.val)); 
+            $(".big_number").text(num);
+        },
+        complete: function() {
+            var num = numberWithCommas(Math.floor(this.val));
+            $(".big_number").text(num);
+        }
+    });
+
+        $({ val : 0 }).animate({ val : 1.5 }, { /*소숫점 표시시 사용*/
+        duration: 1000,
+        step: function() {
+            var num = numberWithCommas(this.val.toFixed(1));
+            $(".count_num2").text(num);
+        },
+        complete: function() {
+            var num = numberWithCommas(this.val.toFixed(1));
+            $(".count_num2").text(num);
+        }
+    });
+
+    function numberWithCommas(x) { //numberWithCommas 3자리마다 콤마
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
         </script>
 
 </div>

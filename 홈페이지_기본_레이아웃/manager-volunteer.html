@@ -66,8 +66,7 @@
             <div id="lnb" class="my_lnb" role="menu">
                 <a href="../홈페이지_기본_레이아웃/manager-home.html" role="menuitem" class="my_lnb_item" id="lnb_my_home" aria-current="false">MY홈</a> 
                 <a href="../홈페이지_기본_레이아웃/manager-donation.html" role="menuitem" class="my_lnb_item" id="lnb_my_notification" aria-current="false">기부</a>
-                <a href="../홈페이지_기본_레이아웃/manager-volunteer.html" role="menuitem" class="my_lnb_item" id="lnb_my_activity" aria-current="true">봉사</a> 
-                <a href="../홈페이지_기본_레이아웃/manager-regular payment.html" role="menuitem" id="my_lnb_item" class="my_lnb_item" aria-current="false">월 별 조회</a>
+                <a href="../홈페이지_기본_레이아웃/manager-volunteer.html" role="menuitem" class="my_lnb_item" id="lnb_my_activity" aria-current="true">봉사</a>
                 <a href="../홈페이지_기본_레이아웃/manager-Year-end-settlement.html"role="menuitem" class="my_lnb_item" id="lnb_my_tax" aria-current="false">회원 관리</a>
             </div>
         </div>
@@ -80,15 +79,15 @@
                     <fieldset>
                         <legend class="blind">활동내역 필터</legend>
                         <div class="activity_category" aria-hidden="false"> <!-- aria-pressed="true" 면 색 들어옴 -->
-                            <a href="#" role="button"class="activity_category_item" id="all" aria-pressed="true" data-type="all">전체 내역</a> 
-                            <a href="#" role="button" class="activity_category_item" id="donation" aria-pressed="false" data-type="donation">아동 내역</a> 
-                            <a href="#" role="button" class="activity_category_item" id="funding" aria-pressed="false" data-type="funding">노인 내역</a> 
-                            <a href="#" role="button" class="activity_category_item" id="deposit" aria-pressed="false" data-type="deposit">재난 내역</a>
-                            <a href="#" role="button" class="activity_category_item" id="cong" aria-pressed="false" data-type="cong">콩 내역</a>
-
-                            <div class="activity_category_link" data-type="payment"><a href="../홈페이지_기본_레이아웃/manager-donation-search.html" class="link" id="activity_category_payment">
-                                <i class="fas fa-search"></i>&nbsp;&nbsp;상세 검색</a>
-                            </div>
+                            <a href="#" role="button"class="activity_category_item" id="all" aria-pressed="true" data-type="all">전체 조회</a> 
+                            <a href="#" role="button" class="activity_category_item" id="donation" aria-pressed="false" data-type="donation">서구</a> 
+                            <a href="#" role="button" class="activity_category_item" id="funding" aria-pressed="false" data-type="funding">동구</a> 
+                            <a href="#" role="button" class="activity_category_item" id="deposit" aria-pressed="false" data-type="deposit">중구</a>
+                            <a href="#" role="button" class="activity_category_item" id="cong" aria-pressed="false" data-type="cong">유성구</a>
+                            <a href="#" role="button" class="activity_category_item" id="cong" aria-pressed="false" data-type="cong">대덕구</a>
+                        </div>
+                            <div class="activity_category_link" data-type="payment"><a href="../홈페이지_기본_레이아웃/manager-volunteer-search.html" class="link" id="activity_category_payment">
+                            <i class="fas fa-search"></i>&nbsp;&nbsp;상세 검색</a>
                         </div>
                     </fieldset>
                     <div class="my_npaybanner_wrap" style="display:none"></div>
@@ -98,28 +97,28 @@
             <div class="my_summary_wrap" id="mySummaryAll">
                 <div class="my_summary_box">
                     <div class="my_summary_title">
-                        <h3 class="title">오늘의 기부 일정</h3>
+                        <h3 class="title">오늘의 봉사 일정</h3>
                         <span class="number_wrap"><span class="number" id="myCashTotal">0</span> 건</span>
                     </div>
-                    <a href="" class="my_summary_item"><span class="title">진행중</span><span class="number_wrap"><strong class="number" id="myProject">0</strong> 건</span></a>
+                    <a href="" class="my_summary_item"><span class="title">진행 중</span><span class="number_wrap"><strong class="number" id="myProject">0</strong> 건</span></a>
                     <a href="" class="my_summary_item"><span class="title">달성 완료</span><span class="number_wrap"><strong class="number" id="myProject">0</strong> 건</span></a> 
                     <a href="" class="my_summary_item"><span class="title">마감</span><span class="number_wrap"><strong class="number" id="myProject">0</strong> 건</span></a> 
                 </div>
                 <div class="my_summary_box">
                     <div class="my_summary_title">
-                        <h3 class="title">이번 주 기부 일정</h3>
+                        <h3 class="title">이번 주 봉사 일정</h3>
                         <span class="number_wrap"><span class="number" id="myCashTotal">0</span> 건</span>
                     </div>
-                    <a href="" class="my_summary_item"><span class="title">진행중</span><span class="number_wrap"><strong class="number" id="myProject">0</strong> 건</span></a>
+                    <a href="" class="my_summary_item"><span class="title">진행 중</span><span class="number_wrap"><strong class="number" id="myProject">0</strong> 건</span></a>
                     <a href="" class="my_summary_item"><span class="title">달성 완료</span><span class="number_wrap"><strong class="number" id="myProject">0</strong> 건</span></a> 
                     <a href="" class="my_summary_item"><span class="title">마감</span><span class="number_wrap"><strong class="number" id="myProject">0</strong> 건</span></a> 
                 </div>
                 <div class="my_summary_box">
                     <div class="my_summary_title">
-                        <h3 class="title">이번 달 기부 일정</h3>
+                        <h3 class="title">이번 달 봉사 일정</h3>
                         <span class="number_wrap"><span class="number" id="myCashTotal">15</span> 건</span>
                     </div>
-                    <a href="" class="my_summary_item"><span class="title">진행중</span><span class="number_wrap"><strong class="number" id="myProject">0</strong> 건</span></a>
+                    <a href="" class="my_summary_item"><span class="title">진행 중</span><span class="number_wrap"><strong class="number" id="myProject">0</strong> 건</span></a>
                     <a href="" class="my_summary_item"><span class="title">달성 완료</span><span class="number_wrap"><strong class="number" id="myProject">0</strong> 건</span></a> 
                     <a href="" class="my_summary_item"><span class="title">마감</span><span class="number_wrap"><strong class="number" id="myProject">0</strong> 건</span></a> 
                 </div>
@@ -127,11 +126,11 @@
         
                 <!-- 진행중 기부 -->
             <div class="my_recent_news_wrap" id="my_notification">
-                <h3 class="my_recent_news_title">진행중인 기부</h3><span class="my_recent_news_count">총<span class="number" id="my_notification_count">42</span>건</span>
+                <h3 class="my_recent_news_title">진행중인 봉사모집</h3><span class="my_recent_news_count">총<span class="number" id="my_notification_count">42</span>건</span>
                 <div class="my_recent_news_feed"><!--전체 보기-->
                     <ol class="list_news" id="my_notification_list">
                         <!-- 마감일이 가까워지는 순서대로 보여져야 함-->
-                        <li class="item_news type_donation">
+                        <li class="item_news type_funding">
                             <div class="card_news">
                                 <a href="https://happybean.naver.com/my/notification" class="link"></a>
                                 <p class="text_content">
@@ -144,7 +143,7 @@
                                 </button>
                             </div>
                         </li>
-                        <li class="item_news type_donation">
+                        <li class="item_news type_funding">
                             <div class="card_news">
                                 <a href="https://happybean.naver.com/my/notification" class="link"></a>
                                 <p class="text_content">
@@ -157,7 +156,7 @@
                                 </button>
                             </div>
                         </li>
-                        <li class="item_news type_donation">
+                        <li class="item_news type_funding">
                             <div class="card_news">
                                 <a href="https://happybean.naver.com/my/notification" class="link"></a>
                                 <p class="text_content">
@@ -171,16 +170,16 @@
                             </div>
                         </li>
                     </ol>
-                </div><a href="../홈페이지_기본_레이아웃/manager-donation-search.html" class="my_recent_news_link">전체보기 <i class="fas fa-chevron-right"></i></a>
+                </div><a href="../홈페이지_기본_레이아웃/manager-volunteer-search.html" class="my_recent_news_link">전체보기 <i class="fas fa-chevron-right"></i></a>
             </div>
 
             <!-- 달성 완료 기부 -->
             <div class="my_recent_news_wrap" id="my_notification">
-                <h3 class="my_recent_news_title">목표금액 달성 완료</h3><span class="my_recent_news_count">총<span class="number" id="my_notification_count">42</span>건</span>
+                <h3 class="my_recent_news_title">목표인원 달성 완료</h3><span class="my_recent_news_count">총<span class="number" id="my_notification_count">42</span>건</span>
                 <div class="my_recent_news_feed"><!--전체 보기-->
                     <ol class="list_news" id="my_notification_list">
                         <!-- 마감일이 가까워지는 순서대로 보여져야 함-->
-                        <li class="item_news type_donation">
+                        <li class="item_news type_funding">
                             <div class="card_news">
                                 <a href="https://happybean.naver.com/my/notification" class="link"></a>
                                 <p class="text_content">
@@ -193,7 +192,7 @@
                                 </button>
                             </div>
                         </li>
-                        <li class="item_news type_donation">
+                        <li class="item_news type_funding">
                             <div class="card_news">
                                 <a href="https://happybean.naver.com/my/notification" class="link"></a>
                                 <p class="text_content">
@@ -206,7 +205,7 @@
                                 </button>
                             </div>
                         </li>
-                        <li class="item_news type_donation">
+                        <li class="item_news type_funding">
                             <div class="card_news">
                                 <a href="https://happybean.naver.com/my/notification" class="link"></a>
                                 <p class="text_content">
@@ -220,7 +219,7 @@
                             </div>
                         </li>
                     </ol>
-                </div><a href="../홈페이지_기본_레이아웃/manager-donation-search.html" class="my_recent_news_link">전체보기 <i class="fas fa-chevron-right"></i></a>
+                </div><a href="../홈페이지_기본_레이아웃/manager-volunteer-search.html" class="my_recent_news_link">전체보기 <i class="fas fa-chevron-right"></i></a>
             </div>
 
         </div><!-- 활동 내용 div-->
