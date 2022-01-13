@@ -70,7 +70,9 @@
    font-weight: 700;
    line-height: 24px;
    color: #070808b5;
- }
+   flex-grow: 1;
+   flex-basis: 1px;
+}
  /*마우스 올릴시 색상 변경*/
  .main-text[aria-current='true'],
  .main-text:hover,
@@ -86,6 +88,7 @@
    left: 100px;
    text-align: center;
    justify-content: center;
+   margin: 0 100px
 }
 .main-top-login {
    display: flex;

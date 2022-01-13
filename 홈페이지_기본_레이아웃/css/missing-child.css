@@ -1,0 +1,68 @@
+/*내용---------------------*/
+.grid-list > .list {
+    display: flex;
+    flex-wrap: wrap;
+}
+.grid-list .grid-item {
+    margin: 27px 0 0;
+    width: 100%;
+}
+
+.grid-list .grid-item {
+    width: calc((100% - 80px) / 3);
+    margin-top: 37px;
+    margin-left: 40px;
+}
+.grid-list .grid-item:nth-child(-n+3) {
+    margin-top: 0 !important;
+}
+.grid-list .grid-item:nth-child(3n+1) {
+    margin-left: 0;
+}
+.grid-link {
+    display: block;
+    height: 100%;
+}
+.grid-list .grid-item .grid-img {
+    position: relative;
+    overflow: hidden;
+}
+.grid-list .grid-item .grid-img img {
+    width: 100%;
+}   
+.grid-list .grid-item .grid-img + .grid-txt {
+    margin-top: 16px;
+}
+.grid-list .grid-item .title {
+    display: block;
+    font-size: 21px;
+    line-height: 1.28;
+    color: #222;
+    max-height: 2.56em;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+.grid-list .grid-item .title {
+    font-size: 24px;
+    line-height: 1.5;
+    max-height: 3em;
+}
+.grid-list .grid-item .desc {
+    margin-top: 11px;
+    font-size: 15px;
+    line-height: 1.33;
+    color: #555;
+    font-weight: 300;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.grid-list .grid-item .desc {
+    margin-top: 9px;
+    font-size: 16px;
+}

@@ -30,10 +30,10 @@
 }
 /*서브 헤더 이미지 div class에 따라 이미지 변경 */
 .sub-header.sub-header-give {
-    background-image:url("../img/sub-header.png");
+    background-image:url("../img/sub-header-banner-1.png");
 }
-.sub-header.vis-news { 
-    background-image:url("/resources/images/sub/vis-news.jpg"); 
+.sub-header.missing-child { 
+    background-image:url("../img/sub-header-banner-missing.png"); 
 }
 .sub-header.vis-about { 
     background-image:url("/resources/images/sub/vis-about.jpg"); 
@@ -97,8 +97,7 @@
     margin-left: 12px;
     width: 71px;
     height: 70px;
-    transform: rotate(
-28deg);
+    transform: rotate(28deg);
 }
 .sub-header .deco-box .deco-2 {  /*서브 헤더 삼각형 위치*/
     top:61px; 
@@ -120,94 +119,133 @@
     font-size:0; 
 }
 
-.sub-header .sub-menu .menu-in { 
-    position:relative; 
-    left:0; 
-    right:0; 
-    top:0; 
-    padding:0; 
-    background:transparent; 
-    transition:all .3s; 
-}
-
-.sub-header .sub-menu .menu-in {
-    border-top: 1px solid rgba(255,255,255,.2);
-    border-bottom: 1px solid rgba(255,255,255,.2);
-}
-
 /*서브 헤더 메뉴 창*/
-
-.sub-header .sub-menu .menu-form { 
-    max-width:1440px; 
-    margin:0 auto; 
-    padding:0 20px; 
-    border: none;
+/*메뉴 창--------------------------------------------------------*/
+.contents {
+    max-width: 1440px;
+    padding: 88px 20px 130px;
+    margin: 0 auto;
+}
+/*메인 박스 */
+.contents {
+    max-width: 1440px; /*1140px으로 변경 여부*/
+    padding: 88px 20px 130px;
+    margin: 0 auto;
 }
 
-.sub-header .sub-menu .menu-form > li { 
-    display:inline-block; 
-    vertical-align:top; 
-}
-
-.sub-header .sub-menu .menu-form > li {
+.swipe-initialized {
     position: relative;
-    background: transparent;
+    overflow: hidden;
+    cursor: move;
 }
 
-.sub-header .sub-menu .home > a { 
-    line-height:48px; 
-    padding:0 17px; 
-    border-left:1px solid rgba(255,255,255,.2); 
-    border-right:1px solid rgba(255,255,255,.2); 
-}
-.sub-header .sub-menu a, .sub-header .sub-menu button { /*버튼과 a class에만 적용*/
-    display:block; 
-    width:100%; 
-    text-align:left; 
+.tab-3 {
+    position: relative;
+    margin: 25px -20px 30px;
+    font-size: 0;
+    color: #888;
+    text-align: center;
 }
 
-.pos, .ir-b:before, .ir-a:after { display:inline-block; vertical-align:middle; background-position:999px 999px; background-repeat:no-repeat; font-size:0; }
-
-.pos { padding:0; margin:0; white-space:nowrap; font-size:1px; overflow:hidden; text-indent:-999px; color:transparent; line-height:0; }
-
-.pos, .ir-b:before, .ir-a:after { background-image:url("../img/btn-total.png"); }
-
-
-.i-home {
-    background-position: -624px 0;
-    width: 26px;
-    height: 25px;
+.tab-3 { 
+    margin: 43px 0 50px;
 }
 
-.sub-header .sub-menu .dep {
-    border-right: 1px solid rgba(255,255,255,.2);
+.contents > .tab-3:first-child { 
+    margin-top: -88px;
+    margin-bottom: 88px;
 }
 
-.sub-header .sub-menu .dep > a, .sub-header .sub-menu .dep > button { /*  background-color: transparent; border: 0; border-radius: 0;*/
-    min-width: 220px;
-    padding: 0 47px 0 19px;
-    line-height: 48px;
-    font-size: 16px;
-    font-weight: 400;
-    color: #fff;
-    background-color: transparent;
-}
-
-.sub-header .sub-menu .dep[data-dropdown] > a::after, .sub-header .sub-menu .dep[data-dropdown] > button::after {
-    margin-top: -8px;
-}
-
-.sub-header .sub-menu .dep > a::after, .sub-header .sub-menu .dep > button::after {
+.tab-3::before {
     content: '';
     position: absolute;
-    right: 13px;
-    top: 53%;
-    margin-top: -6px;
-    width: 12px;
-    height: 12px;
-    border: 0 solid #fff;
-    border-width: 0 2px 2px 0;
-    transform: translateY(2px) rotate( -45deg);
-    transition: none;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background: #c8c8c8;
+}
+
+.swipe-initialized {
+    position: relative;
+    overflow: hidden;
+    cursor: move;
+}
+
+.tab-3 {
+    position: relative;
+    margin: 25px -20px 30px;
+    font-size: 0;
+    color: #888;
+    text-align: center;
+}
+
+.tab-3 ul {
+    display: flex;
+}
+
+.swipe-initialized .swipe-cont {
+    position: relative;
+    white-space: nowrap;
+}
+
+.tab-3 .item {
+    flex: 1;
+    position: relative;
+    display: inline-block;
+    font-size: 16px;
+    text-align: center;
+}
+
+.tab-3 .item {
+    font-size: 20px;
+}
+
+.tab-3 a {
+    display: block;
+    padding: 5px 15px;
+    height: 100%;
+}
+
+.tab-3 .item a::before {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    min-height: 33px;
+    height: 100%;
+    margin-right: -1px;
+    vertical-align: middle;
+    transition: min-height .3s;
+}
+
+.tab-3 .item a::before {
+    min-height: 50px;
+}
+
+.tab-3 .item .in {
+    display: inline-block;
+    vertical-align: middle;
+    padding-bottom: 3px;
+}
+
+/*클릭 한 메뉴 */
+.tab-3 .item.active {
+    z-index: 2;
+    color: #000;
+    font-weight: 700;
+}
+
+.tab-3 .item.active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background: #ff5000;
+}
+
+.tab-3 .item.active::before {
+    height: 3px;
 }
 /*------------------------------------------------ 확정 구역 -----------------------------------------------------------*/
